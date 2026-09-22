@@ -1,6 +1,6 @@
 # Current state
 
-- Phase: Prompt 00 complete; Prompt 01 evidence discovery and plan in progress under activated overnight batch (Prompts 00–08).
+- Phase: Prompts 00–01 complete; Prompt 02 design system doc complete, committing; next Prompt 03 scaffold under activated overnight batch (Prompts 00–08).
 - Kickoff: 2026-09-22 23:45 Asia/Manila; stop/checkpoint window 2026-09-23 07:45; final handoff target 07:15.
 - Delivery deadline: 2026-09-25 23:59 Asia/Manila, interpreted end-of-day.
 - Active writer: OpenCode root (`opencode/mimo-v2.6-flash-free`) after Codex emergency checkpoint; no specialists running unless spawned by root.
