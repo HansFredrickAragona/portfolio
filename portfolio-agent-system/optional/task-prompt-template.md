@@ -1,0 +1,3 @@
+# Optional — Single Task
+
+Restore project state and select exactly one approved unblocked task. State scope, owned files, dependencies, acceptance criteria, and checks before editing. Ask the orchestrator before touching out-of-scope files. Implement the smallest complete solution. Run required checks and return changed files, evidence, results, and unresolved issues to the orchestrator. The Progress & Handoff specialist updates its assigned records; other specialists must not edit those records concurrently. The orchestrator verifies the integrated work and documentation and alone commits the completed task. If no documentation specialist is assigned, the orchestrator updates memory/docs. Do not cross an approval gate.

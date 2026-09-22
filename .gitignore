@@ -1,0 +1,47 @@
+# Private owner-provided sources; publish only explicitly approved/redacted assets.
+/project-input/
+
+# Environment files and credentials.
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
+/secrets/
+/credentials/
+.npmrc
+
+# Dependencies and generated application output.
+node_modules/
+/.next/
+/out/
+/dist/
+/build/
+*.tsbuildinfo
+next-env.d.ts
+
+# Test, browser, and temporary artifacts.
+/coverage/
+/playwright-report/
+/test-results/
+/blob-report/
+/reports/
+/tmp/
+/temp/
+*.log
+
+# Local hosting and tool state; keep authored agent rules and memory tracked.
+/.vercel/
+/.kilo/
+/.opencode/node_modules/
+
+# Machine-specific/editor files.
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~

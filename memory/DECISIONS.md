@@ -1,0 +1,10 @@
+# Decisions
+
+- D01: Simple MVC inside Next.js App Router; no separate backend or persistence.
+- D02: Active overnight batch 00-08; local draft only; numeric phase progression with internal checks, final morning review.
+- D03: Public name Hans Fredrick; full source name Hans Fredrick Ong Aragona. Public email and repo-local Git email `hansfredrick2600@gmail.com`. GitHub profile `https://github.com/HansFredrickAragona`; LinkedIn `https://www.linkedin.com/in/hans-aragona`. Do not alter GitHub account email/authentication based on a contact email request.
+- D04: Owner milestone narrative, by college year (not guessed semester/calendar dates): Year 1 learned programming; Year 2 became a varsity member, participated in an organization, developed a simple GUI; Year 3 became team captain, participated in a pitching event, founded the AWS Learning Club at school; Year 4 DOST-funded thesis, club events, presented thesis at events. Treat ambiguous organization role in Year 2 conservatively as participation, not office/title. No numerical intensity or inferred semester placement. Use an accessible four-year narrative/list/grid with year labels; full semester heatmap deferred until dates exist.
+- D05: Fertilizer recommendation deployment is a Soil Scan component demo, not proof of entire Soil Scan deployment. Verify live URL before enabling. Grammar Checker and Resume Job Tracker remain in development with previews only.
+- D06: September 25, 2026 deadline; interpreted 23:59 Asia/Manila. Overnight kickoff September 22 23:45, eight-hour window ends September 23 07:45. User can correct exact deadline time later.
+- D07: No resume download without approved redaction; no analytics, no Facebook without verified owner link, no invented canonical production URL. Missing optional inputs do not block unrelated draft implementation.
+- D08: OpenWolf 1.0.4 installed but README documents only Claude Code hooks; no verified Codex/OpenCode integration. Use consistent Markdown/Git fallback. No speculative hooks or daemon.
