@@ -4,8 +4,9 @@
 - Raw resume contains private phone/location information. No downloadable copy until redaction is explicitly reviewed. Contact uses approved email/LinkedIn only.
 - Resume Job Tracker has only owner-confirmed name/status: in development. Do not invent stack, capabilities, dates, or outcome.
 - Grammar Checker is in development despite resume describing built NLP components. No live/case-study action.
-- Fertilizer demo URL (`https://frontend-delta-rust-70.vercel.app/`) and BaguioReadyGIS URL (`https://baguio-ready-gis-web.vercel.app/`) not yet live-verified. Enable actions only after verification; fertilizer action must be labeled as Soil Scan component demo.
-- No approved project screenshots yet. Use labeled illustrative artwork unless authentic public screenshots are captured without private data.
+- Fertilizer demo URL (`https://frontend-delta-rust-70.vercel.app/`) and BaguioReadyGIS URL (`https://baguio-ready-gis-web.vercel.app/`) live-verified 2026-09-23 (HTTP content returned). Actions enabled with Soil Scan component-demo label for the fertilizer link. Re-verify before release.
+- No approved project screenshots yet. Labeled illustrative SVG artwork generated for Soil Scan, BaguioReadyGIS, Grammar Checker, and Resume Job Tracker (`public/images/artwork-*.svg`, `illustrative: true`). Replace only with authentic public screenshots after owner review.
+- Case-study drafts exist as typed modules plus MDX under `src/models/case-studies/`. Routes `/work/*` are still Prompt 06 work; do not claim routes shipped until implemented and checked.
 - Facebook link not supplied/verified — omit.
 - Production URL unknown — omit canonical, sitemap, absolute metadata; record as release prerequisite.
 - Final product copy, design, and case studies await morning owner review.

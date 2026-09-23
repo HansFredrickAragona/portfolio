@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title-tracker">
+  <title id="title-tracker">Illustrative artwork for Resume Job Tracker</title>
+  <rect width="800" height="500" fill="#0C1A12"/>
+  <rect x="90" y="130" width="200" height="260" rx="12" fill="#163024" stroke="#44403C"/>
+  <rect x="320" y="160" width="200" height="230" rx="12" fill="#163024" stroke="#44403C"/>
+  <rect x="550" y="190" width="180" height="200" rx="12" fill="#163024" stroke="#44403C"/>
+  <rect x="110" y="170" width="120" height="12" rx="6" fill="#A7F3D0"/>
+  <rect x="110" y="200" width="160" height="10" rx="5" fill="#44403C"/>
+  <rect x="340" y="200" width="120" height="12" rx="6" fill="#93C5FD"/>
+  <rect x="340" y="230" width="160" height="10" rx="5" fill="#44403C"/>
+  <rect x="570" y="230" width="100" height="12" rx="6" fill="#FCD34D"/>
+  <rect x="570" y="260" width="140" height="10" rx="5" fill="#44403C"/>
+  <text x="40" y="70" fill="#FAF7F0" font-family="Georgia, serif" font-size="32" font-weight="700">Job Tracker</text>
+  <text x="40" y="105" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="18">Illustrative artwork · not a screenshot</text>
+</svg>

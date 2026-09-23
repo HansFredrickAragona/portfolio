@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title-grammar">
+  <title id="title-grammar">Illustrative artwork for Hiligaynon Grammar Checker</title>
+  <rect width="800" height="500" fill="#0C1A12"/>
+  <rect x="80" y="140" width="640" height="60" rx="8" fill="#163024" stroke="#44403C"/>
+  <rect x="80" y="220" width="520" height="60" rx="8" fill="#163024" stroke="#44403C"/>
+  <rect x="80" y="300" width="580" height="60" rx="8" fill="#163024" stroke="#44403C"/>
+  <circle cx="680" cy="170" r="18" fill="#15803D"/>
+  <circle cx="560" cy="250" r="18" fill="#B91C1C"/>
+  <circle cx="640" cy="330" r="18" fill="#15803D"/>
+  <text x="40" y="70" fill="#FAF7F0" font-family="Georgia, serif" font-size="32" font-weight="700">Grammar Checker</text>
+  <text x="40" y="105" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="18">Illustrative artwork · not a screenshot</text>
+</svg>

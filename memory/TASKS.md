@@ -5,10 +5,10 @@ All phases below are authorized as local drafts by APPROVALS. Each completed tas
 | Task | Owner | Status | Acceptance |
 |---|---|---|---|
 | 00 Bootstrap + recovery | root | done (commit 2b2dfbd); clean recovery previously blocked | contract, consistent memory, private ignores, failed recovery evidence recorded |
-| 01 Evidence/plan | content/root | in progress | brief, evidence matrix, content model, gaps and task plan; no invented claims |
+| 01 Evidence/plan | content/root | done (commit c0614a2) | brief, evidence matrix, content model, gaps and task plan; no invented claims |
 | 02 Design | design/root | done (docs/DESIGN_SYSTEM.md) | responsive editorial tokens, measured AA contrast, interactions, wireframes |
-| 03 MVC scaffold | programmer/root | done (checks pass; commit pending) | compatible exact packages, architecture doc, scripts, minimal shell, format/lint/typecheck/test/build |
-| 04 Content/assets | content/programmer | queued | typed verified content, optimized portrait, year-based milestones, supported case-study drafts |
+| 03 MVC scaffold | programmer/root | done (commit 0e6f734); all checks pass | compatible exact packages, architecture doc, scripts, minimal shell, format/lint/typecheck/test/build |
+| 04 Content/assets | content/programmer | done (checks pass; commit pending) | typed verified content, optimized portrait, year-based milestones, supported case-study drafts |
 | 05 Homepage | programmer | queued | all supported sections, themes, accessible project disclosure, responsive actual QA |
 | 06 Case studies | programmer/content | queued | concise Soil Scan/BaguioReadyGIS only from evidence, routes and return navigation |
 | 07 Contact/metadata | programmer | queued | encoded mailto, copy fallbacks, verified metadata, no analytics/storage |
