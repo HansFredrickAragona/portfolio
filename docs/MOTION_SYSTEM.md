@@ -14,3 +14,5 @@ Owner requested GSAP scrolling explicitly; latest implementation is a progressiv
 References: [ScrollTrigger](https://gsap.com/docs/v3/Plugins/ScrollTrigger/) and [matchMedia](https://gsap.com/docs/v3/GSAP/gsap.matchMedia()/).
 
 Validation: see docs/QA_REDESIGN.md. Real browser reduced-motion emulation and CPU throttling are not exposed by the current browser tool; distinguish unit/source checks from browser checks.
+
+Skills now use native details/summary, initially collapsed. Progressive block-size/opacity transition is 300ms; reduced-motion disables it. Native control stays functional without JavaScript and in browsers without size interpolation (instant fallback). ScrollMotion refreshes on block-size transitionend as well as toggle, avoiding stale section positions after the animation.

@@ -745,3 +745,65 @@ section[id] {
     gap: 2rem;
   }
 }
+
+/* Minimal native skill disclosures: keyboard/touch and no-JS support. */
+.skill-row {
+  display: block;
+  padding: 0;
+  interpolate-size: allow-keywords;
+}
+.skill-row summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 4.25rem;
+  padding: 1rem 0;
+  cursor: pointer;
+  list-style: none;
+}
+.skill-row summary::-webkit-details-marker {
+  display: none;
+}
+.skill-row summary h4 {
+  color: var(--text);
+  font-weight: 500;
+}
+.skill-row summary:hover h4,
+.skill-row[open] summary h4 {
+  color: var(--primary);
+}
+.skill-expand {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--text-subtle);
+  transition: transform 0.25s ease;
+}
+.skill-row[open] .skill-expand {
+  transform: rotate(45deg);
+}
+.skill-row ul {
+  padding: 0.25rem 0 1.5rem;
+}
+@supports (interpolate-size: allow-keywords) and selector(::details-content) {
+  .skill-row::details-content {
+    block-size: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition:
+      block-size 0.3s ease,
+      opacity 0.25s ease,
+      content-visibility 0.3s allow-discrete;
+  }
+  .skill-row[open]::details-content {
+    block-size: auto;
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .skill-row::details-content,
+  .skill-expand {
+    transition: none;
+  }
+}

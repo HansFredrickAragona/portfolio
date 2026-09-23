@@ -23,3 +23,7 @@ GSAP ScrollTrigger reveals section groups when entering the viewport. About subg
 ## Owner spacing and content refinement
 
 Widen shared content to a 90rem cap with 16–24px side gutters, reduce section padding to 48–56px, remove staggered vertical offsets in About, and increase body/secondary type. Remove eyebrow labels and duplicate About summaries. Skills now render as always-visible category rows of icon/name pairs: no descriptions, numbering, disclosure or introductory copy. Evidence remains in models. Skills navigation targets these rows; redundant How I work presentation is removed. Career Growth is removed from the home route at the owner's request; historical milestone data remains in source.
+
+## Minimal skills accordion
+
+Latest owner direction supersedes the always-visible rows: each category is a native clickable summary, initially collapsed, with a plus/close indicator. Items show names/icons only. Labels shortened (AI & ML, GIS, Tools & deployment, Professional skills). Native details works with keyboard, touch and no JavaScript. In supporting browsers, ::details-content interpolates block-size and opacity over 300ms; older browsers use functional instant disclosure. Reduced motion disables transitions. ScrollTrigger refreshes when the size transition finishes. Reference: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::details-content.

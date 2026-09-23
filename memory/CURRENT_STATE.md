@@ -20,3 +20,7 @@ Implementation complete, ready for owner review. Local task commit follows; its 
 Owner requested wider/tighter spacing, larger text, fewer words, no eyebrows, direct skills rows without descriptions, and removal of Career Growth. Implemented in the current portfolio. Existing evidence stays in content models; redundant How I work section is omitted and Skills nav points directly to the About skills rows. Checks underway on this follow-up; earlier checks apply to 6e56841 only.
 
 Spacing/content follow-up: completed and checked (lint clean, typecheck, 31 tests, production build, desktop/mobile inspection). Only post-build code cleanup was removal of an unused import; no runtime behavior changed. Port 3112 restarted with updated build. Ready for owner review and local commit.
+
+Skills accordion follow-up: owner requested clickable expanding category headings with smooth motion and shorter phrases. Implemented native initially-closed details, 300ms progressive CSS size/fade animation, plus indicators and reduced-motion fallback. Category and professional skill wording shortened without changing evidence. Verification underway on this slice.
+
+Skills accordion checks complete: formatting, lint, strict typecheck, 31 tests and production build pass. Browser verified native click expansion, Enter collapse and supported 300ms details-content animation on desktop; responsive check at 375px. No new dependencies, no deployment. Local checkpoint follows.

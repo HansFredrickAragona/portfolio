@@ -89,6 +89,9 @@ export function ScrollMotion() {
       const onLoad = (event: Event) => {
         if (event.target instanceof HTMLImageElement) scheduleRefresh();
       };
+      const onTransitionEnd = (event: TransitionEvent) => {
+        if (event.propertyName === "block-size") scheduleRefresh();
+      };
 
       const onFocus = (event: FocusEvent) => {
         if (failed || !(event.target instanceof Element)) return;
@@ -100,10 +103,12 @@ export function ScrollMotion() {
       root.addEventListener("focusin", onFocus);
       root.addEventListener("toggle", scheduleRefresh, true);
       root.addEventListener("load", onLoad, true);
+      root.addEventListener("transitionend", onTransitionEnd);
       return () => {
         root.removeEventListener("focusin", onFocus);
         root.removeEventListener("toggle", scheduleRefresh, true);
         root.removeEventListener("load", onLoad, true);
+        root.removeEventListener("transitionend", onTransitionEnd);
         cancelAnimationFrame(frame);
         triggers.forEach((trigger) => trigger.kill());
         context.revert();

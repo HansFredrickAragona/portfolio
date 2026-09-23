@@ -17,3 +17,5 @@ Final production build verified at http://127.0.0.1:3112 with no browser console
 ## Spacing/content follow-up
 
 Owner requested removal of eyebrows, skill descriptions and Career Growth, plus wider layout and larger type. These are implemented. Skills display nine always-visible category rows, and Skills navigation now targets that list. Duplicate How I work and repeated About prose removed. Desktop and 375px checks show no horizontal overflow; skill text computes to 16px. Format/typecheck/31 tests/build passed; lint clean after unused-import cleanup. Production preview restarted on 3112. No deployment.
+
+Skills accordion follow-up: desktop click expands Languages; keyboard Enter collapses it. Browser reports interpolate-size support. All nine categories initially closed. No desktop overflow. Lint/typecheck/31 tests/build pass; responsive mobile check done at 375px. No new dependency.

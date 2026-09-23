@@ -101,8 +101,13 @@ export function AboutSection() {
         </h3>
         <div className="skills-rows">
           {aboutSkillCategories.map((category) => (
-            <div data-reveal key={category.id} className="skill-row">
-              <h4>{category.label}</h4>
+            <details data-reveal key={category.id} className="skill-row">
+              <summary>
+                <h4>{category.label}</h4>
+                <span aria-hidden="true" className="skill-expand">
+                  +
+                </span>
+              </summary>
               <ul aria-label={category.label}>
                 {category.entries.map((entry) => (
                   <li key={entry.id}>
@@ -115,7 +120,7 @@ export function AboutSection() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </details>
           ))}
         </div>
       </div>

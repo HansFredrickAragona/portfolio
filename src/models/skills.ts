@@ -180,7 +180,7 @@ export const aboutSkillCategories: readonly SkillCategory[] = [
   },
   {
     id: "backend",
-    label: "Backend and APIs",
+    label: "Backend & APIs",
     entries: [
       {
         id: "nodejs",
@@ -209,11 +209,11 @@ export const aboutSkillCategories: readonly SkillCategory[] = [
   },
   {
     id: "ai-ml",
-    label: "AI and machine learning",
+    label: "AI & ML",
     entries: [
       {
         id: "ml-models",
-        name: "Supervised & unsupervised learning",
+        name: "Machine learning",
         evidence: "Random Forest, XGBoost, and SVM for Soil Scan NPK prediction.",
       },
       {
@@ -223,7 +223,7 @@ export const aboutSkillCategories: readonly SkillCategory[] = [
       },
       {
         id: "rag",
-        name: "RAG and vector databases",
+        name: "RAG & vector databases",
         evidence: "Gift of Grace corporate site RAG chatbot pipeline.",
       },
       {
@@ -247,7 +247,7 @@ export const aboutSkillCategories: readonly SkillCategory[] = [
   },
   {
     id: "data-viz",
-    label: "Data and visualization",
+    label: "Data & visualization",
     entries: [
       {
         id: "power-bi",
@@ -304,7 +304,7 @@ export const aboutSkillCategories: readonly SkillCategory[] = [
   },
   {
     id: "gis",
-    label: "GIS and geospatial",
+    label: "GIS",
     entries: [
       {
         id: "leaflet-gis",
@@ -331,7 +331,7 @@ export const aboutSkillCategories: readonly SkillCategory[] = [
   },
   {
     id: "tools",
-    label: "Development tools and deployment",
+    label: "Tools & deployment",
     entries: [
       {
         id: "git",
@@ -384,26 +384,26 @@ export const aboutSkillCategories: readonly SkillCategory[] = [
   },
   {
     id: "professional",
-    label: "Collaboration and professional",
+    label: "Professional skills",
     entries: [
       {
         id: "fullstack",
-        name: "Full-stack product development",
+        name: "Full-stack development",
         evidence: "End-to-end web delivery from interface to API and deploy.",
       },
       {
         id: "ai-impl",
-        name: "AI and machine-learning implementation",
+        name: "AI implementation",
         evidence: "Soil Scan NPK models and rule-based recommendations.",
       },
       {
         id: "api-design",
-        name: "API design and integration",
+        name: "API integration",
         evidence: "REST integrations for GIS, mobile, and chatbot work.",
       },
       {
         id: "data-analysis",
-        name: "Data analysis and visualization",
+        name: "Data analysis",
         evidence: "ML evaluation, Excel/Power BI reporting, GIS layers.",
       },
       {
@@ -413,7 +413,7 @@ export const aboutSkillCategories: readonly SkillCategory[] = [
       },
       {
         id: "collab",
-        name: "Team collaboration",
+        name: "Collaboration",
         evidence: "Cross-functional delivery with eight- and six-member teams.",
       },
       {
@@ -423,7 +423,7 @@ export const aboutSkillCategories: readonly SkillCategory[] = [
       },
       {
         id: "public-speaking",
-        name: "Public speaking and presentations",
+        name: "Public speaking",
         evidence: "Cloud Horizons speaker; pitching and thesis events.",
       },
       {
@@ -433,7 +433,7 @@ export const aboutSkillCategories: readonly SkillCategory[] = [
       },
       {
         id: "project-coord",
-        name: "Project coordination",
+        name: "Project planning",
         evidence: "Requirements, timelines, and budget alignment as PM/lead.",
       },
     ],

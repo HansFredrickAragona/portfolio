@@ -90,8 +90,8 @@ describe("content models", () => {
     ]);
     const labels = aboutSkillCategories.map((c) => c.label);
     expect(labels).toContain("Languages");
-    expect(labels).toContain("AI and machine learning");
-    expect(labels).toContain("Collaboration and professional");
+    expect(labels).toContain("AI & ML");
+    expect(labels).toContain("Professional skills");
     for (const category of aboutSkillCategories) {
       expect(category.entries.length).toBeGreaterThan(0);
       for (const entry of category.entries) {

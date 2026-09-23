@@ -24,3 +24,5 @@ Owner selected current portfolio and authorized implementation. Root Codex owns 
 Redesign task complete: final checks pass (31 tests, lint, format, typecheck, build, responsive browser). Local checkpoint commit ready; owner design review and real photo replacement next. Production preview http://127.0.0.1:3112.
 
 Completed owner spacing/content follow-up: wider layout/larger type; no eyebrows or Career Growth; direct skill rows, no descriptions or duplicate How I work. Checks pass; local checkpoint only.
+
+Completed minimal skills accordion with short labels, click/keyboard control and smooth animation. Format/lint/typecheck/31 tests/build pass. Owner review next; local-only commit.
