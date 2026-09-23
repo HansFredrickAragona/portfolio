@@ -6,22 +6,18 @@ export type HeroTechSymbol = {
   icon: TechIconId;
   /** Decorative only in Hero — duplicated labels live in About skills. */
   decorative: true;
-  /** Desktop placement relative to the portrait column (intentional, not random). */
+  /** Desktop placement relative to the center portrait (intentional, not random). */
   desktop: {
-    /** CSS position classes for absolute placement on lg+ */
     position: string;
     size: "sm" | "md" | "lg";
-    /** 0–1 opacity base in both themes */
     opacity: string;
   };
-  /** Tablet: show or hide */
   tablet: "show" | "hide";
-  /** Mobile: show only primary symbols */
   mobile: "show" | "hide";
-  /** Stagger offset seconds for entrance; float duration seconds */
   motion: { enterDelay: number; floatDuration: number; floatY: number };
 };
 
+/** Kept clear of left careers rail and right socials rail on lg+. */
 export const heroTechSymbols = [
   {
     id: "python",
@@ -29,9 +25,9 @@ export const heroTechSymbols = [
     icon: "python",
     decorative: true,
     desktop: {
-      position: "top-[8%] left-[4%] lg:left-[-6%]",
+      position: "top-[6%] left-[2%]",
       size: "md",
-      opacity: "opacity-70",
+      opacity: "opacity-65",
     },
     tablet: "show",
     mobile: "show",
@@ -43,9 +39,9 @@ export const heroTechSymbols = [
     icon: "typescript",
     decorative: true,
     desktop: {
-      position: "top-[4%] right-[6%] lg:right-[-8%]",
+      position: "top-[4%] right-[4%]",
       size: "sm",
-      opacity: "opacity-65",
+      opacity: "opacity-60",
     },
     tablet: "show",
     mobile: "show",
@@ -57,9 +53,9 @@ export const heroTechSymbols = [
     icon: "javascript",
     decorative: true,
     desktop: {
-      position: "top-[38%] left-[-10%]",
+      position: "bottom-[30%] left-[-4%]",
       size: "sm",
-      opacity: "opacity-55",
+      opacity: "opacity-50",
     },
     tablet: "hide",
     mobile: "hide",
@@ -71,9 +67,9 @@ export const heroTechSymbols = [
     icon: "react",
     decorative: true,
     desktop: {
-      position: "bottom-[28%] right-[-9%]",
+      position: "bottom-[24%] right-[-4%]",
       size: "lg",
-      opacity: "opacity-75",
+      opacity: "opacity-70",
     },
     tablet: "show",
     mobile: "show",
@@ -85,9 +81,9 @@ export const heroTechSymbols = [
     icon: "nextdotjs",
     decorative: true,
     desktop: {
-      position: "bottom-[12%] left-[2%] lg:left-[-4%]",
+      position: "bottom-[8%] left-[6%]",
       size: "sm",
-      opacity: "opacity-60",
+      opacity: "opacity-55",
     },
     tablet: "hide",
     mobile: "hide",
@@ -99,9 +95,9 @@ export const heroTechSymbols = [
     icon: "nodedotjs",
     decorative: true,
     desktop: {
-      position: "top-[52%] right-[2%] lg:right-[-4%]",
+      position: "top-[48%] right-[0%]",
       size: "md",
-      opacity: "opacity-65",
+      opacity: "opacity-60",
     },
     tablet: "show",
     mobile: "hide",
@@ -113,9 +109,9 @@ export const heroTechSymbols = [
     icon: "googlecolab",
     decorative: true,
     desktop: {
-      position: "bottom-[4%] right-[18%]",
+      position: "bottom-[4%] right-[14%]",
       size: "sm",
-      opacity: "opacity-55",
+      opacity: "opacity-50",
     },
     tablet: "hide",
     mobile: "hide",

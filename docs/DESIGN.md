@@ -4,13 +4,28 @@ Status: owner-directed technology-symbol + About skills extension implemented as
 
 Direction source: `portfolio-agent-system/specs/DESIGN.md` plus owner requirements for Hero/About technology symbols.
 
-## Hero
+## Hero (owner revision 2026-09-23)
 
-- Asymmetric editorial composition: headline + intro + CTAs left; portrait 4:5 right (lg 7/5).
+- **Top:** full legal name as the only `h1` (Hans Fredrick Ong Aragona); short headline under it.
+- **Center:** portrait only — **no card/background/border** behind the photo; floats on the page ground.
+- **Left rail:** Careers (compact experience: role, org, dates).
+- **Right rail:** Social links floating (LinkedIn, GitHub, Email) — real anchors, subtle GSAP float on desktop only.
+- **Below:** summary + primary/secondary CTAs centered; restrained tech-symbol row on small screens.
+- Tech symbols: decorative only around the center portrait on desktop (`lg`); never cover face; never form a badge cloud.
 - No eyebrow text. Real portrait only in Hero.
-- Technology symbols: restrained set of strongest verified tools around the portrait on desktop; static primary row under CTAs on mobile/tablet.
-- Symbols are decorative (`aria-hidden`), never cover the face or headline, never form a badge cloud.
-- Mobile: fewer symbols; composition remains single-column; no horizontal overflow.
+- Mobile: single column — name → portrait → careers → socials → CTAs; no horizontal overflow.
+
+### Desktop wireframe
+
+```text
+[              Hans Fredrick Ong Aragona              ]
+[         I build practical software and AI…         ]
+[ Careers          | Portrait (no bg)      | Social   ]
+[ · ML Researcher  |                        | LinkedIn]
+[ · Project Manager|     [tech floats]      | GitHub  ]
+[ · Mobile Dev     |                        | Email   ]
+[            summary + CTAs + tech row               ]
+```
 
 ## About
 

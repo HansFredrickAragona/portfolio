@@ -102,11 +102,13 @@ Prohibited: parallax, scroll hijack, cursor follower, orbit/spin/bounce loops. G
 
 ## Hero
 
-- No eyebrow text.
-- Asymmetric: strong headline (display), brief supporting intro (body, max ~40ch on desktop), primary action **View projects** (scrolls to work), secondary **Let's talk** (contact).
-- Portrait: `object-fit: cover`, fixed aspect `aspect-[4/5]` mobile and desktop; never distorted; meaningful `alt="Portrait of Hans Fredrick"`.
-- Mobile: stacks copy then portrait (or portrait then copy — implement copy-first for 30-second scan), preserves editorial tension with bleed/offset margin if space allows.
-- Technology symbols (owner extension): desktop absolute glass tiles around portrait only (`lg+`); mobile/tablet static primary row under CTAs; monochrome `currentColor`; max 7 desktop / primary subset mobile; decorative `aria-hidden`. Full rules: `docs/DESIGN.md`, `docs/MOTION_SYSTEM.md`.
+- Full legal name as the single `h1` (owner layout): centered top; value headline beneath (not eyebrow).
+- Center portrait with **no background frame/border/card** — photo sits on page ground (`object-cover`, aspect 4:5).
+- Left: Careers rail (experience role/org/dates). Right: floating Social rail (LinkedIn, GitHub, Email).
+- Summary + **View projects** / **Let's talk** centered below the three-column composition.
+- Technology symbols: decorative glass tiles around center portrait on `lg+` only; monochrome; max 7; `aria-hidden`. Mobile/tablet: static primary row under CTAs.
+- Mobile: stacks name → portrait → careers → socials → CTAs; no horizontal overflow.
+- Real portrait only (`alt` includes full name).
 
 ## About (owner extension)
 

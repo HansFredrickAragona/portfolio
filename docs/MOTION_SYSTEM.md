@@ -11,6 +11,15 @@ Owner-approved exception: GSAP is used only for technology-symbol entrance and s
 | Ownership | Isolated client components only |
 | Cleanup | `gsap.context` / tween `kill` on unmount; no global timeline leaks |
 
+## Hero social rail
+
+| Behavior | Detail |
+|---|---|
+| Entrance | opacity 0→1, x 16→0, stagger 0.1s, desktop only (`lg+`) |
+| Float | y ~5px, durations 5.2–6.1s per item, desynced, `sine.inOut` |
+| Reduced motion / mobile | No GSAP; static links |
+| Accessibility | Real focusable links with visible text labels |
+
 ## Hero symbols
 
 | Behavior | Detail |
