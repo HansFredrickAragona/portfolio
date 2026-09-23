@@ -11,3 +11,7 @@ Owner confirms fertilizer recommendation system is part of Soil Scan; Grammar Ch
 Free model families approved: Nemotron and MiMo V2 on OpenCode. Exact catalog IDs verified and tested in `portfolio-agent-system/optional/opencode-handoff.md`.
 
 No owner review of individual phase artifacts has occurred yet. Record phase internal checks separately; never mark owner gates approved merely because the batch permits progression.
+
+## Post-batch push — 2026-09-23
+
+Owner: “go push in the main branch.” Explicitly authorizes pushing the completed overnight draft to origin `main` (and the feature branch as needed). This overrides the overnight batch’s local-only/no-push default for this action only. Still no deploy, no PR requirement, no Prompt 09 unless separately requested. Commit email remains `hansfredrick2600@gmail.com`.
