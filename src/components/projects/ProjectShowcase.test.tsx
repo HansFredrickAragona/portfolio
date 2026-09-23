@@ -21,9 +21,10 @@ describe("ProjectShowcase", () => {
     expect(
       screen.getByRole("link", { name: /View fertilizer recommendation demo/i }),
     ).toHaveAttribute("href", "https://frontend-delta-rust-70.vercel.app/");
-    expect(
-      screen.queryByRole("link", { name: /Read case study/i }),
-    ).not.toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /Read case study/i })).toHaveAttribute(
+      "href",
+      "/work/soil-scan",
+    );
   });
 
   it("collapses details when switching projects and hides unfinished actions", async () => {

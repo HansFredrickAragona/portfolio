@@ -39,7 +39,7 @@ Legend: **Pass (code/test)** = verified by unit test, static analysis, or build.
 
 ## Known issues / deferred
 
-- Case-study links hidden until Prompt 06 routes exist (`implementedCaseStudySlugs` empty).
+- Case-study routes now implemented: `/work/soil-scan`, `/work/baguioreadygis` (Prompt 06). Deep-link browser check still Pending.
 - Playwright visual screenshots not yet captured — install browsers in Prompt 08 and fill Observed columns with real results.
 - No resume download (by design).
 - Facebook omitted (gap).
