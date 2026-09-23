@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { siteMetadata } from "@/models/metadata";
+import { personJsonLd, siteMetadata } from "@/models/metadata";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -18,6 +18,21 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: siteMetadata.title,
   description: siteMetadata.description,
+  applicationName: siteMetadata.name,
+  authors: [{ name: siteMetadata.name }],
+  keywords: ["software engineer", "AI", "full-stack", "portfolio", "Hans Fredrick"],
+  // No canonical/metadataBase/og url/sitemap until productionOrigin is set.
+  robots: { index: true, follow: true },
+  alternates: undefined,
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#FAF7F0" },
+    { media: "(prefers-color-scheme: dark)", color: "#0C1A12" },
+  ],
 };
 
 const themeInit = `(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t);return}if(window.matchMedia("(prefers-color-scheme: dark)").matches){document.documentElement.setAttribute("data-theme","dark")}}catch(e){}})();`;
@@ -31,6 +46,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
       </head>
       <body className="flex min-h-full flex-col">
         <a
