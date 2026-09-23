@@ -10,8 +10,10 @@ Typed TypeScript modules under `src/models/` (Prompt 03/04). MDX only for comple
 | `navigation.ts` | section anchors, work links, primary CTA |
 | `experience.ts` | id, org, role, start, end, bullets[] |
 | `projects.ts` | id, title, status: completed \| in-development, summary, problem?, role?, stack[], outcome?, liveUrl?, liveActionLabel?, caseStudySlug?, illustration |
-| `skills.ts` | groups[]: label, items[] |
-| `technologies.ts` | flat verified tech list from resume |
+| `skills.ts` | `skillGroups[]` (Build/Intelligence/Insights/Improve); `aboutSkillCategories[]` with `SkillEntry { name, evidence, icon? }`; `aboutContentGroups` |
+| `technologies.ts` | flat verified tech list from resume (legacy list; About uses categorized entries) |
+| `tech-symbols.ts` | `heroTechSymbols[]` (desktop placement, tablet/mobile visibility, motion timing); `aboutFloatSymbols[]` |
+| `about-photos.ts` | temporary About photo metadata (`temporary: true` until owner assets) |
 | `leadership.ts` | id, org, role, period, bullets[] |
 | `recognition.ts` | id, text, relatedProjectId? |
 | `milestones.ts` | year: 1–4, label, items[]; source: owner-D04; intensity: none |
@@ -36,6 +38,18 @@ Typed TypeScript modules under `src/models/` (Prompt 03/04). MDX only for comple
 ## Career growth presentation
 
 Four-year narrative/list/grid with year labels (D04). Accessible text equivalent. Not a commit graph; no inferred semesters or numeric productivity.
+
+## About skills showcase
+
+Categories only when verified content exists: Languages; Frontend; Backend and APIs; AI and machine learning; Data and visualization; Databases; GIS and geospatial; Development tools and deployment; Collaboration and professional.
+
+Each entry: recognizable local symbol (optional) + technology name + short evidence line from résumé/projects. Professional strengths use typography, not logos. No progress bars, star ratings, circular percentages, or unsupported “expert” labels.
+
+Verified technology inventory source: résumé TECHNICAL SKILLS + experience/projects modules. Conflicts stop for owner (none open for skills; Grammar Checker remains in-development per owner).
+
+## Hero technology symbols
+
+Decorative only; `aria-hidden`; strongest technologies only; local Simple Icons paths; GSAP entrance/float; reduced-motion static; mobile reduced set.
 
 ## Contact model
 

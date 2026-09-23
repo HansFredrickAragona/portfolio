@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-labelledby="t1">
+  <title id="t1">Temporary abstract portrait placeholder</title>
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#14532D"/>
+      <stop offset="55%" stop-color="#1E3A5F"/>
+      <stop offset="100%" stop-color="#0C1A12"/>
+    </linearGradient>
+    <linearGradient id="s1" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#A7F3D0" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#93C5FD" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#g1)"/>
+  <circle cx="300" cy="300" r="120" fill="url(#s1)" opacity="0.9"/>
+  <ellipse cx="300" cy="620" rx="190" ry="160" fill="url(#s1)" opacity="0.75"/>
+  <circle cx="300" cy="300" r="120" fill="none" stroke="#FAF7F0" stroke-width="3" opacity="0.35"/>
+  <text x="40" y="740" fill="#FAF7F0" font-family="system-ui,sans-serif" font-size="22" opacity="0.7">Temporary placeholder · owner photo pending</text>
+</svg>

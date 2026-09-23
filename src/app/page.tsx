@@ -1,19 +1,22 @@
 import { ProjectShowcase } from "@/components/projects/ProjectShowcase";
 import { ContactComposer } from "@/components/sections/ContactComposer";
+import { AboutSection } from "@/components/sections/AboutSection";
 import {
   CapabilitiesSection,
   ExperienceSection,
   LeadershipSection,
 } from "@/components/sections/ContentSections";
-import { Hero, ProfileSection } from "@/components/sections/HeroProfile";
+import { Hero } from "@/components/sections/HeroProfile";
 import { Section } from "@/components/ui/Section";
 import { projects } from "@/models/projects";
+import { CareerGrowthSection } from "@/components/sections/CareerGrowthSection";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <ProfileSection />
+      <AboutSection />
+      <CareerGrowthSection />
 
       <Section id="work" title="Selected work">
         <ProjectShowcase projects={projects} />

@@ -17,6 +17,8 @@ Branch `feat/overnight-portfolio`. Writer: OpenCode root (`opencode/mimo-v2.6-fl
 | 06 Case studies | `2018748` |
 | 07 Metadata/analytics | `e7ab949` |
 | 08 QA | `b7cf2ae` |
+| Push to origin main+feat (owner) | `26fcdf9` |
+| Tech symbols + About skills | see `git log -1` after this commit |
 
 ## How to run
 

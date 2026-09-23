@@ -12,6 +12,10 @@ Free model families approved: Nemotron and MiMo V2 on OpenCode. Exact catalog ID
 
 No owner review of individual phase artifacts has occurred yet. Record phase internal checks separately; never mark owner gates approved merely because the batch permits progression.
 
+## Tech symbols + About skills — 2026-09-23
+
+Owner (while away): “start doing the layout and code i will send the photos after the code is built just fill up photo with ai versions of me (temp)… i will be out so do all changes.” Authorizes implementing the technology-symbol system and About skills showcase without waiting for the brief’s §11 pre-implementation approval gate. Temporary About photo placeholders allowed. Still no deploy; push only as previously authorized for the overnight draft (this slice commits locally unless owner re-authorizes push). Inventory must stay résumé/project-evidenced; stop on résumé conflicts.
+
 ## Post-batch push — 2026-09-23
 
 Owner: “go push in the main branch.” Explicitly authorizes pushing the completed overnight draft to origin `main` (and the feature branch as needed). This overrides the overnight batch’s local-only/no-push default for this action only. Still no deploy, no PR requirement, no Prompt 09 unless separately requested. Commit email remains `hansfredrick2600@gmail.com`.

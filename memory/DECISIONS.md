@@ -8,3 +8,4 @@
 - D06: September 25, 2026 deadline; interpreted 23:59 Asia/Manila. Overnight kickoff September 22 23:45, eight-hour window ends September 23 07:45. User can correct exact deadline time later.
 - D07: No resume download without approved redaction; no analytics, no Facebook without verified owner link, no invented canonical production URL. Missing optional inputs do not block unrelated draft implementation.
 - D08: OpenWolf 1.0.4 installed but README documents only Claude Code hooks; no verified Codex/OpenCode integration. Use consistent Markdown/Git fallback. No speculative hooks or daemon.
+- D09: Tech-symbol extension: Hero decorative symbols from verified résumé/project stack only; About holds full categorized skills with evidence lines; icons from simple-icons CC0 paths bundled locally; GSAP only for symbol motion; temporary About photos until owner assets. Details in `docs/DECISIONS.md` DX01–DX10.

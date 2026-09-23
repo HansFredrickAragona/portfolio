@@ -13,5 +13,6 @@ All phases below are authorized as local drafts by APPROVALS. Each completed tas
 | 06 Case studies | programmer/content | done (commit 2018748) | concise Soil Scan/BaguioReadyGIS only from evidence, routes and return navigation |
 | 07 Contact/metadata | programmer | done (commit e7ab949) | encoded mailto, copy fallbacks, verified metadata, no analytics/storage |
 | 08 Integrated QA | QA/root | done (commit b7cf2ae) | relevant automated checks + browser inspection, fixes, honest QA report and morning handoff |
+| 09 Tech symbols + About skills | root | done (this commit) | résumé inventory, Hero GSAP symbols, About multi-column skills, temp photos, docs, format/lint/typecheck/test/build |
 
 No task permits deployment, push, PR, final approval, or Prompt 09. Root retains memory ownership until specifically delegated.

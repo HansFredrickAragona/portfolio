@@ -1,12 +1,14 @@
 # Current state
 
-- Phase: Overnight batch Prompts 00–08 COMPLETE. Commits: `2b2dfbd` 00 · `c0614a2` 01 · `081c8d5` 02 · `0e6f734` 03 · `a412d6f` 04 · `f93398e` 05 · `2018748` 06 · `e7ab949` 07 · `b7cf2ae` 08 QA/handoff. Local working draft ready for owner morning review. Working tree clean after 08 commit. No push/PR/deploy/Prompt 09.
-- Kickoff: 2026-09-22 23:45 Asia/Manila; overnight window ended 2026-09-23 07:45; batch finished ~09:00 Asia/Manila 2026-09-23 (slightly past window; complete draft delivered).
+- Phase: Overnight Prompts 00–08 complete and pushed to origin `main` + `feat/overnight-portfolio` at `26fcdf9` (owner-authorized push). Tech-symbol + About skills extension implemented locally (pending new commit): Hero decorative symbols (local Simple Icons CC0 paths, GSAP), About multi-column with categorized résumé skills + temp SVG photos, docs DESIGN/MOTION/DECISIONS/TASKS/CURRENT_STATE/HANDOFF.
+- Owner: “start doing the layout and code… photos after… fill up photo with AI versions (temp)… I will be out so do all changes.” Implementation authorized without waiting for the original §11 approval gate; inventory still résumé-derived.
+- Kickoff: 2026-09-22 23:45 Asia/Manila; overnight window ended 2026-09-23 07:45; batch finished ~09:00; tech-symbol slice same day.
 - Delivery deadline: 2026-09-25 23:59 Asia/Manila, interpreted end-of-day.
 - Active writer: OpenCode root (`opencode/mimo-v2.6-flash-free`). No specialists running.
-- Git: branch `feat/overnight-portfolio`, origin `https://github.com/HansFredrickAragona/portfolio.git`. Local commits only. Commit email `hansfredrick2600@gmail.com`.
-- Application: Next 16.3.5 / React 19.2.8 / Tailwind 4 / strict TS. Home sections, project disclosure, `/work/soil-scan`, `/work/baguioreadygis`, `/robots.txt`, mailto contact, light/dark themes.
-- Checks: format, lint, typecheck, 25 tests, production build PASS. Playwright Chromium 320/375/768/1280 light+dark: no horizontal overflow; theme, expand details, Tab order, reduced-motion verified. Screenshots ignored under `tmp/qa/`.
-- Privacy: tracked files free of phone/city patterns and private inputs. Portrait EXIF-free in `public/images/`.
-- Local preview: `http://127.0.0.1:3111` returned 200 at batch end (production `next start`). Restart with `npm ci && npm run build && npm start`.
-- Remaining owner work: morning review, production origin, redacted resume, Facebook decision, LinkedIn manual check, Prompt 09 only if later authorized.
+- Git: branch `feat/overnight-portfolio`, origin `https://github.com/HansFredrickAragona/portfolio.git`. Prior commits through `26fcdf9` pushed. Commit email `hansfredrick2600@gmail.com`.
+- Application: Next 16.3.5 / React 19.2.8 / Tailwind 4 / strict TS / gsap ^3.15.0. Home: Hero+symbols, About+skills, Career growth, Work, Experience, How I work, Leadership, Contact. Case studies `/work/soil-scan`, `/work/baguioreadygis`.
+- Checks (tech-symbol slice): format, lint, typecheck, 28 tests, production build PASS.
+- Privacy: tracked files free of phone/city patterns; résumé extract only in ignored `tmp/`. Hero portrait real; About photos temporary placeholders until owner assets.
+- Icons: path data from simple-icons v16.32.0 CC0 in `src/components/icons/techIconPaths.ts`; no CDN; package not a runtime dependency.
+- Local preview: restart with `npm ci && npm run build && npm start`.
+- Remaining owner work: send real About photos; morning review; production origin; redacted resume; Facebook; LinkedIn open-check; Prompt 09 only if later authorized.

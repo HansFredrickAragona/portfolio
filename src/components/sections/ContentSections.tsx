@@ -1,6 +1,5 @@
 import { experience } from "@/models/experience";
 import { skillGroups } from "@/models/skills";
-import { technologies } from "@/models/technologies";
 import { leadership } from "@/models/leadership";
 import { recognition } from "@/models/recognition";
 import { Section } from "@/components/ui/Section";
@@ -35,42 +34,23 @@ export function ExperienceSection() {
 
 export function CapabilitiesSection() {
   return (
-    <Section id="skills" title="Capabilities">
-      <div className="grid gap-8 md:grid-cols-2">
-        <div className="space-y-6">
-          {skillGroups.map((group) => (
-            <div key={group.id}>
-              <h3 className="text-text mb-2 text-base font-semibold">{group.label}</h3>
-              <ul className="flex flex-wrap gap-2" role="list">
-                {group.items.map((item) => (
-                  <li
-                    key={item}
-                    className="border-border bg-surface text-text-muted rounded border px-2.5 py-1.5 text-sm"
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-        <div>
-          <h3 className="text-text mb-2 text-base font-semibold">Technologies</h3>
-          <p className="text-text-subtle mb-3 text-sm">
-            Verified technical skills from experience and projects. Shown beside work, not
-            as ratings.
-          </p>
-          <ul className="flex flex-wrap gap-2" role="list">
-            {technologies.map((tech) => (
-              <li
-                key={tech}
-                className="border-border text-text-muted rounded border px-2 py-1 text-xs"
-              >
-                {tech}
-              </li>
-            ))}
-          </ul>
-        </div>
+    <Section id="skills" title="How I work">
+      <p className="text-text-subtle measure mb-6 max-w-[60ch] text-sm">
+        Capability themes from verified work. Full categorized skills live in About.
+      </p>
+      <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+        {skillGroups.map((group) => (
+          <div key={group.id} className="border-border border-t pt-4">
+            <h3 className="text-text mb-2 text-base font-semibold">{group.label}</h3>
+            <ul className="space-y-2" role="list">
+              {group.items.map((item) => (
+                <li key={item} className="text-text-muted text-sm">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </Section>
   );

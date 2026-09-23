@@ -24,8 +24,10 @@ Compatibility evidence: create-next-app 16.2.10 generated a working Next 16.3.5 
 ## Rendering
 
 - Static-first App Router pages (`export const dynamic = 'force-static'` not required if default static).
-- Server Components default; Client Components only: theme toggle, mobile nav, project index/disclosure, career selection if needed, contact composer.
+- Server Components default; Client Components only: theme toggle, mobile nav, project index/disclosure, contact composer, **HeroTechSymbols**, **AboutTechSymbols** (GSAP islands).
 - No API routes. No iframes. Images local under `public/images/`.
+- Icons: path strings in `src/components/icons/techIconPaths.ts` (extracted from simple-icons CC0); no icon CDN; no full icon package import at runtime.
+- GSAP (`gsap` dependency) used only inside the two symbol client components; cleanup on unmount; see `docs/MOTION_SYSTEM.md`.
 
 ## MVC split
 
@@ -69,11 +71,9 @@ src/app/page.tsx
 src/app/work/[slug]/page.tsx
 src/app/not-found.tsx
 src/components/layout/{Header,Footer,ThemeToggle,MobileNav}.tsx
-src/components/sections/{Hero,Profile,CareerGrowth,Projects,Experience,Skills,Leadership,Contact}.tsx
-src/components/projects/{ProjectIndex,ProjectPreview}.tsx
-src/components/ui/{Button,Section,Chip}.tsx
-src/controllers/{useTheme,useProjectDisclosure,useContactComposer}.ts
-src/models/{profile,navigation,experience,projects,skills,technologies,leadership,recognition,milestones,links,metadata}.ts
+src/components/sections/{HeroProfile,HeroTechSymbols,AboutSection,AboutTechSymbols,CareerGrowthSection,ContentSections,ContactComposer}.tsx
+src/components/icons/{TechIcon,techIconPaths}.tsx|ts
+src/models/{profile,navigation,experience,projects,skills,technologies,tech-symbols,about-photos,leadership,recognition,milestones,links,metadata}.ts
 src/models/case-studies/{soil-scan,baguioreadygis}.mdx
 src/lib/mailto.ts
 docs/ARCHITECTURE.md (this file)

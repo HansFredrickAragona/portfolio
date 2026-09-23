@@ -94,10 +94,11 @@ Theme implementation: CSS variables on `:root` and `[data-theme="dark"]` (or cla
 | Project details open | opacity 0→1 on overlay | 180ms | ease-out |
 | Project switch | crossfade preview image | 160ms | ease |
 | Theme toggle | color tokens only (no page fade required) | — | — |
+| Hero/About tech symbols | GSAP entrance + subtle y-float only | see `docs/MOTION_SYSTEM.md` | power2 / sine |
 
-`@media (prefers-reduced-motion: reduce)`: all durations `0.01ms`; no transforms; disclosures appear instantly.
+`@media (prefers-reduced-motion: reduce)`: all durations `0.01ms`; no transforms; disclosures appear instantly; GSAP symbol motion skipped (static final positions).
 
-Prohibited: parallax, scroll hijack, cursor follower, loop animations, animation libraries.
+Prohibited: parallax, scroll hijack, cursor follower, orbit/spin/bounce loops. GSAP exception limited to tech symbols (owner-approved; `docs/MOTION_SYSTEM.md`).
 
 ## Hero
 
@@ -105,10 +106,19 @@ Prohibited: parallax, scroll hijack, cursor follower, loop animations, animation
 - Asymmetric: strong headline (display), brief supporting intro (body, max ~40ch on desktop), primary action **View projects** (scrolls to work), secondary **Let's talk** (contact).
 - Portrait: `object-fit: cover`, fixed aspect `aspect-[4/5]` mobile and desktop; never distorted; meaningful `alt="Portrait of Hans Fredrick"`.
 - Mobile: stacks copy then portrait (or portrait then copy — implement copy-first for 30-second scan), preserves editorial tension with bleed/offset margin if space allows.
+- Technology symbols (owner extension): desktop absolute glass tiles around portrait only (`lg+`); mobile/tablet static primary row under CTAs; monochrome `currentColor`; max 7 desktop / primary subset mobile; decorative `aria-hidden`. Full rules: `docs/DESIGN.md`, `docs/MOTION_SYSTEM.md`.
+
+## About (owner extension)
+
+- Multi-column editorial: Who I am · Achievements and leadership · Beyond work · Skills and technical capabilities.
+- Temporary photo placeholders until owner assets; captioned “Temporary photo”.
+- Skills: category heading + name + evidence line; optional local brand icon as support only — never icon-only meaning.
+- Floating decorative symbols md+ in gutters only; hidden on mobile; no motion behind reading text.
+- No skill percentages, stars, or “expert”.
 
 ## Navigation
 
-- Sticky top; logo/name left; anchor links (Work, Experience, Skills, Leadership, Contact); theme toggle; optional resume link omitted until redacted PDF.
+- Sticky top; logo/name left; anchor links (About, Work, Experience, Skills, Leadership, Contact); theme toggle; optional resume link omitted until redacted PDF.
 - Mobile: compact menu button (44×44 min) revealing same anchors; focus trapped while open; Esc closes.
 - One primary CTA style for **Let's talk**.
 
@@ -172,13 +182,15 @@ Badge clouds, excessive pills, repeated cards, gratuitous gradients, fake termin
 [ Headline display            ]
 [ Supporting intro            ]
 [ View projects ] [ Let's talk]
+[ Primary tech symbols row    ]
 [ Portrait 4:5 full width     ]
-[ Profile prose               ]
+[ About: who | photos | beyond]
+[ About skills categories     ]
 [ Career years 1–4 stacked    ]
 [ Project index (list)        ]
 [ Preview + Expand details    ]
 [ Experience entries          ]
-[ Skills groups               ]
+[ How I work groups           ]
 [ Leadership                  ]
 [ Recognition (compact)       ]
 [ Contact form                ]
@@ -190,11 +202,13 @@ Badge clouds, excessive pills, repeated cards, gratuitous gradients, fake termin
 ```text
 [ Nav anchors .................. theme ]
 [ Headline          | Portrait 4:5     ]
-[ Intro             | (offset)         ]
-[ CTAs              |                  ]
-[ Profile + career years (4-col)        ]
+[ Intro             | (offset) + icons ]
+[ CTAs + icon row   |                  ]
+[ About: who | photos | achievements    ]
+[ About skills (3-col categories)      ]
+[ Career years 1–4 (4-col)             ]
 [ Project index | Active preview+overlay]
-[ Experience              | Skills      ]
+[ Experience              | How I work  ]
 [ Leadership + recognition             ]
 [ Contact composer                     ]
 [ Footer                               ]
