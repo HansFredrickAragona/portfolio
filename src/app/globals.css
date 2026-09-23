@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #faf7f0;
+  --bg-subtle: #f0ebe1;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --text-muted: #44403c;
+  --text-subtle: #706b63;
+  --primary: #14532d;
+  --primary-fg: #faf7f0;
+  --accent: #1e3a5f;
+  --accent-fg: #faf7f0;
+  --highlight: #b45309;
+  --success: #15803d;
+  --danger: #b91c1c;
+  --border: #d6d3d1;
+  --focus: #14532d;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --bg: #0c1a12;
+  --bg-subtle: #12241a;
+  --surface: #163024;
+  --text: #e7e5e4;
+  --text-muted: #d6d3d1;
+  --text-subtle: #a8a29e;
+  --primary: #a7f3d0;
+  --primary-fg: #0c1a12;
+  --accent: #93c5fd;
+  --accent-fg: #0c1a12;
+  --highlight: #fcd34d;
+  --success: #86efac;
+  --danger: #fca5a5;
+  --border: #44403c;
+  --focus: #a7f3d0;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-subtle: var(--bg-subtle);
+  --color-surface: var(--surface);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-text-subtle: var(--text-subtle);
+  --color-primary: var(--primary);
+  --color-primary-fg: var(--primary-fg);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-highlight: var(--highlight);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --color-border: var(--border);
+  --color-focus: var(--focus);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.section-shell {
+  padding-block: 4rem;
+  border-top: 1px solid var(--border);
+}
+
+@media (min-width: 1024px) {
+  .section-shell {
+    padding-block: 6rem;
+  }
+}
+
+.container-shell {
+  width: min(100% - 2rem, 72rem);
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .container-shell {
+    width: min(100% - 3rem, 72rem);
+  }
+}
+
+.measure {
+  max-width: 65ch;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

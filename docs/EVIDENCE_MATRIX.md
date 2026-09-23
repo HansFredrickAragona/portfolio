@@ -12,7 +12,7 @@ Sources: `project-input/Aragona,Hans_Resume.pdf` (private, never tracked), owner
 | GitHub https://github.com/HansFredrickAragona | Owner approval D03 | Publishable |
 | LinkedIn https://www.linkedin.com/in/hans-aragona | Owner approval D03 | Publishable |
 | Phone number | Resume | Blocked — never publish |
-| Home address / Quezon City location | Resume | Blocked — never publish |
+| Home address / city location | Resume | Blocked — never publish |
 | Facebook | Not supplied | Gap — omit |
 | Resume download | Resume (raw) | Gap — omit until redacted PDF approved |
 
