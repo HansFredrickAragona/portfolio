@@ -19,3 +19,7 @@ Owner (while away): “start doing the layout and code i will send the photos af
 ## Post-batch push — 2026-09-23
 
 Owner: “go push in the main branch.” Explicitly authorizes pushing the completed overnight draft to origin `main` (and the feature branch as needed). This overrides the overnight batch’s local-only/no-push default for this action only. Still no deploy, no PR requirement, no Prompt 09 unless separately requested. Commit email remains `hansfredrick2600@gmail.com`.
+
+## Current portfolio redesign — 2026-09-23
+
+Owner confirmed GSAP scrolling, approved implementation and temporary AI photos, then explicitly selected “Continue the current portfolio” over the pending Figma v2 work. Codex resumes root ownership after observing OpenCode's latest response completed with finish=stop; no concurrent OpenCode work is authorized by this continuation. Scope: current branch layout, scroll-triggered section reveals, responsive hover/focus/touch states, generated placeholder images, checks and local commit. GSAP ScrollTrigger is explicitly authorized despite the older no-animation-library default. No new push or deployment authorization is inferred.

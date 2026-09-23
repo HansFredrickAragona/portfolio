@@ -44,8 +44,8 @@ export function ProjectShowcase({ projects }: ProjectShowcaseProps) {
 
   return (
     <div className="grid gap-8 md:grid-cols-2 md:gap-10">
-      <div>
-        <h3 className="text-text mb-3 text-lg font-semibold">Selected work</h3>
+      <div data-reveal>
+        <h3 className="editorial-kicker">Projects / Selected explorations</h3>
         <ul className="flex flex-col gap-1" role="list">
           {projects.map((project) => {
             const selected = project.id === active.id;
@@ -55,19 +55,22 @@ export function ProjectShowcase({ projects }: ProjectShowcaseProps) {
                   type="button"
                   aria-current={selected ? "true" : undefined}
                   onClick={() => selectProject(project.id)}
-                  className={`border-border flex min-h-11 w-full items-center justify-between gap-3 rounded border px-4 py-3 text-left text-sm transition-colors ${
+                  className={`project-index-button border-border flex min-h-11 w-full items-center justify-between gap-3 border text-left text-sm ${
                     selected
                       ? "bg-primary text-primary-fg border-primary"
-                      : "bg-surface text-text hover:border-primary hover:text-primary"
+                      : "text-text hover:border-primary hover:text-primary"
                   }`}
                 >
-                  <span className="font-medium">{project.title}</span>
+                  <span className="project-index-title font-medium">{project.title}</span>
                   <span
                     className={`text-xs ${
                       selected ? "text-primary-fg opacity-90" : "text-text-subtle"
                     }`}
                   >
                     {project.status === "completed" ? "Completed" : "In development"}
+                  </span>
+                  <span aria-hidden="true" className="project-index-arrow">
+                    ↗
                   </span>
                 </button>
               </li>
@@ -76,7 +79,10 @@ export function ProjectShowcase({ projects }: ProjectShowcaseProps) {
         </ul>
       </div>
 
-      <div className="border-border bg-bg-subtle relative overflow-hidden rounded border">
+      <div
+        data-reveal
+        className="project-preview border-border bg-bg-subtle relative overflow-hidden border"
+      >
         {/*
           eslint-disable-next-line @next/next/no-img-element --
           SVG artwork uses plain img for exact aspect control and jsdom tests
@@ -111,7 +117,7 @@ export function ProjectShowcase({ projects }: ProjectShowcaseProps) {
               type="button"
               onClick={toggleExpanded}
               aria-expanded={expanded}
-              aria-controls={detailsId}
+              aria-controls={`${detailsId}-panel`}
               className="border-border bg-surface text-text hover:border-primary hover:text-primary inline-flex min-h-11 shrink-0 items-center rounded border px-4 text-sm font-medium transition-colors"
             >
               {expanded ? "Close details" : "Expand details"}

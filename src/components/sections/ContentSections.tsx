@@ -9,7 +9,7 @@ export function ExperienceSection() {
     <Section id="experience" title="Experience">
       <ol className="space-y-8">
         {experience.map((item) => (
-          <li key={item.id} className="border-border border-l-2 pl-4">
+          <li data-reveal key={item.id} className="experience-row border-border">
             <div className="flex flex-wrap items-baseline justify-between gap-2">
               <h3 className="text-text text-lg font-semibold">{item.role}</h3>
               <p className="text-text-subtle text-sm">
@@ -40,7 +40,7 @@ export function CapabilitiesSection() {
       </p>
       <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
         {skillGroups.map((group) => (
-          <div key={group.id} className="border-border border-t pt-4">
+          <div data-reveal key={group.id} className="border-border border-t pt-4">
             <h3 className="text-text mb-2 text-base font-semibold">{group.label}</h3>
             <ul className="space-y-2" role="list">
               {group.items.map((item) => (
@@ -62,7 +62,7 @@ export function LeadershipSection() {
       <div className="grid gap-10 lg:grid-cols-2">
         <ul className="space-y-6" role="list">
           {leadership.map((item) => (
-            <li key={item.id}>
+            <li data-reveal key={item.id}>
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <h3 className="text-text text-base font-semibold">{item.role}</h3>
                 <p className="text-text-subtle text-sm">{item.period}</p>

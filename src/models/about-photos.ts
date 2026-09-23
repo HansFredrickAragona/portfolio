@@ -2,35 +2,31 @@ export type AboutPhoto = {
   id: string;
   src: string;
   alt: string;
-  /** Marked temporary until owner-supplied photos arrive. */
   temporary: boolean;
   span: "wide" | "tall" | "square";
 };
 
-/**
- * Temporary stand-in portraits (owner will replace with real photos).
- * Hero keeps the verified real portrait; About uses these labeled placeholders.
- */
+/** Keep generated lifestyle images explicitly temporary; replace src/alt when real photos arrive. */
 export const aboutPhotos = [
   {
-    id: "about-portrait-temp-1",
-    src: "/images/about-portrait-temp-1.svg",
-    alt: "Temporary abstract portrait placeholder for About — replace with owner photo",
+    id: "about-workspace",
+    src: "/images/about-hans-ai-temp.webp",
+    alt: "AI-generated temporary portrait of Hans seated at a laptop",
     temporary: true,
     span: "tall",
   },
   {
-    id: "about-portrait-temp-2",
-    src: "/images/about-portrait-temp-2.svg",
-    alt: "Temporary abstract portrait placeholder for About — replace with owner photo",
+    id: "about-outdoors",
+    src: "/images/about-hans-outdoors-ai-temp.webp",
+    alt: "AI-generated temporary portrait of Hans outdoors",
     temporary: true,
     span: "square",
   },
   {
-    id: "about-portrait-temp-3",
-    src: "/images/about-portrait-temp-3.svg",
-    alt: "Temporary abstract portrait placeholder for About — replace with owner photo",
-    temporary: true,
-    span: "wide",
+    id: "about-portrait",
+    src: "/images/portrait.webp",
+    alt: "Portrait of Hans Fredrick Ong Aragona",
+    temporary: false,
+    span: "tall",
   },
 ] as const satisfies readonly AboutPhoto[];

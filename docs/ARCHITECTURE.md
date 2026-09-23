@@ -82,3 +82,7 @@ docs/ARCHITECTURE.md (this file)
 ## Scripts (package.json)
 
 `format`, `format:check`, `lint`, `typecheck` (`tsc --noEmit`), `test`, `build`, `dev`, `start`.
+
+## Current motion and asset extension
+
+GSAP was already installed at ^3.15.0 before this revision. ScrollMotion is a null-rendering client controller; Home, Section and About content remain Server Components. Hero symbol/social islands own their own desktop floats; there is no page-wide Client Component conversion. Native details needs no React state. See MOTION_SYSTEM.md for cleanup and dynamic layout refresh. About assets are local optimized WebP, with provenance in ASSET_PROVENANCE.md.

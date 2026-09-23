@@ -58,3 +58,7 @@ Fields: name, email, message → encoded `mailto:` subject/body. Fallbacks: copy
 ## Privacy invariants
 
 No phone, address, raw resume, secrets, private repo names, signatures, or IDs in any model or public file.
+
+## Photo replacement contract
+
+`src/models/about-photos.ts` is the central source for three About image slots. Two entries are generated lifestyle placeholders (`temporary: true`); the third is the original portrait (`temporary: false`). Replace src and alt and set temporary=false only after real owner assets arrive. Preserve the current résumé-backed skills inventory; this redesign changes presentation only. Icon source remains local Simple Icons CC0 paths with no runtime CDN.

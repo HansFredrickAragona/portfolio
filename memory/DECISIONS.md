@@ -9,3 +9,6 @@
 - D07: No resume download without approved redaction; no analytics, no Facebook without verified owner link, no invented canonical production URL. Missing optional inputs do not block unrelated draft implementation.
 - D08: OpenWolf 1.0.4 installed but README documents only Claude Code hooks; no verified Codex/OpenCode integration. Use consistent Markdown/Git fallback. No speculative hooks or daemon.
 - D09: Tech-symbol extension: Hero decorative symbols from verified résumé/project stack only; About holds full categorized skills with evidence lines; icons from simple-icons CC0 paths bundled locally; GSAP only for symbol motion; temporary About photos until owner assets. Details in `docs/DECISIONS.md` DX01–DX10.
+
+- D09: Owner selected current portfolio continuation, not the unavailable Figma v2 export. Retain green/cream/blue and approved information. Add progressive GSAP ScrollTrigger section reveals and stronger editorial Hero/About typography. Keep server content readable without JavaScript; no scroll hijacking or pinning.
+- D10: Two generated About photos are labeled temporary AI portraits. Original real portrait remains Hero and third About photo. Two background extraction attempts returned opaque checkerboards, so neither is used. Real replacement photos remain pending. See docs/ASSET_PROVENANCE.md.

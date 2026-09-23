@@ -17,3 +17,7 @@ Launch: `npm ci && npm run build && npm start` (or `npm run dev`). QA server was
 Pending owner: morning review; production origin; redacted resume decision; Facebook confirm/omit; LinkedIn manual open; exact Sep 25 deadline time.
 
 Do not resume source edits as a second root after handoff acceptance. Do not claim recovery from prior failed Codex→OpenCode transfer—this session completed the batch.
+
+## Superseded writer record — 2026-09-23 current-portfolio continuation
+
+The overnight handoff above is historical. OpenCode later completed commits 555c2c9 and 2ba2f4e; its latest turn was verified finished before Codex edits. Owner explicitly selected continuation of the current portfolio in Codex, so current writer is Codex root. No automatic OpenCode continuation is running for this revision. Use CURRENT_STATE/HANDOFF for current state; never resume the historical overnight transfer blindly.

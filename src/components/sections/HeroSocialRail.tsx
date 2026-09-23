@@ -76,52 +76,52 @@ export function HeroSocialRail() {
   useEffect(() => {
     const root = rootRef.current;
     if (!root) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    if (window.matchMedia("(max-width: 1023px)").matches) return;
-
-    const cleanups: Array<() => void> = [];
-    const ctx = gsap.context(() => {
-      const nodes = gsap.utils.toArray<HTMLElement>("[data-social-float]");
-      if (nodes.length === 0) return;
-
-      const enter = gsap.from(nodes, {
-        opacity: 0,
-        x: 16,
-        duration: 0.65,
-        stagger: 0.1,
-        ease: "power2.out",
-        delay: 0.2,
-        clearProps: "transform",
-      });
-      cleanups.push(() => enter.kill());
-
-      const floats = nodes.map((node, index) => {
-        const item = socials[index];
-        return gsap.to(node, {
-          y: 5 + (index % 2),
-          duration: item?.floatDuration ?? 5.5,
-          ease: "sine.inOut",
-          yoyo: true,
-          repeat: -1,
-          delay: 0.4 + index * 0.14,
-        });
-      });
-      cleanups.push(() => floats.forEach((t) => t.kill()));
-
-      const onVisibility = () => {
-        for (const tween of floats) {
-          if (document.hidden) tween.pause();
-          else tween.resume();
-        }
-      };
-      document.addEventListener("visibilitychange", onVisibility);
-      cleanups.push(() => document.removeEventListener("visibilitychange", onVisibility));
-    }, root);
-
-    return () => {
-      for (const fn of cleanups) fn();
-      ctx.revert();
-    };
+    const media = gsap.matchMedia();
+    media.add(
+      "(min-width: 1024px) and (prefers-reduced-motion: no-preference)",
+      () => {
+        const nodes = Array.from(
+          root.querySelectorAll<HTMLElement>("[data-social-float]"),
+        );
+        const floats = nodes.map((node, index) =>
+          gsap.to(node, {
+            y: 5 + (index % 2),
+            duration: socials[index]?.floatDuration ?? 5.5,
+            ease: "sine.inOut",
+            yoyo: true,
+            repeat: -1,
+            delay: index * 0.14,
+            paused: document.hidden,
+          }),
+        );
+        const onVisibility = () => {
+          floats.forEach((tween) => {
+            tween.paused(document.hidden || root.contains(document.activeElement));
+          });
+        };
+        const onFocus = () => floats.forEach((tween) => tween.pause());
+        const onBlur = (event: FocusEvent) => {
+          if (
+            !(event.relatedTarget instanceof Node) ||
+            !root.contains(event.relatedTarget)
+          ) {
+            floats.forEach((tween) => {
+              tween.paused(document.hidden);
+            });
+          }
+        };
+        document.addEventListener("visibilitychange", onVisibility);
+        root.addEventListener("focusin", onFocus);
+        root.addEventListener("focusout", onBlur);
+        return () => {
+          document.removeEventListener("visibilitychange", onVisibility);
+          root.removeEventListener("focusin", onFocus);
+          root.removeEventListener("focusout", onBlur);
+        };
+      },
+      root,
+    );
+    return () => media.revert();
   }, []);
 
   return (

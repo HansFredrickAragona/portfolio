@@ -9,7 +9,7 @@ import {
 
 function CareersRail() {
   return (
-    <div>
+    <div className="hero-careers">
       <p className="text-text-subtle mb-3 text-xs tracking-[0.14em] uppercase">Careers</p>
       <ol className="space-y-4" role="list">
         {experience.map((item) => (
@@ -28,27 +28,30 @@ function CareersRail() {
 
 export function Hero() {
   return (
-    <section aria-labelledby="hero-title" className="border-t-0">
-      <div className="container-shell py-10 lg:py-14">
+    <section data-motion-section aria-labelledby="hero-title" className="hero-editorial">
+      <div className="container-shell">
         <h1
+          data-reveal
           id="hero-title"
-          className="text-text mb-2 text-center font-serif text-3xl leading-tight font-bold tracking-tight sm:text-4xl lg:text-5xl"
+          aria-label={profile.fullName}
+          className="hero-name"
         >
-          {profile.fullName}
+          <span>Hans Fredrick</span>
+          <span className="hero-name-outline">Ong Aragona</span>
         </h1>
-        <p className="text-primary mx-auto mb-10 max-w-[40ch] text-center text-base sm:text-lg">
+        <p data-reveal className="hero-positioning">
           {profile.headline}
         </p>
 
-        <div className="grid items-center gap-8 lg:grid-cols-12 lg:gap-6">
-          <div className="order-2 lg:order-1 lg:col-span-3 lg:self-start lg:pt-6">
+        <div className="hero-stage">
+          <div data-reveal className="hero-career-rail">
             <CareersRail />
           </div>
 
-          <div className="relative order-1 mx-auto w-full max-w-sm lg:order-2 lg:col-span-6 lg:max-w-md">
-            <div className="relative mx-auto aspect-[4/5] w-full max-w-[22rem] lg:max-w-none">
+          <div className="hero-portrait-group">
+            <div data-reveal className="hero-portrait">
               <Image
-                src="/images/portrait.jpg"
+                src="/images/portrait.webp"
                 alt="Portrait of Hans Fredrick Ong Aragona"
                 fill
                 priority
@@ -59,31 +62,35 @@ export function Hero() {
             <HeroTechSymbols />
           </div>
 
-          <div className="order-3 lg:col-span-3 lg:self-start lg:pt-6 lg:text-right">
+          <div data-reveal className="hero-social-rail">
             <HeroSocialRail />
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-center gap-4">
+        <div data-reveal className="hero-bottom">
           <p className="text-text-muted measure max-w-[46ch] text-center">
             {profile.summary}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <a
               href={profile.cta.primary.href}
-              className="bg-primary text-primary-fg inline-flex min-h-11 items-center rounded px-5 py-3 text-sm font-medium transition-opacity hover:opacity-90"
+              className="editorial-button editorial-button-primary"
             >
               {profile.cta.primary.label}
+              <span aria-hidden="true">↗</span>
             </a>
             <a
               href={profile.cta.secondary.href}
-              className="border-accent text-accent hover:bg-accent hover:text-accent-fg inline-flex min-h-11 items-center rounded border px-5 py-3 text-sm font-medium transition-colors"
+              className="editorial-button editorial-button-secondary"
             >
               {profile.cta.secondary.label}
             </a>
           </div>
           <HeroTechSymbolsRow />
         </div>
+        <a href="#about" className="hero-scroll-cue">
+          A little more about me <span aria-hidden="true">↓</span>
+        </a>
       </div>
     </section>
   );

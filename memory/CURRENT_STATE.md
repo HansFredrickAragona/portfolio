@@ -1,14 +1,16 @@
 # Current state
 
-- Phase: Overnight Prompts 00–08 complete and pushed to origin `main` + `feat/overnight-portfolio` at `26fcdf9` (owner-authorized push). Tech-symbol + About skills extension implemented locally (pending new commit): Hero decorative symbols (local Simple Icons CC0 paths, GSAP), About multi-column with categorized résumé skills + temp SVG photos, docs DESIGN/MOTION/DECISIONS/TASKS/CURRENT_STATE/HANDOFF.
-- Owner: “start doing the layout and code… photos after… fill up photo with AI versions (temp)… I will be out so do all changes.” Implementation authorized without waiting for the original §11 approval gate; inventory still résumé-derived.
-- Kickoff: 2026-09-22 23:45 Asia/Manila; overnight window ended 2026-09-23 07:45; batch finished ~09:00; tech-symbol slice same day.
-- Delivery deadline: 2026-09-25 23:59 Asia/Manila, interpreted end-of-day.
-- Active writer: OpenCode root (`opencode/mimo-v2.6-flash-free`). No specialists running.
-- Git: branch `feat/overnight-portfolio`, origin `https://github.com/HansFredrickAragona/portfolio.git`. Prior commits through `26fcdf9` pushed. Commit email `hansfredrick2600@gmail.com`.
-- Application: Next 16.3.5 / React 19.2.8 / Tailwind 4 / strict TS / gsap ^3.15.0. Home: Hero+symbols, About+skills, Career growth, Work, Experience, How I work, Leadership, Contact. Case studies `/work/soil-scan`, `/work/baguioreadygis`.
-- Checks (tech-symbol slice): format, lint, typecheck, 28 tests, production build PASS.
-- Privacy: tracked files free of phone/city patterns; résumé extract only in ignored `tmp/`. Hero portrait real; About photos temporary placeholders until owner assets.
-- Icons: path data from simple-icons v16.32.0 CC0 in `src/components/icons/techIconPaths.ts`; no CDN; package not a runtime dependency.
-- Local preview: restart with `npm ci && npm run build && npm start`.
-- Remaining owner work: send real About photos; morning review; production origin; redacted resume; Facebook; LinkedIn open-check; Prompt 09 only if later authorized.
+- Phase: current portfolio editorial/GSAP redesign, implementation and final verification complete. Owner explicitly selected current portfolio over Figma v2.
+- Active writer: Codex root. OpenCode last turn verified finish=stop before edits; no concurrent successor was launched. One bounded motion specialist finished; root owns integration and Git.
+- Git base: feat/overnight-portfolio at 2ba2f4e. Preserve prior OpenCode commits 555c2c9 and 2ba2f4e. This revision is local; all checks passed and the checkpoint commit follows.
+- Changes: stronger full-name Hero; original arched portrait; editorial About photo/story composition; two visibly labeled temporary AI photos; native categorized skills disclosures; shared layered headings; scoped GSAP ScrollTrigger reveals; responsive/static mobile floats; project disclosure aria-controls fix; tablet nav breakpoint.
+- Checks so far: typecheck, lint, 31 unit tests and production build pass. 320/768/1280 browser inspected. Final post-refinement checks also passed; see docs/QA_REDESIGN.md for limitations.
+- Preview: http://localhost:3000 (existing development server). Prior 3111 production preview is stale for this revision.
+- Next: local task commit, then owner review. No push/deployment authorized by this continuation.
+- Deadline remains September 25, 2026 EOD Asia/Manila. Real About photos, redacted résumé and production origin remain owner inputs.
+
+## Final verification
+
+Final post-refinement checks: formatting, ESLint, strict TypeScript, all 31 tests (7 files) and production build PASS. Production preview started at http://127.0.0.1:3112 and rendered in the browser without console errors. Development preview remains http://localhost:3000. Keyboard Enter expanded the native Backend and APIs disclosure. Git diff whitespace check and private input ignore checks pass. CPU throttling and browser-level reduced-motion switching remain untested; reduced-motion/failure paths are covered by unit checks and static mobile transform inspection.
+
+Implementation complete, ready for owner review. Local task commit follows; its identifier is available from Git HEAD rather than fabricated in advance. No push/deployment.

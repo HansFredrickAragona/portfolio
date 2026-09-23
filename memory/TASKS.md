@@ -16,3 +16,9 @@ All phases below are authorized as local drafts by APPROVALS. Each completed tas
 | 09 Tech symbols + About skills | root | done (this commit) | résumé inventory, Hero GSAP symbols, About multi-column skills, temp photos, docs, format/lint/typecheck/test/build |
 
 No task permits deployment, push, PR, final approval, or Prompt 09. Root retains memory ownership until specifically delegated.
+
+## Current portfolio redesign — 2026-09-23
+
+Owner selected current portfolio and authorized implementation. Root Codex owns integration; bounded motion specialist completed assigned files. Layout, two temporary AI assets, native skill disclosures and GSAP section reveals implemented. Final check/commit pending; see CURRENT_STATE and QA_REDESIGN. No Figma v2 work, push or deployment in this revision.
+
+Redesign task complete: final checks pass (31 tests, lint, format, typecheck, build, responsive browser). Local checkpoint commit ready; owner design review and real photo replacement next. Production preview http://127.0.0.1:3112.

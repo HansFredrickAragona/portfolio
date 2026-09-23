@@ -118,10 +118,10 @@ describe("content models", () => {
     expect(allNames.some((n) => n.includes("%"))).toBe(false);
   });
 
-  it("uses temporary About photo placeholders until owner assets arrive", () => {
+  it("labels AI About photos as temporary and retains the real portrait", () => {
     expect(aboutPhotos).toHaveLength(3);
     for (const photo of aboutPhotos) {
-      expect(photo.temporary).toBe(true);
+      if (photo.src.includes("ai-temp")) expect(photo.temporary).toBe(true);
       expect(photo.src.startsWith("/images/")).toBe(true);
       const filePath = path.join(publicRoot, photo.src.replace(/^\//, ""));
       expect(existsSync(filePath), photo.src).toBe(true);

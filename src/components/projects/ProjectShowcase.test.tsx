@@ -11,8 +11,11 @@ describe("ProjectShowcase", () => {
 
     const expand = screen.getByRole("button", { name: "Expand details" });
     expect(expand).toHaveAttribute("aria-expanded", "false");
+    const panel = document.getElementById(expand.getAttribute("aria-controls")!);
+    expect(panel).toHaveAttribute("hidden");
 
     await user.click(expand);
+    expect(panel).not.toHaveAttribute("hidden");
     expect(screen.getByRole("button", { name: "Close details" })).toHaveAttribute(
       "aria-expanded",
       "true",

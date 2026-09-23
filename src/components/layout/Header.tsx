@@ -24,7 +24,7 @@ export function Header() {
           Hans Fredrick
         </a>
 
-        <nav aria-label="Primary" className="hidden items-center gap-1 md:flex">
+        <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
           {navigation.sectionLinks.map((link) => (
             <a
               key={link.href}
@@ -43,7 +43,7 @@ export function Header() {
           <ThemeToggle />
         </nav>
 
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex items-center gap-2 lg:hidden">
           <ThemeToggle />
           <button
             type="button"
@@ -60,7 +60,7 @@ export function Header() {
       <nav
         id={menuId}
         aria-label="Mobile"
-        className={`border-border bg-bg border-t md:hidden ${open ? "block" : "hidden"}`}
+        className={`border-border bg-bg border-t lg:hidden ${open ? "block" : "hidden"}`}
       >
         <div className="container-shell flex flex-col gap-1 py-3">
           {navigation.sectionLinks.map((link) => (

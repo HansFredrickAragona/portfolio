@@ -10,17 +10,22 @@ const categorySwatch: Record<string, string> = {
 
 export function CareerGrowthSection() {
   return (
-    <section id="career" aria-labelledby="career-title" className="section-shell">
+    <section
+      data-motion-section
+      id="career"
+      aria-labelledby="career-title"
+      className="section-shell"
+    >
       <div className="container-shell">
         <h2
+          data-reveal
           id="career-title"
           className="text-primary mb-6 text-2xl font-semibold tracking-tight sm:text-3xl"
         >
           Career growth
         </h2>
         <p className="text-text-subtle mb-4 max-w-[60ch] text-sm">
-          Four-year college narrative from owner-verified milestones. Equal visual weight
-          — not an activity heatmap or commit graph.
+          Four years of learning, building, research, and leadership.
         </p>
         <ul
           className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4"
@@ -28,7 +33,7 @@ export function CareerGrowthSection() {
           aria-label="Career milestones by college year"
         >
           {careerMilestones.map((block) => (
-            <li key={block.year} className="border-border bg-surface rounded border p-3">
+            <li data-reveal key={block.year} className="border-border border-t p-4">
               <p className="text-primary text-sm font-semibold">{block.label}</p>
               <ul className="mt-2 space-y-2" role="list">
                 {block.items.map((item) => (

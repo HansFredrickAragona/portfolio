@@ -236,3 +236,7 @@ Badge clouds, excessive pills, repeated cards, gratuitous gradients, fake termin
 - [x] Focus/hover/tap; motion timings; reduced motion; prohibited patterns
 - [x] Text wireframes 320 and desktop
 - [ ] Owner morning review of direction tokens (batch defers approval)
+
+## September 23 editorial revision
+
+Active layout and wireframe: docs/DESIGN.md. The original wireframes above are historical. Shared headings now use a faint oversized word behind the section title. Pill-shaped hero actions, arched real portrait, editorial photo/text columns, divided project index and native skill disclosures replace the original compact layout. Tablet navigation uses the mobile menu below 1024px to prevent cramped labels. GSAP ScrollTrigger is now owner-authorized; see MOTION_SYSTEM.md. Original palette tokens are unchanged.

@@ -18,54 +18,33 @@ function useSymbolMotion(
   useEffect(() => {
     const root = rootRef.current;
     if (!root) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-    const cleanups: Array<() => void> = [];
-
-    const ctx = gsap.context(() => {
-      const nodes = gsap.utils.toArray<HTMLElement>(selector);
-      if (nodes.length === 0) return;
-
-      const enter = gsap.from(nodes, {
-        opacity: 0,
-        y: 14,
-        scale: 0.92,
-        duration: 0.7,
-        stagger: 0.09,
-        ease: "power2.out",
-        delay: 0.12,
-        clearProps: "transform",
-      });
-      cleanups.push(() => enter.kill());
-
-      const floats = nodes.map((node, index) => {
-        const y = Number(node.dataset.floatY || 5);
-        const duration = Number(node.dataset.floatDuration || 5);
-        return gsap.to(node, {
-          y,
-          duration,
-          ease: "sine.inOut",
-          yoyo: true,
-          repeat: -1,
-          delay: 0.35 + index * 0.12,
-        });
-      });
-      cleanups.push(() => floats.forEach((t) => t.kill()));
-
-      const onVisibility = () => {
-        for (const tween of floats) {
-          if (document.hidden) tween.pause();
-          else tween.resume();
-        }
-      };
-      document.addEventListener("visibilitychange", onVisibility);
-      cleanups.push(() => document.removeEventListener("visibilitychange", onVisibility));
-    }, root);
-
-    return () => {
-      for (const fn of cleanups) fn();
-      ctx.revert();
-    };
+    const media = gsap.matchMedia();
+    media.add(
+      "(min-width: 1024px) and (prefers-reduced-motion: no-preference)",
+      () => {
+        const nodes = root.querySelectorAll<HTMLElement>(selector);
+        const floats = Array.from(nodes).map((node, index) =>
+          gsap.to(node, {
+            y: Number(node.dataset.floatY || 5),
+            duration: Number(node.dataset.floatDuration || 5),
+            ease: "sine.inOut",
+            yoyo: true,
+            repeat: -1,
+            delay: index * 0.12,
+            paused: document.hidden,
+          }),
+        );
+        const onVisibility = () => {
+          floats.forEach((tween) => {
+            tween.paused(document.hidden);
+          });
+        };
+        document.addEventListener("visibilitychange", onVisibility);
+        return () => document.removeEventListener("visibilitychange", onVisibility);
+      },
+      root,
+    );
+    return () => media.revert();
   }, [rootRef, selector]);
 }
 
@@ -104,7 +83,6 @@ export function HeroTechSymbolsRow() {
     const mobile: string = symbol.mobile;
     return tablet === "show" || mobile === "show";
   });
-  useSymbolMotion(rootRef, "[data-hero-symbol-row]");
 
   return (
     <div ref={rootRef} aria-hidden="true" className="mt-6 lg:hidden">

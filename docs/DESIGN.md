@@ -1,43 +1,21 @@
-# Design (active source of truth for layout directions)
+# Design — active layout record
 
-Status: owner-directed technology-symbol + About skills extension implemented as draft (2026-09-23). Tokens remain in `docs/DESIGN_SYSTEM.md`.
+Updated 2026-09-23 under explicit current-portfolio continuation. Supersedes earlier asymmetric Hero and symbols-only motion restrictions for this approved iteration. Palette and verified content are retained.
 
-Direction source: `portfolio-agent-system/specs/DESIGN.md` plus owner requirements for Hero/About technology symbols.
+## Hero
 
-## Hero (owner revision 2026-09-23)
-
-- **Top:** full legal name as the only `h1` (Hans Fredrick Ong Aragona); short headline under it.
-- **Center:** portrait only — **no card/background/border** behind the photo; floats on the page ground.
-- **Left rail:** Careers (compact experience: role, org, dates).
-- **Right rail:** Social links floating (LinkedIn, GitHub, Email) — real anchors, subtle GSAP float on desktop only.
-- **Below:** summary + primary/secondary CTAs centered; restrained tech-symbol row on small screens.
-- Tech symbols: decorative only around the center portrait on desktop (`lg`); never cover face; never form a badge cloud.
-- No eyebrow text. Real portrait only in Hero.
-- Mobile: single column — name → portrait → careers → socials → CTAs; no horizontal overflow.
-
-### Desktop wireframe
-
-```text
-[              Hans Fredrick Ong Aragona              ]
-[         I build practical software and AI…         ]
-[ Careers          | Portrait (no bg)      | Social   ]
-[ · ML Researcher  |                        | LinkedIn]
-[ · Project Manager|     [tech floats]      | GitHub  ]
-[ · Mobile Dev     |                        | Email   ]
-[            summary + CTAs + tech row               ]
-```
+Large full-name heading with solid first names and outlined surname. Centered real portrait with an arched crop, careers left and social links right on desktop. Summary and actions beneath. Existing local technology symbols surround the portrait without covering the face. On mobile the heading, portrait, static social links, careers and actions form a single column. Full accessible name is provided on the h1. The original photographic background is retained; failed AI cutouts were not used.
 
 ## About
 
-- Multi-column editorial layout with content groups: Who I am · Achievements and leadership · Beyond work · Skills and technical capabilities.
-- Multiple photos: temporary SVG placeholders until owner supplies real images (labeled “Temporary photo”).
-- Skills integrated as categorized columns with name + short evidence line (no bars, stars, percentages, “expert”).
-- Few decorative tech symbols in negative space only (md+); never behind body text or over photos/controls on mobile (hidden).
+Three desktop columns: story/education, temporary workspace portrait, achievements/leadership. Second composition: temporary outdoor portrait, Beyond work, original real portrait. Tablet uses two columns and hides the redundant third photo; mobile becomes a single narrative. AI photos are visibly labeled and have accurate alt text. No invented workplace, event or achievement is implied.
+
+Skills remain in their nine verified categories with text names and evidence. Native details disclosures allow keyboard/touch expansion without JavaScript; first two categories initially open. Technology logo paths and skill claims are unchanged.
+
+## Shared language
+
+Large faint background section words, crisp foreground headings, generous whitespace, fine dividers. Project index retains explicit selection and expansion; arrows and image scale provide hover feedback. Experience rows gain restrained background emphasis. Project button aria-controls points to its actual disclosure panel.
 
 ## Motion
 
-See `docs/MOTION_SYSTEM.md`. GSAP only for Hero/About symbol entrance + subtle float. Reduced motion: static final positions. Page content never depends on GSAP.
-
-## Prohibited
-
-Badge clouds, skill percentages, icon-only skill meaning, CDN icon fetches, cursor-follow icons, orbit/spin/bounce loops, whole-page client conversion for icons.
+GSAP ScrollTrigger reveals section groups when entering the viewport. About subgroups reveal independently. Natural native scrolling, no pinning or hijacking. See MOTION_SYSTEM.md for ownership, failure recovery, reduced-motion and cleanup.
