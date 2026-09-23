@@ -6,7 +6,7 @@ Project: `C:/Users/Hans/Downloads/Personal/CODE/portfolio`. Branch `feat/overnig
 
 Owner activated Prompts 00–08 (“Accept those defaults and execute the overnight batch”). Gates 1–7 were internal draft checks. Final content/design/release approval remains with the owner morning review.
 
-Commits: `2b2dfbd` 00 · `c0614a2` 01 · `081c8d5` 02 · `0e6f734` 03 · `a412d6f` 04 · `f93398e` 05 · `2018748` 06 · `e7ab949` 07 · plus Prompt 08 QA commit (see `git log`).
+Commits: `2b2dfbd` 00 · `c0614a2` 01 · `081c8d5` 02 · `0e6f734` 03 · `a412d6f` 04 · `f93398e` 05 · `2018748` 06 · `e7ab949` 07 · `b7cf2ae` 08 QA/handoff.
 
 Deliverables: working local Next 16.3.5 draft (home + two case studies + mailto contact + light/dark), typed evidence-backed content, optimized portrait, illustrative project art, `docs/QA_REPORT.md`, `docs/VISUAL_QA.md`, `docs/RELEASE_PREREQUISITES.md`, consistent memory.
 

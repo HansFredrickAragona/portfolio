@@ -13,7 +13,7 @@ Scope: Prompts 00–08 local draft only. Not publication approval. No push/PR/de
 | Strict TypeScript | `npm run typecheck` | Pass |
 | Unit/component tests | `npm test` | Pass — 25 tests / 6 files |
 | Production build | `npm run build` | Pass — routes: `/`, `/_not-found`, `/robots.txt`, `/work/soil-scan`, `/work/baguioreadygis` |
-| Privacy grep (tracked) | `git grep 0929\|Quezon` | Clean outside `project-input/` and `tmp/` |
+| Privacy grep (tracked) | `git grep` for phone/city patterns | Clean outside `project-input/` and `tmp/` |
 | Private files tracked | `git ls-files` vs `project-input` | None tracked |
 
 ## Browser inspection (Playwright Chromium headless)
