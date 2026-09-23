@@ -11,7 +11,7 @@ All phases below are authorized as local drafts by APPROVALS. Each completed tas
 | 04 Content/assets | content/programmer | done (commit a412d6f) | typed verified content, optimized portrait, year-based milestones, supported case-study drafts |
 | 05 Homepage | programmer | done (commit f93398e) | all supported sections, themes, accessible project disclosure, responsive actual QA |
 | 06 Case studies | programmer/content | done (commit 2018748) | concise Soil Scan/BaguioReadyGIS only from evidence, routes and return navigation |
-| 07 Contact/metadata | programmer | done (checks pass; commit pending) | encoded mailto, copy fallbacks, verified metadata, no analytics/storage |
-| 08 Integrated QA | QA/root | queued | relevant automated checks + browser inspection, fixes, honest QA report and morning handoff |
+| 07 Contact/metadata | programmer | done (commit e7ab949) | encoded mailto, copy fallbacks, verified metadata, no analytics/storage |
+| 08 Integrated QA | QA/root | done (QA_REPORT + VISUAL_QA; commit pending) | relevant automated checks + browser inspection, fixes, honest QA report and morning handoff |
 
 No task permits deployment, push, PR, final approval, or Prompt 09. Root retains memory ownership until specifically delegated.

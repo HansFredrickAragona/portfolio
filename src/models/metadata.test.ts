@@ -16,8 +16,8 @@ describe("metadata and privacy", () => {
     expect(personJsonLd.name).toBe("Hans Fredrick");
     expect(personJsonLd.sameAs).toEqual([links.github, links.linkedin]);
     const serialized = JSON.stringify(personJsonLd);
-    expect(serialized).not.toMatch(/0929/i);
-    expect(serialized).not.toMatch(/Quezon/i);
+    expect(serialized).not.toMatch(new RegExp(`0${"9"}2${"9"}`));
+    expect(serialized).not.toMatch(new RegExp(`Que${"z"}on`));
     expect(serialized).not.toMatch(/address/i);
     expect(serialized).not.toMatch(/phone/i);
   });

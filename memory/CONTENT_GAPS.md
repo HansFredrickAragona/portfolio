@@ -6,7 +6,7 @@
 - Grammar Checker is in development despite resume describing built NLP components. No live/case-study action.
 - Fertilizer demo URL (`https://frontend-delta-rust-70.vercel.app/`) and BaguioReadyGIS URL (`https://baguio-ready-gis-web.vercel.app/`) live-verified 2026-09-23 (HTTP content returned). Actions enabled with Soil Scan component-demo label for the fertilizer link. Re-verify before release.
 - No approved project screenshots yet. Labeled illustrative SVG artwork generated for Soil Scan, BaguioReadyGIS, Grammar Checker, and Resume Job Tracker (`public/images/artwork-*.svg`, `illustrative: true`). Replace only with authentic public screenshots after owner review.
-- Case-study drafts exist as typed modules plus MDX under `src/models/case-studies/`. Routes `/work/*` are still Prompt 06 work; do not claim routes shipped until implemented and checked.
+- Case-study drafts exist as typed modules plus MDX under `src/models/case-studies/`. Routes `/work/soil-scan` and `/work/baguioreadygis` are implemented and browser-checked (Prompt 06/08). Typed modules are the live source of truth for the routes.
 - Facebook link not supplied/verified — omit.
 - Production URL unknown — omit canonical, sitemap, absolute metadata; record as release prerequisite.
 - Final product copy, design, and case studies await morning owner review.

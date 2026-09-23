@@ -1,45 +1,45 @@
-# Visual QA checklist — Prompt 05
+# Visual QA checklist — Prompt 05 / Prompt 08
 
-Status: written checklist for morning review. Automated browser screenshots are pending Playwright install/browser download in Prompt 08; rows below mark what can be verified from markup/tests versus what still needs a human viewport pass. Do not treat build success as visual pass.
-
-Legend: **Pass (code/test)** = verified by unit test, static analysis, or build. **Pending browser** = requires real viewport inspection.
+Status: browser-inspected with Playwright Chromium against `next start` on `http://127.0.0.1:3111` (2026-09-23). Screenshots in ignored `tmp/qa/`. Details in `docs/QA_REPORT.md`.
 
 ## Viewports
 
 | Width | Focus | Expected | Status |
 |---|---|---|---|
-| 320px | Full page | Single column; no horizontal overflow; CTAs full-width comfortable; nav menu works | Pending browser |
-| 375–430px (common phone) | Full page | Same stack; type comfortable; project index above preview | Pending browser |
-| 768px (tablet) | Project section | Two-column index/preview begins; nav may still collapse | Pending browser |
-| 1024px+ (desktop) | Hero + sections | Asymmetric hero 7/5; desktop nav row; career grid 4 columns | Pending browser |
+| 320px | Full page | Single column; no horizontal overflow; CTAs comfortable; nav Menu works | Pass — overflow false; hero stacks; Menu + Dark present |
+| 375–430px (common phone) | Full page | Same stack; type comfortable | Pass — overflow false |
+| 768px (tablet) | Project section | Two-column project layout from md; nav may still be compact | Pass — desktop nav row visible; hero stacks until lg 1024 (known, QA-3) |
+| 1024px+ / 1280 desktop | Hero + sections | Asymmetric hero; career grid columns | Pass at 1280 — 7/5 hero, portrait right |
 
-## Sections (order matches PRODUCT.md)
+## Sections
 
 | Section | Expected | Observed / evidence | Status |
 |---|---|---|---|
-| Hero | No eyebrow; headline, intro ≤~40ch, View projects + Let's talk, portrait 4:5 with alt | Markup in `HeroProfile.tsx`; portrait uses next/image priority | Pass (code) / Pending browser |
-| Profile + Career Growth | Prose + education honors; Year 1–4 blocks; legend; no heatmap intensity | Models + unit privacy tests; equal-weight swatches | Pass (code/test) / Pending browser |
-| Selected work | Index controls one preview; Expand details toggle; overlay fields; actions filtered | `ProjectShowcase.test.tsx` 4 tests | Pass (test) / Pending browser |
-| Experience | Timeline list with dates and bullets from resume | Content model tests | Pass (code/test) / Pending browser |
-| Capabilities | Skill groups + technology chips; no percentage bars | Content model tests | Pass (code/test) / Pending browser |
-| Leadership + Recognition | Separate leadership; recognition beside it | Content model tests | Pass (code/test) / Pending browser |
-| Contact | Labeled fields, Continue to email, copy fallbacks, live region, no storage | `ContactComposer.test.tsx` | Pass (test) / Pending browser |
-| Footer | Year, email, LinkedIn, GitHub | Existing Footer component | Pass (code) / Pending browser |
+| Hero | No eyebrow; headline; CTAs; portrait 4:5 alt | Screenshot 320/1280/light+dark | Pass |
+| Profile + Career Growth | Year 1–4 blocks + legend; no heatmap | Markup + content tests + browser | Pass |
+| Selected work | Index + Expand details; actions | Playwright: aria-expanded true; case-study link present | Pass |
+| Experience | Timeline from resume | Code/tests + page load | Pass |
+| Capabilities | Groups + tech chips | Code/tests | Pass |
+| Leadership + Recognition | Separate sections | Code/tests | Pass |
+| Contact | Labels, mailto, copy fallbacks, live region | Unit tests | Pass (manual send needs owner mail client) |
+| Footer | Email / LinkedIn / GitHub | Code + keyboard focus reaches footer links | Pass |
+| Case studies | Problem→Results, back/next, caption | Browser 200 + screenshots | Pass |
+| 404 | Friendly not-found | `/work/missing` → Page not found | Pass |
 
 ## Interactions
 
 | Interaction | Expected | Status |
 |---|---|---|
-| Theme toggle | Switches light/dark tokens; no FOUC script issues | Pass (code) / Pending browser |
-| Expand details | aria-expanded, focus moves to details heading, Close restores | Pass (test) / Pending browser |
-| Project switch | Collapses open details; aria-current updates | Pass (test) / Pending browser |
-| Keyboard | All controls reachable; focus ring visible; no hover-only essential UI | Pass (code) / Pending browser |
-| Reduced motion | CSS durations collapsed under prefers-reduced-motion | Pass (code) / Pending browser |
-| Mobile menu | Esc closes; anchors work | Pass (code) / Pending browser |
+| Theme toggle | light/dark tokens | Pass — `data-theme=dark`, label Light |
+| Expand details | aria-expanded + focus target | Pass (component tests + browser) |
+| Project switch | Collapse on change | Pass (component tests) |
+| Keyboard | Skip link first; nav reachable | Pass — Tab order recorded in QA_REPORT |
+| Reduced motion | scroll-behavior auto | Pass — measured `auto` |
+| Mobile menu | Esc closes | Pass (unit/code; Esc handler present) |
 
 ## Known issues / deferred
 
-- Case-study routes now implemented: `/work/soil-scan`, `/work/baguioreadygis` (Prompt 06). Deep-link browser check still Pending.
-- Playwright visual screenshots not yet captured — install browsers in Prompt 08 and fill Observed columns with real results.
-- No resume download (by design).
-- Facebook omitted (gap).
+- Case-study deep links: both implemented and browser-checked.
+- LinkedIn automated fetch 999 — residual manual check.
+- Resume download and Facebook still intentional gaps.
+- Production canonical/sitemap blocked on unknown origin (`docs/RELEASE_PREREQUISITES.md`).

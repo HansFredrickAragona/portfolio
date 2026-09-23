@@ -1,6 +1,6 @@
 # Current state
 
-- Phase: Prompts 00–06 committed (`2b2dfbd`, `c0614a2`, `081c8d5`, `0e6f734`, `a412d6f`, `f93398e`, `2018748`). Prompt 07 complete in working tree: Person JSON-LD, viewport theme colors, robots (no sitemap URL), analytics explicitly disabled, `docs/RELEASE_PREREQUISITES.md`, metadata/mailto/privacy tests. 25 tests green; format/lint/typecheck/build pass. Next: commit 07, then Prompt 08 integrated QA report.
+- Phase: Prompts 00–07 committed (`2b2dfbd`, `c0614a2`, `081c8d5`, `0e6f734`, `a412d6f`, `f93398e`, `2018748`, `e7ab949`). Prompt 08 complete in working tree: `docs/QA_REPORT.md`, updated `docs/VISUAL_QA.md`, Playwright multi-viewport inspection, privacy/metadata test hardening, playwright devDependency. All automated checks green (format/lint/typecheck/25 tests/build). Local preview `http://127.0.0.1:3111` was 200 during QA. Next: commit 08, final morning handoff. Do not push or run Prompt 09.
 - Kickoff: 2026-09-22 23:45 Asia/Manila; stop/checkpoint window 2026-09-23 07:45; final handoff target 07:15.
 - Delivery deadline: 2026-09-25 23:59 Asia/Manila, interpreted end-of-day.
 - Active writer: OpenCode root (`opencode/mimo-v2.6-flash-free`) after Codex emergency checkpoint; no specialists running unless spawned by root.

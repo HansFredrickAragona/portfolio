@@ -1,8 +1,9 @@
 # Blockers and limitations
 
-- WHOLE-BATCH BLOCKER: Codex reached 6% five-hour allowance, below the configured 10% emergency reserve. Both owner-approved OpenCode free models returned HTTP 403 FreeTierError during clean recovery requests. Neither took over. Checkpoint and stop per approved reserve policy.
-- OpenWolf documented integration is Claude Code only; use Markdown/Git fallback. Do not claim hooked memory recovery.
-- OpenCode connectivity previously passed at CLI 1.18.31; current CLI reports 1.18.32 and both recovery checks fail. This is an observation, not a proven causal diagnosis. Supported recovery/access must be restored before claiming takeover; do not spoof provider restrictions or select paid variants.
-- GitHub repository privacy has not been remotely verified. No pushes/PRs permitted in this batch, so keep work local.
-- Web reader could not fetch supplied project URLs during preparation; actual browser/HTTP verification pending. Do not equate reader failure with a down site.
-- Semester dates, approved redacted resume, Facebook, and final production URL unavailable. Approved draft omissions/year-labelled milestones are allowed; retain final release gaps.
+- Overnight Prompts 00–08 completed as a local draft by OpenCode root; no whole-batch writer blocker remains.
+- OpenWolf documented integration is Claude Code only; Markdown/Git fallback used throughout.
+- GitHub repository privacy not remotely verified (no push/PR in this batch). Work stays local on `feat/overnight-portfolio`.
+- LinkedIn automated HTTP fetch returned 999 (bot challenge); treat as residual manual check, not proof the profile is down.
+- Semester dates, approved redacted resume, Facebook link, and final production URL unavailable. Draft uses year-level milestones (D04), omits resume download and Facebook, and omits absolute canonical/sitemap (see `docs/RELEASE_PREREQUISITES.md`).
+- Delivery deadline still 2026-09-25 23:59 Asia/Manila (end-of-day interpretation; owner may correct exact time).
+- Prompt 09, push, PR, merge, and deploy remain forbidden until owner authorizes a new batch.
