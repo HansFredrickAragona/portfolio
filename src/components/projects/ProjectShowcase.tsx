@@ -35,6 +35,12 @@ export function ProjectShowcase({ projects }: ProjectShowcaseProps) {
     setExpanded((value) => !value);
   }
 
+  const activeIndex = projects.findIndex((project) => project.id === active.id);
+  function moveProject(direction: number) {
+    const next = projects[(activeIndex + direction + projects.length) % projects.length];
+    if (next) selectProject(next.id);
+  }
+
   const allowedActions = active.actions.filter((action) => {
     if (action.kind === "case-study") {
       return hasCaseStudyRoute(active.caseStudySlug ?? "");
@@ -82,23 +88,55 @@ export function ProjectShowcase({ projects }: ProjectShowcaseProps) {
         data-reveal
         className="project-preview border-border bg-bg-subtle relative overflow-hidden border"
       >
-        {/*
+        <div
+          className="project-carousel"
+          role="region"
+          aria-label="Project previews"
+          aria-roledescription="carousel"
+        >
+          {/*
           eslint-disable-next-line @next/next/no-img-element --
           SVG artwork uses plain img for exact aspect control and jsdom tests
         */}
-        <img
-          src={active.illustration.src}
-          alt={active.illustration.alt}
-          width={800}
-          height={500}
-          className="aspect-[16/10] w-full object-cover"
-          loading="lazy"
-        />
-        {active.illustration.illustrative ? (
-          <p className="text-text-subtle absolute top-3 left-3 bg-[color-mix(in_srgb,var(--bg)_90%,transparent)] px-2 py-1 text-xs">
-            Illustrative artwork
+          <img
+            key={active.id}
+            src={active.illustration.src}
+            alt={active.illustration.alt}
+            width={800}
+            height={500}
+            className="project-slide aspect-[16/10] w-full object-cover"
+            loading="lazy"
+          />
+          {active.illustration.illustrative ? (
+            <p className="text-text-subtle absolute top-3 left-3 bg-[color-mix(in_srgb,var(--bg)_90%,transparent)] px-2 py-1 text-xs">
+              Illustrative artwork
+            </p>
+          ) : null}
+          {projects.length > 1 && (
+            <>
+              <button
+                type="button"
+                className="project-carousel-arrow project-carousel-prev"
+                aria-label="Previous project"
+                onClick={() => moveProject(-1)}
+              >
+                <span aria-hidden="true">←</span>
+              </button>
+              <button
+                type="button"
+                className="project-carousel-arrow project-carousel-next"
+                aria-label="Next project"
+                onClick={() => moveProject(1)}
+              >
+                <span aria-hidden="true">→</span>
+              </button>
+            </>
+          )}
+          <p className="project-slide-count" aria-live="polite" aria-atomic="true">
+            <span className="sr-only">{active.title}, project </span>
+            {activeIndex + 1} / {projects.length}
           </p>
-        ) : null}
+        </div>
         <div className="bg-bg border-border border-t p-5">
           <div className="mb-3 flex flex-wrap items-start justify-between gap-3">
             <div>

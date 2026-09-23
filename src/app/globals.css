@@ -807,3 +807,80 @@ section[id] {
     transition: none;
   }
 }
+
+/* Two independent accordion columns; project preview carousel. */
+.skills-rows {
+  display: grid;
+  gap: 0 3rem;
+  border-bottom: 0;
+  align-items: start;
+}
+.skills-column {
+  border-bottom: 1px solid var(--border);
+  min-width: 0;
+}
+@media (min-width: 768px) {
+  .skills-rows {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+.project-carousel {
+  position: relative;
+  overflow: hidden;
+}
+.project-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+.project-carousel-arrow:hover {
+  background: var(--primary);
+  color: var(--primary-fg);
+}
+.project-carousel-prev {
+  left: 0.75rem;
+}
+.project-carousel-next {
+  right: 0.75rem;
+}
+.project-slide-count {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  border-radius: 2rem;
+  background: var(--bg);
+  color: var(--text);
+  padding: 0.2rem 0.65rem;
+  font-size: 0.8rem;
+}
+.project-slide {
+  animation: project-slide-in 0.3s ease both;
+}
+@keyframes project-slide-in {
+  from {
+    opacity: 0.3;
+    transform: scale(1.025);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-slide {
+    animation: none;
+  }
+}

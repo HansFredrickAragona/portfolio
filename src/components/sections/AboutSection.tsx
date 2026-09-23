@@ -100,28 +100,34 @@ export function AboutSection() {
           Skills
         </h3>
         <div className="skills-rows">
-          {aboutSkillCategories.map((category) => (
-            <details data-reveal key={category.id} className="skill-row">
-              <summary>
-                <h4>{category.label}</h4>
-                <span aria-hidden="true" className="skill-expand">
-                  +
-                </span>
-              </summary>
-              <ul aria-label={category.label}>
-                {category.entries.map((entry) => (
-                  <li key={entry.id}>
-                    {"icon" in entry && entry.icon && (
-                      <span aria-hidden="true" className="skill-icon">
-                        <TechIcon id={entry.icon} className="h-5 w-5" />
+          {[aboutSkillCategories.slice(0, 5), aboutSkillCategories.slice(5)].map(
+            (column, index) => (
+              <div key={index} className="skills-column">
+                {column.map((category) => (
+                  <details data-reveal key={category.id} className="skill-row">
+                    <summary>
+                      <h4>{category.label}</h4>
+                      <span aria-hidden="true" className="skill-expand">
+                        +
                       </span>
-                    )}
-                    <span>{entry.name}</span>
-                  </li>
+                    </summary>
+                    <ul aria-label={category.label}>
+                      {category.entries.map((entry) => (
+                        <li key={entry.id}>
+                          {"icon" in entry && entry.icon && (
+                            <span aria-hidden="true" className="skill-icon">
+                              <TechIcon id={entry.icon} className="h-5 w-5" />
+                            </span>
+                          )}
+                          <span>{entry.name}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
                 ))}
-              </ul>
-            </details>
-          ))}
+              </div>
+            ),
+          )}
         </div>
       </div>
     </Section>

@@ -5,6 +5,41 @@ import { ProjectShowcase } from "@/components/projects/ProjectShowcase";
 import { projects } from "@/models/projects";
 
 describe("ProjectShowcase", () => {
+  it("cycles previews with side arrows, wraps, and resets expanded details", async () => {
+    const user = userEvent.setup();
+    render(<ProjectShowcase projects={projects} />);
+    await user.click(screen.getByRole("button", { name: "Expand details" }));
+    await user.click(screen.getByRole("button", { name: "Next project" }));
+    expect(screen.getByRole("button", { name: /BaguioReadyGIS/ })).toHaveAttribute(
+      "aria-current",
+      "true",
+    );
+    expect(screen.getByRole("button", { name: "Expand details" })).toHaveAttribute(
+      "aria-expanded",
+      "false",
+    );
+    await user.click(screen.getByRole("button", { name: "Previous project" }));
+    await user.click(screen.getByRole("button", { name: "Previous project" }));
+    expect(screen.getByRole("button", { name: /Resume Job Tracker/ })).toHaveAttribute(
+      "aria-current",
+      "true",
+    );
+    await user.click(screen.getByRole("button", { name: "Next project" }));
+    expect(screen.getByRole("button", { name: /Soil Scan\s*Completed/ })).toHaveAttribute(
+      "aria-current",
+      "true",
+    );
+  });
+
+  it("omits unnecessary carousel controls for a single project", () => {
+    render(<ProjectShowcase projects={[projects[0]]} />);
+    expect(
+      screen.queryByRole("button", { name: "Next project" }),
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole("button", { name: "Previous project" }),
+    ).not.toBeInTheDocument();
+  });
   it("selects Soil Scan first and expands details without hover", async () => {
     const user = userEvent.setup();
     render(<ProjectShowcase projects={projects} />);

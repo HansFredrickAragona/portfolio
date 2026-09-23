@@ -87,9 +87,6 @@ export function Hero() {
           </div>
           <HeroTechSymbolsRow />
         </div>
-        <a href="#about" className="hero-scroll-cue">
-          A little more about me <span aria-hidden="true">↓</span>
-        </a>
       </div>
     </section>
   );
