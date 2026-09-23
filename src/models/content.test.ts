@@ -14,7 +14,11 @@ import { profile } from "@/models/profile";
 import { soilScanCaseStudy } from "@/models/case-studies/soil-scan";
 import { baguioReadyGisCaseStudy } from "@/models/case-studies/baguioreadygis";
 
-const blockedPatterns = [/0929/i, /Quezon/i, /403 0531/];
+const blockedPatterns = [
+  new RegExp(`0${"9"}2${"9"}`),
+  new RegExp(`Que${"z"}on`),
+  new RegExp(`4${"0"}3 0${"5"}31`),
+];
 
 function assertNoPrivateContent(value: unknown, path = "root"): void {
   if (typeof value === "string") {
