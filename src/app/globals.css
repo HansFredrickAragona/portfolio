@@ -615,3 +615,133 @@ section[id] {
     gap: 1rem;
   }
 }
+
+/* Owner refinement: wider composition, readable type, direct skills rows. */
+.container-shell {
+  width: min(100% - 2rem, 90rem);
+}
+.section-shell {
+  padding-block: 3rem;
+}
+.editorial-section-heading {
+  margin-bottom: 1.5rem;
+  padding-block: 1.5rem 1rem;
+}
+.section-ghost {
+  font-size: clamp(3rem, 7vw, 6rem);
+}
+.about-intro > p {
+  font-size: 1.125rem;
+}
+.about-education,
+.about-leadership-list li,
+.about-interests li {
+  font-size: 1rem;
+}
+.about-education {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+}
+.about-leadership-list .text-sm,
+.about-leadership-list .text-xs {
+  font-size: 1rem;
+}
+.about-personal-grid {
+  margin-top: 2.5rem;
+  gap: 2rem;
+}
+.about-skills {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  scroll-margin-top: 6rem;
+}
+.about-main-photo,
+.about-achievements,
+.about-third-photo {
+  padding-top: 0;
+}
+.about-photo {
+  max-height: 32rem;
+}
+.about-interests {
+  margin-top: 1.25rem;
+}
+.skills-rows {
+  border-bottom: 1px solid var(--border);
+}
+.skill-row {
+  display: grid;
+  gap: 1rem;
+  padding-block: 1.4rem;
+  border-top: 1px solid var(--border);
+}
+.skill-row h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--primary);
+}
+.skill-row ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.5rem;
+}
+.skill-row li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.skill-row .skill-icon {
+  width: 1.25rem;
+  padding-top: 0;
+}
+.hero-careers .text-sm {
+  font-size: 1.05rem;
+}
+.hero-careers .text-xs {
+  font-size: 0.95rem;
+}
+.hero-bottom > p {
+  max-width: 55ch;
+  font-size: 1.125rem;
+}
+.experience-row .text-sm,
+#leadership .text-sm,
+#contact .text-sm {
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .container-shell {
+    width: min(100% - 3rem, 90rem);
+  }
+  .skill-row {
+    grid-template-columns: minmax(12rem, 22%) minmax(0, 1fr);
+    gap: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .section-shell {
+    padding-block: 3.5rem;
+  }
+  .hero-stage {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr) minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+  .hero-portrait-group {
+    max-width: 25rem;
+  }
+  .hero-portrait {
+    height: clamp(24rem, 48vh, 29rem);
+  }
+  .hero-social-rail {
+    justify-self: center;
+  }
+  .about-story-grid {
+    gap: 2rem;
+  }
+  .about-personal-grid {
+    gap: 2rem;
+  }
+}

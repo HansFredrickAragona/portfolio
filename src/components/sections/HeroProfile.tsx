@@ -10,7 +10,6 @@ import {
 function CareersRail() {
   return (
     <div className="hero-careers">
-      <p className="text-text-subtle mb-3 text-xs tracking-[0.14em] uppercase">Careers</p>
       <ol className="space-y-4" role="list">
         {experience.map((item) => (
           <li key={item.id} className="border-border border-l-2 pl-3">

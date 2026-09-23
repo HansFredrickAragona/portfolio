@@ -126,7 +126,6 @@ export function HeroSocialRail() {
 
   return (
     <div ref={rootRef}>
-      <p className="text-text-subtle mb-3 text-xs tracking-[0.14em] uppercase">Social</p>
       <ul className="flex flex-wrap gap-3 lg:flex-col lg:items-end" role="list">
         {socials.map((item) => (
           <li key={item.id} data-social-float>

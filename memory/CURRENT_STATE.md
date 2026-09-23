@@ -14,3 +14,9 @@
 Final post-refinement checks: formatting, ESLint, strict TypeScript, all 31 tests (7 files) and production build PASS. Production preview started at http://127.0.0.1:3112 and rendered in the browser without console errors. Development preview remains http://localhost:3000. Keyboard Enter expanded the native Backend and APIs disclosure. Git diff whitespace check and private input ignore checks pass. CPU throttling and browser-level reduced-motion switching remain untested; reduced-motion/failure paths are covered by unit checks and static mobile transform inspection.
 
 Implementation complete, ready for owner review. Local task commit follows; its identifier is available from Git HEAD rather than fabricated in advance. No push/deployment.
+
+## Owner refinement — current task
+
+Owner requested wider/tighter spacing, larger text, fewer words, no eyebrows, direct skills rows without descriptions, and removal of Career Growth. Implemented in the current portfolio. Existing evidence stays in content models; redundant How I work section is omitted and Skills nav points directly to the About skills rows. Checks underway on this follow-up; earlier checks apply to 6e56841 only.
+
+Spacing/content follow-up: completed and checked (lint clean, typecheck, 31 tests, production build, desktop/mobile inspection). Only post-build code cleanup was removal of an unused import; no runtime behavior changed. Port 3112 restarted with updated build. Ready for owner review and local commit.

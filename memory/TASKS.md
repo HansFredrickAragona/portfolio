@@ -22,3 +22,5 @@ No task permits deployment, push, PR, final approval, or Prompt 09. Root retains
 Owner selected current portfolio and authorized implementation. Root Codex owns integration; bounded motion specialist completed assigned files. Layout, two temporary AI assets, native skill disclosures and GSAP section reveals implemented. Final check/commit pending; see CURRENT_STATE and QA_REDESIGN. No Figma v2 work, push or deployment in this revision.
 
 Redesign task complete: final checks pass (31 tests, lint, format, typecheck, build, responsive browser). Local checkpoint commit ready; owner design review and real photo replacement next. Production preview http://127.0.0.1:3112.
+
+Completed owner spacing/content follow-up: wider layout/larger type; no eyebrows or Career Growth; direct skill rows, no descriptions or duplicate How I work. Checks pass; local checkpoint only.

@@ -13,3 +13,7 @@ Base commit: 2ba2f4e on feat/overnight-portfolio. Checks apply to the current un
 - No deploy or push in this revision. Owner-provided real About photos remain pending.
 
 Final production build verified at http://127.0.0.1:3112 with no browser console errors. Final format/lint/typecheck/build and 31 tests pass. Keyboard Enter expanded native skills disclosure. Development server remains port 3000. Local-only checkpoint; no push/deploy.
+
+## Spacing/content follow-up
+
+Owner requested removal of eyebrows, skill descriptions and Career Growth, plus wider layout and larger type. These are implemented. Skills display nine always-visible category rows, and Skills navigation now targets that list. Duplicate How I work and repeated About prose removed. Desktop and 375px checks show no horizontal overflow; skill text computes to 16px. Format/typecheck/31 tests/build passed; lint clean after unused-import cleanup. Production preview restarted on 3112. No deployment.

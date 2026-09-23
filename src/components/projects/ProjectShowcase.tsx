@@ -45,7 +45,6 @@ export function ProjectShowcase({ projects }: ProjectShowcaseProps) {
   return (
     <div className="grid gap-8 md:grid-cols-2 md:gap-10">
       <div data-reveal>
-        <h3 className="editorial-kicker">Projects / Selected explorations</h3>
         <ul className="flex flex-col gap-1" role="list">
           {projects.map((project) => {
             const selected = project.id === active.id;
