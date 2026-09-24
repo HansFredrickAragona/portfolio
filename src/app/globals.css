@@ -253,3 +253,19 @@ main > section > div:not(.absolute) { width:100%; }
 .about-section-shell > .section-title { padding-inline:37px; }
 .about-copy h3 { font-family:var(--font-serif); font-size:1.5rem; color:var(--primary); margin-bottom:7px; }
 @media(max-width:900px) { .about-section-shell > .section-title { padding-inline:16px; } .about-copy h3 { font-size:1.35rem; } }
+
+/* Uniform desktop section spacing; footer retains its existing padding. */
+@media (min-width:901px) {
+  main > section,
+  main > .hero-section,
+  .contact-screen > section { padding:20px; }
+  main > .hero-section { padding-top:84px; } /* 64px fixed navigation + 20px spacing */
+  .hero-composition,
+  .about-layout,
+  .skills-shell,
+  #services > div:last-child,
+  #projects > div:last-child,
+  #experience > div:last-child,
+  .contact-screen > section > div:last-child { padding:10px; }
+  .about-section-shell > .section-title { padding-inline:10px; }
+}
