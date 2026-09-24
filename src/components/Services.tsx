@@ -114,18 +114,18 @@ export function Services() {
   return (
     <section
       id="services"
-      className="relative py-12 md:py-16 px-6 overflow-hidden"
+      className="relative py-14 md:py-[74px] px-6 overflow-hidden"
       style={{ backgroundColor: "var(--card)" }}
     >
       <FloatingIcons seed={2} />
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10">
-        <div className="flex items-center gap-3 mb-8">
+        <div className="flex items-center gap-3 mb-9">
           <div
-            className="w-1 h-7 rounded-full"
+            className="w-1 h-8 rounded-full"
             style={{ backgroundColor: "var(--primary)" }}
           />
           <h2
-            className="font-serif text-3xl md:text-4xl font-semibold"
+            className="font-serif text-[1.75rem] md:text-[2.3rem] font-semibold"
             style={{ color: "var(--primary)" }}
           >
             Services
@@ -135,7 +135,7 @@ export function Services() {
           {SERVICES.map((s, i) => (
             <div
               key={i}
-              className="border-b py-4 cursor-pointer transition-all duration-200 rounded-lg px-3 -mx-3"
+              className="border-b py-[18px] cursor-pointer transition-all duration-200 rounded-lg px-3 -mx-3"
               style={{
                 borderColor: "var(--border)",
                 backgroundColor:
@@ -146,9 +146,9 @@ export function Services() {
               onMouseLeave={() => setHovered(null)}
             >
               <div className="flex items-center justify-between gap-4">
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3.5">
                   <div
-                    className="shrink-0 w-9 h-9 rounded-xl flex items-center justify-center transition-colors duration-200"
+                    className="shrink-0 w-10 h-10 rounded-xl flex items-center justify-center transition-colors duration-200"
                     style={{
                       backgroundColor:
                         hovered === i ? "var(--primary)" : "var(--muted)",

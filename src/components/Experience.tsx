@@ -6,27 +6,27 @@ export function Experience() {
   return (
     <section
       id="experience"
-      className="relative py-12 md:py-16 px-6 overflow-hidden"
+      className="relative py-14 md:py-[74px] px-6 overflow-hidden"
     >
       <FloatingIcons seed={4} />
       <div className="relative z-10 max-w-6xl mx-auto">
-        <div className="flex items-center gap-3 mb-8">
+        <div className="flex items-center gap-3 mb-9">
           <div
-            className="w-1 h-7 rounded-full"
+            className="w-1 h-8 rounded-full"
             style={{ backgroundColor: "var(--primary)" }}
           />
           <h2
-            className="font-serif text-3xl md:text-4xl font-semibold"
+            className="font-serif text-[1.75rem] md:text-[2.3rem] font-semibold"
             style={{ color: "var(--primary)" }}
           >
             Experience
           </h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {experience.map((e) => (
             <div
               key={e.id}
-              className="hover-card rounded-2xl p-5 flex flex-col gap-3 transition-all duration-200"
+              className="hover-card rounded-2xl p-6 flex flex-col gap-3.5 transition-all duration-200"
               style={{
                 backgroundColor: "var(--card)",
 

@@ -270,16 +270,16 @@ export function Projects() {
         @keyframes slideInLeft  { from { opacity:0; transform:translateX(-36px); } to { opacity:1; transform:translateX(0); } }
       `}</style>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 py-[74px] md:py-[92px]">
         {/* Section header */}
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center justify-between mb-7">
           <div className="flex items-center gap-3">
             <div
-              className="w-1 h-7 rounded-full"
+              className="w-1 h-8 rounded-full"
               style={{ backgroundColor: "var(--primary)" }}
             />
             <h2
-              className="font-serif text-3xl md:text-4xl font-semibold"
+              className="font-serif text-[1.75rem] md:text-[2.3rem] font-semibold"
               style={{ color: "var(--primary)" }}
             >
               Projects

@@ -34,18 +34,18 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-12 md:py-16 px-6 overflow-hidden"
+      className="relative py-14 md:py-[74px] px-6 overflow-hidden"
       style={{ backgroundColor: "var(--card)" }}
     >
       <FloatingIcons seed={3} />
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10">
-        <div className="flex items-center gap-3 mb-8">
+        <div className="flex items-center gap-3 mb-9">
           <div
-            className="w-1 h-7 rounded-full"
+            className="w-1 h-8 rounded-full"
             style={{ backgroundColor: "var(--primary)" }}
           />
           <h2
-            className="font-serif text-3xl md:text-4xl font-semibold"
+            className="font-serif text-[1.75rem] md:text-[2.3rem] font-semibold"
             style={{ color: "var(--primary)" }}
           >
             Let's talk
