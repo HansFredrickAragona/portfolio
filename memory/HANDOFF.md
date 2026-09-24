@@ -69,3 +69,5 @@ Desktop spacing request: sections use 20px outer and 10px inner padding above 90
 Owner reports section gaps still too large. Removed full-screen minimum height and vertical centering from main content sections except hero; 20px outer/10px inner desktop padding retained. Contact/footer sizing unchanged. Build/typecheck and diff check PASS. This supersedes earlier one-screen-per-content-section requirement in response to latest owner feedback.
 
 Alignment refinement: Experience max width now matches Services (1280px); Skills normalized to 1280px; About heading text shares same inset. FloatingIcons now symmetric left/right 12px, top/bottom 20px with centered middle row, decorative aria-hidden; added same frame to About/Skills. At medium desktop 1024-1439px reserve 72px side gutters for icons. Build/typecheck/format/diff check pass. Browser actual1280px: Services/Experience/Skills headings left82px; About text left82px (box72 + padding10); no horizontal overflow. Preview3114 restarted. Existing line-ending changes untouched.
+
+Floating icons visibility: opacity increased from 0.16 to 0.70 at owner request. Production build/typecheck pass; no layout changes.
