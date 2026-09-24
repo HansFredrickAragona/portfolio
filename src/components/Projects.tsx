@@ -116,19 +116,673 @@ const PROJECTS: Project[] = [
   },
 ]
 
-// Browser mockup frame wrapping an iframe or labeled abstract placeholder
+// Labeled concept UI illustrations (owner temporary override 2026-09-24).
+// Not screenshots of a running product; decorative how-the-app-might-look art.
+
+function ConceptArt({ id }: { id: string }) {
+  if (id === "soilscan") {
+    return (
+      <svg
+        viewBox="0 0 640 480"
+        className="w-full h-full"
+        role="img"
+        aria-label="Concept illustration of Soil Scan app interface"
+      >
+        <rect width="640" height="480" fill="#f3f7f2" />
+        <rect width="640" height="52" fill="#1d3a2f" />
+        <text
+          x="24"
+          y="33"
+          fill="#f5f0e8"
+          fontFamily="Outfit,sans-serif"
+          fontSize="18"
+          fontWeight="600"
+        >
+          Soil Scan
+        </text>
+        <rect x="480" y="14" width="136" height="26" rx="13" fill="#3d6e4a" />
+        <text
+          x="548"
+          y="32"
+          textAnchor="middle"
+          fill="#f5f0e8"
+          fontFamily="Outfit,sans-serif"
+          fontSize="12"
+        >
+          New analysis
+        </text>
+        <rect
+          x="20"
+          y="72"
+          width="300"
+          height="200"
+          rx="12"
+          fill="#dfe9dc"
+          stroke="#b7cbb5"
+        />
+        <circle cx="120" cy="150" r="48" fill="#8fbf8a" opacity=".7" />
+        <circle cx="210" cy="190" r="62" fill="#5f9e62" opacity=".55" />
+        <path
+          d="M40 240 Q140 200 280 250"
+          stroke="#3d6e4a"
+          strokeWidth="3"
+          fill="none"
+        />
+        <text
+          x="36"
+          y="96"
+          fontFamily="Outfit,sans-serif"
+          fontSize="13"
+          fill="#1d3a2f"
+          fontWeight="600"
+        >
+          Field map
+        </text>
+        <rect
+          x="340"
+          y="72"
+          width="280"
+          height="88"
+          rx="12"
+          fill="#fff"
+          stroke="#d5e0d2"
+        />
+        <text
+          x="356"
+          y="100"
+          fontFamily="Outfit,sans-serif"
+          fontSize="12"
+          fill="#6b6558"
+        >
+          N–P–K recommendation
+        </text>
+        <text
+          x="356"
+          y="130"
+          fontFamily="Outfit,sans-serif"
+          fontSize="22"
+          fill="#1d3a2f"
+          fontWeight="700"
+        >
+          14-10-12 · balanced
+        </text>
+        <rect
+          x="340"
+          y="176"
+          width="132"
+          height="96"
+          rx="12"
+          fill="#fff"
+          stroke="#d5e0d2"
+        />
+        <text
+          x="356"
+          y="204"
+          fontFamily="Outfit,sans-serif"
+          fontSize="12"
+          fill="#6b6558"
+        >
+          Soil pH
+        </text>
+        <text
+          x="356"
+          y="236"
+          fontFamily="Outfit,sans-serif"
+          fontSize="28"
+          fill="#3d6e4a"
+          fontWeight="700"
+        >
+          6.4
+        </text>
+        <rect
+          x="488"
+          y="176"
+          width="132"
+          height="96"
+          rx="12"
+          fill="#fff"
+          stroke="#d5e0d2"
+        />
+        <text
+          x="504"
+          y="204"
+          fontFamily="Outfit,sans-serif"
+          fontSize="12"
+          fill="#6b6558"
+        >
+          Moisture
+        </text>
+        <text
+          x="504"
+          y="236"
+          fontFamily="Outfit,sans-serif"
+          fontSize="28"
+          fill="#3d6e4a"
+          fontWeight="700"
+        >
+          42%
+        </text>
+        <rect
+          x="20"
+          y="292"
+          width="600"
+          height="168"
+          rx="12"
+          fill="#fff"
+          stroke="#d5e0d2"
+        />
+        <text
+          x="40"
+          y="324"
+          fontFamily="Outfit,sans-serif"
+          fontSize="14"
+          fill="#1d3a2f"
+          fontWeight="600"
+        >
+          Crop plan preview
+        </text>
+        {[0, 1, 2, 3].map((i) => (
+          <g key={i}>
+            <rect
+              x="40"
+              y={340 + i * 28}
+              width={180 - i * 20}
+              height="12"
+              rx="6"
+              fill="#3d6e4a"
+              opacity={0.75 - i * 0.12}
+            />
+            <rect
+              x="240"
+              y={340 + i * 28}
+              width="340"
+              height="12"
+              rx="6"
+              fill="#e8e0cf"
+            />
+          </g>
+        ))}
+      </svg>
+    )
+  }
+  if (id === "baguiogis") {
+    return (
+      <svg
+        viewBox="0 0 640 480"
+        className="w-full h-full"
+        role="img"
+        aria-label="Concept illustration of BaguioReady GIS map interface"
+      >
+        <rect width="640" height="480" fill="#e7eef3" />
+        <rect width="640" height="48" fill="#1a3348" />
+        <text
+          x="20"
+          y="31"
+          fill="#f5f0e8"
+          fontFamily="Outfit,sans-serif"
+          fontSize="17"
+          fontWeight="600"
+        >
+          BaguioReady GIS
+        </text>
+        <rect x="480" y="12" width="140" height="24" rx="12" fill="#3d6e8c" />
+        <text
+          x="550"
+          y="29"
+          textAnchor="middle"
+          fill="#fff"
+          fontFamily="Outfit,sans-serif"
+          fontSize="11"
+        >
+          Hazard layers
+        </text>
+        <polygon
+          points="0,80 180,60 320,120 480,70 640,110 640,480 0,480"
+          fill="#c5d5c0"
+        />
+        <polygon
+          points="40,200 200,160 340,220 300,360 80,340"
+          fill="#f0c27a"
+          opacity=".85"
+        />
+        <polygon
+          points="280,140 520,120 580,260 420,300 300,240"
+          fill="#e07a5f"
+          opacity=".75"
+        />
+        <polygon
+          points="120,300 260,280 300,400 100,420"
+          fill="#81b29a"
+          opacity=".8"
+        />
+        <path
+          d="M0 380 Q160 340 320 400 T640 360"
+          stroke="#3d6e8c"
+          strokeWidth="4"
+          fill="none"
+          opacity=".7"
+        />
+        <circle cx="360" cy="210" r="10" fill="#c1121f" />
+        <circle
+          cx="360"
+          cy="210"
+          r="18"
+          fill="none"
+          stroke="#c1121f"
+          strokeWidth="2"
+          opacity=".5"
+        />
+        <rect
+          x="20"
+          y="64"
+          width="170"
+          height="150"
+          rx="10"
+          fill="#fff"
+          stroke="#d0dbe4"
+          opacity=".95"
+        />
+        <text
+          x="36"
+          y="90"
+          fontFamily="Outfit,sans-serif"
+          fontSize="13"
+          fill="#1a3348"
+          fontWeight="600"
+        >
+          Layers
+        </text>
+        {["Landslide", "Flood", "Fault", "Shelter"].map((n, i) => (
+          <g key={n}>
+            <rect
+              x="36"
+              y={108 + i * 24}
+              width="14"
+              height="14"
+              rx="3"
+              fill={["#e07a5f", "#3d6e8c", "#f0c27a", "#81b29a"][i]}
+            />
+            <text
+              x="58"
+              y={120 + i * 24}
+              fontFamily="Outfit,sans-serif"
+              fontSize="12"
+              fill="#44546a"
+            >
+              {n}
+            </text>
+          </g>
+        ))}
+        <rect
+          x="430"
+          y="320"
+          width="190"
+          height="140"
+          rx="10"
+          fill="#fff"
+          stroke="#d0dbe4"
+          opacity=".95"
+        />
+        <text
+          x="446"
+          y="348"
+          fontFamily="Outfit,sans-serif"
+          fontSize="13"
+          fill="#1a3348"
+          fontWeight="600"
+        >
+          Alert detail
+        </text>
+        <text
+          x="446"
+          y="372"
+          fontFamily="Outfit,sans-serif"
+          fontSize="12"
+          fill="#c1121f"
+          fontWeight="600"
+        >
+          High risk zone
+        </text>
+        <text
+          x="446"
+          y="396"
+          fontFamily="Outfit,sans-serif"
+          fontSize="11"
+          fill="#6b7280"
+        >
+          Sector 4 · updated 2h ago
+        </text>
+        <rect x="446" y="412" width="120" height="28" rx="8" fill="#3d6e8c" />
+        <text
+          x="506"
+          y="431"
+          textAnchor="middle"
+          fill="#fff"
+          fontFamily="Outfit,sans-serif"
+          fontSize="12"
+        >
+          View route
+        </text>
+      </svg>
+    )
+  }
+  if (id === "grammar") {
+    return (
+      <svg
+        viewBox="0 0 640 480"
+        className="w-full h-full"
+        role="img"
+        aria-label="Concept illustration of Grammar Checker editor"
+      >
+        <rect width="640" height="480" fill="#f7f5fb" />
+        <rect width="640" height="48" fill="#2c2a4a" />
+        <text
+          x="20"
+          y="31"
+          fill="#efeaff"
+          fontFamily="Outfit,sans-serif"
+          fontSize="17"
+          fontWeight="600"
+        >
+          Grammar Checker
+        </text>
+        <rect x="500" y="12" width="120" height="24" rx="12" fill="#6a5acd" />
+        <text
+          x="560"
+          y="29"
+          textAnchor="middle"
+          fill="#fff"
+          fontFamily="Outfit,sans-serif"
+          fontSize="11"
+        >
+          Check text
+        </text>
+        <rect
+          x="24"
+          y="68"
+          width="380"
+          height="380"
+          rx="12"
+          fill="#fff"
+          stroke="#ddd6f3"
+        />
+        <text
+          x="44"
+          y="100"
+          fontFamily="Outfit,sans-serif"
+          fontSize="13"
+          fill="#6b6558"
+        >
+          Draft
+        </text>
+        <text
+          x="44"
+          y="140"
+          fontFamily="Outfit,sans-serif"
+          fontSize="16"
+          fill="#1a1a18"
+        >
+          The team{" "}
+          <tspan fill="#c1121f" textDecoration="underline">
+            have finish
+          </tspan>{" "}
+          the report
+        </text>
+        <text
+          x="44"
+          y="168"
+          fontFamily="Outfit,sans-serif"
+          fontSize="16"
+          fill="#1a1a18"
+        >
+          yesterday and{" "}
+          <tspan fill="#c1121f" textDecoration="underline">
+            send
+          </tspan>{" "}
+          it to the client.
+        </text>
+        <text
+          x="44"
+          y="210"
+          fontFamily="Outfit,sans-serif"
+          fontSize="16"
+          fill="#1a1a18"
+        >
+          We{" "}
+          <tspan fill="#b08900" textDecoration="underline">
+            is excited
+          </tspan>{" "}
+          to share results
+        </text>
+        <text
+          x="44"
+          y="238"
+          fontFamily="Outfit,sans-serif"
+          fontSize="16"
+          fill="#1a1a18"
+        >
+          with the{" "}
+          <tspan fill="#c1121f" textDecoration="underline">
+            stakeholders
+          </tspan>
+          .
+        </text>
+        {[0, 1, 2, 3].map((i) => (
+          <rect
+            key={i}
+            x="44"
+            y={270 + i * 36}
+            width={320 - i * 40}
+            height="10"
+            rx="5"
+            fill="#e8e4f4"
+          />
+        ))}
+        <rect
+          x="424"
+          y="68"
+          width="192"
+          height="380"
+          rx="12"
+          fill="#fff"
+          stroke="#ddd6f3"
+        />
+        <text
+          x="444"
+          y="100"
+          fontFamily="Outfit,sans-serif"
+          fontSize="13"
+          fill="#6a5acd"
+          fontWeight="600"
+        >
+          Suggestions
+        </text>
+        <rect x="440" y="120" width="160" height="88" rx="10" fill="#f3e8ff" />
+        <text
+          x="456"
+          y="146"
+          fontFamily="Outfit,sans-serif"
+          fontSize="12"
+          fill="#2c2a4a"
+          fontWeight="600"
+        >
+          Subject–verb
+        </text>
+        <text
+          x="456"
+          y="168"
+          fontFamily="Outfit,sans-serif"
+          fontSize="13"
+          fill="#6a5acd"
+        >
+          has finished
+        </text>
+        <rect x="456" y="180" width="72" height="18" rx="9" fill="#6a5acd" />
+        <text
+          x="492"
+          y="193"
+          textAnchor="middle"
+          fill="#fff"
+          fontFamily="Outfit,sans-serif"
+          fontSize="10"
+        >
+          Apply
+        </text>
+        <rect x="440" y="224" width="160" height="88" rx="10" fill="#f3e8ff" />
+        <text
+          x="456"
+          y="250"
+          fontFamily="Outfit,sans-serif"
+          fontSize="12"
+          fill="#2c2a4a"
+          fontWeight="600"
+        >
+          Tense
+        </text>
+        <text
+          x="456"
+          y="272"
+          fontFamily="Outfit,sans-serif"
+          fontSize="13"
+          fill="#6a5acd"
+        >
+          sent
+        </text>
+        <rect x="456" y="284" width="72" height="18" rx="9" fill="#6a5acd" />
+        <text
+          x="492"
+          y="297"
+          textAnchor="middle"
+          fill="#fff"
+          fontFamily="Outfit,sans-serif"
+          fontSize="10"
+        >
+          Apply
+        </text>
+        <text
+          x="444"
+          y="360"
+          fontFamily="Outfit,sans-serif"
+          fontSize="12"
+          fill="#6b6558"
+        >
+          Score
+        </text>
+        <text
+          x="444"
+          y="400"
+          fontFamily="Outfit,sans-serif"
+          fontSize="36"
+          fill="#6a5acd"
+          fontWeight="700"
+        >
+          78
+        </text>
+      </svg>
+    )
+  }
+  return (
+    <svg
+      viewBox="0 0 640 480"
+      className="w-full h-full"
+      role="img"
+      aria-label="Concept illustration of Resume Job Tracker board"
+    >
+      <rect width="640" height="480" fill="#f6f1ea" />
+      <rect width="640" height="48" fill="#3d2f1f" />
+      <text
+        x="20"
+        y="31"
+        fill="#f5f0e8"
+        fontFamily="Outfit,sans-serif"
+        fontSize="17"
+        fontWeight="600"
+      >
+        Résumé Job Tracker
+      </text>
+      <rect x="500" y="12" width="120" height="24" rx="12" fill="#8c6a3d" />
+      <text
+        x="560"
+        y="29"
+        textAnchor="middle"
+        fill="#fff"
+        fontFamily="Outfit,sans-serif"
+        fontSize="11"
+      >
+        Add application
+      </text>
+      {[
+        { x: 16, title: "Applied", cards: ["Frontend role", "Data intern"] },
+        { x: 176, title: "Interview", cards: ["AI engineer"] },
+        { x: 336, title: "Offer", cards: ["Junior FS"] },
+        { x: 496, title: "Closed", cards: [] },
+      ].map((col) => (
+        <g key={col.title}>
+          <rect
+            x={col.x}
+            y="68"
+            width="144"
+            height="388"
+            rx="12"
+            fill="#ebe3d6"
+          />
+          <text
+            x={col.x + 14}
+            y="96"
+            fontFamily="Outfit,sans-serif"
+            fontSize="13"
+            fill="#3d2f1f"
+            fontWeight="600"
+          >
+            {col.title}
+          </text>
+          {col.cards.map((c, i) => (
+            <g key={c}>
+              <rect
+                x={col.x + 10}
+                y={112 + i * 88}
+                width="124"
+                height="72"
+                rx="10"
+                fill="#fff"
+                stroke="#d9d0c2"
+              />
+              <rect
+                x={col.x + 22}
+                y={128 + i * 88}
+                width="80"
+                height="8"
+                rx="4"
+                fill="#8c6a3d"
+                opacity=".7"
+              />
+              <rect
+                x={col.x + 22}
+                y={146 + i * 88}
+                width="96"
+                height="6"
+                rx="3"
+                fill="#d9d0c2"
+              />
+              <rect
+                x={col.x + 22}
+                y={160 + i * 88}
+                width="64"
+                height="6"
+                rx="3"
+                fill="#d9d0c2"
+              />
+            </g>
+          ))}
+        </g>
+      ))}
+    </svg>
+  )
+}
 
 function BrowserMockup({ project }: { project: Project }) {
   const [loaded, setLoaded] = useState(false)
-
-  const accent =
-    project.id === "soilscan"
-      ? "#3d6e4a"
-      : project.id === "baguiogis"
-        ? "#3d6e8c"
-        : project.id === "grammar"
-          ? "#6a5acd"
-          : "#8c6a3d"
+  const showLive = Boolean(project.liveUrl) && loaded
 
   return (
     <div
@@ -180,89 +834,47 @@ function BrowserMockup({ project }: { project: Project }) {
         className="relative w-full"
         style={{ height: "480px", backgroundColor: "var(--muted)" }}
       >
-        {project.liveUrl ? (
-          <>
-            {!loaded && (
-              <div
-                className="absolute inset-0 flex flex-col items-center justify-center gap-3"
-                style={{ color: "var(--muted-foreground)" }}
-              >
-                <span className="text-xs opacity-50">Loading preview…</span>
-              </div>
-            )}
-            <iframe
-              src={project.liveUrl}
-              title={project.title}
-              onLoad={() => setLoaded(true)}
-              className="w-full h-full border-0"
-              style={{
-                transform: "scale(0.75)",
-
-                transformOrigin: "top left",
-
-                width: "133.33%",
-
-                height: "133.33%",
-
-                opacity: loaded ? 1 : 0,
-
-                transition: "opacity 0.4s ease",
-              }}
-            />
-          </>
-        ) : (
+        <div
+          className="absolute inset-0"
+          style={{ opacity: showLive ? 0 : 1, transition: "opacity .3s ease" }}
+        >
+          <ConceptArt id={project.id} />
           <div
-            className="w-full h-full flex flex-col items-center justify-center gap-4 p-6"
-            style={{ color: "var(--muted-foreground)" }}
+            className="absolute bottom-0 left-0 right-0 px-3 py-2 text-center"
+            style={{
+              backgroundColor: "rgba(26,26,24,0.55)",
+              color: "#f5f0e8",
+              fontSize: "11px",
+            }}
           >
-            <div
-              className="w-full max-w-sm rounded-xl border p-6 grid gap-3"
-              style={{
-                borderColor: "var(--border)",
-                backgroundColor: "var(--card)",
-              }}
-              aria-hidden="true"
-            >
-              <div
-                className="h-3 w-2/3 rounded"
-                style={{ backgroundColor: accent, opacity: 0.55 }}
-              />
-              <div
-                className="h-2.5 w-full rounded"
-                style={{
-                  backgroundColor: "var(--muted-foreground)",
-                  opacity: 0.25,
-                }}
-              />
-              <div
-                className="h-2.5 w-5/6 rounded"
-                style={{
-                  backgroundColor: "var(--muted-foreground)",
-                  opacity: 0.2,
-                }}
-              />
-              <div className="grid grid-cols-3 gap-2 pt-1">
-                {[0, 1, 2].map((n) => (
-                  <div
-                    key={n}
-                    className="h-14 rounded-lg"
-                    style={{
-                      backgroundColor: accent,
-                      opacity: 0.12 + n * 0.06,
-                    }}
-                  />
-                ))}
-              </div>
-              <div
-                className="h-8 w-28 rounded-lg mt-1"
-                style={{ backgroundColor: accent, opacity: 0.45 }}
-              />
-            </div>
-            <p className="text-sm font-medium opacity-70">
-              Concept layout — not a live screenshot
-            </p>
-            <p className="text-xs font-medium opacity-50">In development</p>
+            AI concept preview — not a product screenshot
+            {project.status === "development" ? " · in development" : ""}
           </div>
+        </div>
+        {project.liveUrl && (
+          <iframe
+            src={project.liveUrl}
+            title={project.title}
+            onLoad={() => setLoaded(true)}
+            className="w-full h-full border-0"
+            style={{
+              transform: "scale(0.75)",
+
+              transformOrigin: "top left",
+
+              width: "133.33%",
+
+              height: "133.33%",
+
+              opacity: showLive ? 1 : 0,
+
+              transition: "opacity 0.4s ease",
+
+              position: "absolute",
+
+              inset: 0,
+            }}
+          />
         )}
       </div>
     </div>

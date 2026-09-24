@@ -35,3 +35,7 @@ Owner: “push now.” Authorizes pushing the Figma integration commits on `feat
 ## Codex refinement push — 2026-09-24
 
 Owner: “do all commit pushed before we continue the changes in ui.” Authorizes committing the uncommitted memory handoff checkpoint and pushing all local `feat/v2` commits (Codex combined-design refinements `f765f6c`…`8cebd47` plus memory) to origin before further UI work. Still no deploy, no PR, no merge to main unless separately requested.
+
+## Project concept previews — 2026-09-24
+
+Owner: “override fro now the ai images.” Temporary override of the no-fake-product-screenshot default for project demo frames only: labeled AI/concept UI illustrations showing how each app might look are allowed while real screenshots are unavailable. Must remain visibly labeled as concept/not a product screenshot. Live project iframes still preferred when loaded. Does not authorize inventing metrics, features, or claiming the art is a real deploy capture. Supersedes the prior “concept layout only / no AI mockups” hesitation for this slice only; permanent policy still prefers approved real screenshots.
