@@ -1,10 +1,13 @@
 import { useState } from "react"
+
 import { FloatingIcons } from "./FloatingIcons"
 
 const SERVICES = [
   {
     title: "Website & web application development",
-    desc: "From concept to deployed product — responsive, performant web apps built with modern full-stack tooling including React, Next.js, Node.js, and cloud infrastructure.",
+
+    desc: "From concept to deployed product: responsive, performant web apps built with modern full-stack tooling including React, Next.js, Node.js, and cloud infrastructure.",
+
     icon: (
       <svg
         width="22"
@@ -25,9 +28,12 @@ const SERVICES = [
       </svg>
     ),
   },
+
   {
     title: "AI-powered solutions",
+
     desc: "Machine learning models, NLP pipelines, and intelligent recommendation systems integrated directly into usable products.",
+
     icon: (
       <svg
         width="22"
@@ -46,9 +52,12 @@ const SERVICES = [
       </svg>
     ),
   },
+
   {
     title: "Data analytics & visualization",
+
     desc: "Turning raw datasets into clear, actionable insight through statistical analysis, Power BI dashboards, and custom data visualization layers.",
+
     icon: (
       <svg
         width="22"
@@ -67,9 +76,12 @@ const SERVICES = [
       </svg>
     ),
   },
+
   {
     title: "Business process automation",
-    desc: "Replacing manual workflows with efficient, maintainable automated systems — from data pipelines to notification workflows.",
+
+    desc: "Replacing manual workflows with efficient, maintainable automated systems: from data pipelines to notification workflows.",
+
     icon: (
       <svg
         width="22"
@@ -86,9 +98,12 @@ const SERVICES = [
       </svg>
     ),
   },
+
   {
     title: "Technical consulting",
+
     desc: "Architecture review, technology selection, and strategic technical guidance for teams building software or adopting new platforms.",
+
     icon: (
       <svg
         width="22"
@@ -110,7 +125,9 @@ const SERVICES = [
 
 export function Services() {
   const [open, setOpen] = useState<number | null>(null)
+
   const [hovered, setHovered] = useState<number | null>(null)
+
   return (
     <section
       id="services"
@@ -127,6 +144,7 @@ export function Services() {
               className="hover-card border-b py-[18px] cursor-pointer transition-all duration-200 rounded-lg px-3 -mx-3"
               style={{
                 borderColor: "var(--border)",
+
                 backgroundColor:
                   hovered === i ? "rgba(29,58,47,0.04)" : "transparent",
               }}
@@ -141,6 +159,7 @@ export function Services() {
                     style={{
                       backgroundColor:
                         hovered === i ? "var(--primary)" : "var(--muted)",
+
                       color:
                         hovered === i
                           ? "var(--primary-foreground)"
@@ -163,7 +182,9 @@ export function Services() {
                   className="shrink-0 text-lg font-light transition-all duration-300"
                   style={{
                     color: "var(--accent)",
+
                     transform: open === i ? "rotate(45deg)" : "none",
+
                     display: "inline-block",
                   }}
                 >

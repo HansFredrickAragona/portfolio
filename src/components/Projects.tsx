@@ -28,7 +28,7 @@ const PROJECTS: Project[] = [
   {
     id: "soilscan",
 
-    title: "Soil Scan — Fertilizer Recommendation System",
+    title: "Soil Scan: Fertilizer Recommendation System",
 
     summary:
       "An AI-powered web platform that analyzes soil data to generate precise fertilizer recommendations for farmers.",
@@ -38,7 +38,7 @@ const PROJECTS: Project[] = [
     problem:
       "Farmers lacked accessible, data-driven fertilizer guidance, leading to over-application and soil degradation.",
 
-    role: "Lead developer — designed the ML pipeline, built the full-stack app, handled deployment.",
+    role: "Lead developer: designed the ML pipeline, built the full-stack app, handled deployment.",
 
     outcome:
       "Deployed tool now accessible online, enabling evidence-based decisions for smallholder farmers.",
@@ -63,7 +63,7 @@ const PROJECTS: Project[] = [
     problem:
       "Emergency response lacked a centralized digital tool for spatial hazard mapping and public access.",
 
-    role: "Full-stack developer — built the GIS data layer, interactive map UI, and backend API.",
+    role: "Full-stack developer: built the GIS data layer, interactive map UI, and backend API.",
 
     outcome:
       "Publicly available platform supporting community disaster preparedness decisions.",
@@ -88,9 +88,9 @@ const PROJECTS: Project[] = [
     problem:
       "Existing tools miss contextual issues relevant to Filipino English writers.",
 
-    role: "Lead developer — designing the NLP pipeline and building the editor interface.",
+    role: "Lead developer: designing the NLP pipeline and building the editor interface.",
 
-    outcome: "[In progress — not yet deployed]",
+    outcome: "[In progress: not yet deployed]",
 
     tech: ["Python", "React", "FastAPI", "spaCy", "TypeScript"],
   },
@@ -108,9 +108,9 @@ const PROJECTS: Project[] = [
     problem:
       "Job seekers lack a purpose-built tool connecting application history with résumé variants.",
 
-    role: "Solo developer — designing the data model, UI system, and automation features.",
+    role: "Solo developer: designing the data model, UI system, and automation features.",
 
-    outcome: "[In progress — not yet deployed]",
+    outcome: "[In progress: not yet deployed]",
 
     tech: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS"],
   },
@@ -257,7 +257,7 @@ function ConceptArt({ id }: { id: string }) {
           fill="#2c2a4a"
           fontWeight="600"
         >
-          Subject–verb
+          Subject-verb
         </text>
         <text
           x="456"
@@ -332,6 +332,7 @@ function ConceptArt({ id }: { id: string }) {
       </svg>
     )
   }
+
   return (
     <svg
       viewBox="0 0 640 480"
@@ -364,8 +365,11 @@ function ConceptArt({ id }: { id: string }) {
       </text>
       {[
         { x: 16, title: "Applied", cards: ["Frontend role", "Data intern"] },
+
         { x: 176, title: "Interview", cards: ["AI engineer"] },
+
         { x: 336, title: "Offer", cards: ["Junior FS"] },
+
         { x: 496, title: "Closed", cards: [] },
       ].map((col) => (
         <g key={col.title}>
@@ -533,6 +537,7 @@ function BrowserMockup({ project }: { project: Project }) {
               className="absolute bottom-2 left-2 right-2 text-center text-[10px] px-2 py-1 rounded"
               style={{
                 backgroundColor: "rgba(0,0,0,0.55)",
+
                 color: "#fff",
               }}
             >
@@ -600,7 +605,7 @@ export function Projects() {
               {String(idx + 1).padStart(2, "0")} /{" "}
               {String(PROJECTS.length).padStart(2, "0")}
             </span>
-            {/* Mobile arrows — visible only on small screens */}
+            {/* Mobile arrows: visible only on small screens */}
             <div className="flex gap-2 lg:hidden">
               <button
                 onClick={() => go(-1)}
@@ -634,7 +639,7 @@ export function Projects() {
           </div>
         </div>
 
-        {/* Main carousel — swipeable on mobile */}
+        {/* Main carousel: swipeable on mobile */}
         <div
           key={animKey}
           onTouchStart={onTouchStart}
@@ -678,12 +683,12 @@ export function Projects() {
               ←
             </button>
 
-            {/* Browser preview — ~4.5 cols */}
+            {/* Browser preview: ~4.5 cols */}
             <div className="lg:col-span-4">
               <BrowserMockup project={p} />
             </div>
 
-            {/* Project info — ~6 cols */}
+            {/* Project info: ~6 cols */}
             <div className="hover-card project-info-card lg:col-span-6 flex flex-col gap-3">
               <h3
                 className="font-serif text-2xl md:text-3xl font-semibold leading-snug"

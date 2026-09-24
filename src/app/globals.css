@@ -248,3 +248,8 @@ main > section > div:not(.absolute) { width:100%; }
 @media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference) { .hover-card:hover { transform:translateY(-4px); box-shadow:0 12px 30px #142b2014; border-color:var(--accent); } }
 @media(max-width:900px) { .hero-photo { height:480px; } .hero-name { font-size:clamp(2.2rem,7.5vw,4.5rem); } }
 @media(prefers-reduced-motion:reduce) { .hover-card::after { display:none; } }
+
+.about-section-shell { max-width:1280px; margin:auto; }
+.about-section-shell > .section-title { padding-inline:37px; }
+.about-copy h3 { font-family:var(--font-serif); font-size:1.5rem; color:var(--primary); margin-bottom:7px; }
+@media(max-width:900px) { .about-section-shell > .section-title { padding-inline:16px; } .about-copy h3 { font-size:1.35rem; } }

@@ -36,14 +36,14 @@ export function RandomPattern({ dark }: { dark: boolean }) {
   function pseudo(w: number, d: number) {
     const isWeekend = d >= 5
 
-    // Week-level intensity via overlapping waves — always positive base
+    // Week-level intensity via overlapping waves: always positive base
 
     const weekNoise =
       Math.sin(w * 0.31 + 0.5) * 0.35 +
       Math.sin(w * 0.97 + 1.1) * 0.25 +
       Math.sin(w * 1.85 + 2.0) * 0.15
 
-    const weekIntensity = 0.55 + weekNoise * 0.45 // range ~0.15–0.95
+    const weekIntensity = 0.55 + weekNoise * 0.45 // range ~0.15-0.95
 
     // Per-cell deterministic jitter
 
@@ -103,7 +103,9 @@ export function RandomPattern({ dark }: { dark: boolean }) {
     <div
       style={{
         overflow: "hidden",
+
         maxWidth: "100%",
+
         height: visibleH,
       }}
     >
@@ -114,7 +116,9 @@ export function RandomPattern({ dark }: { dark: boolean }) {
         width="100%"
         style={{
           display: "block",
+
           height: "auto",
+
           fontFamily: "Outfit, sans-serif",
         }}
       >

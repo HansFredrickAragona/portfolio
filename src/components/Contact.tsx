@@ -1,33 +1,51 @@
 import { useState, type CSSProperties } from "react"
+
 import { FloatingIcons } from "./FloatingIcons"
+
 import { links } from "@/data/links"
 
 export function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" })
+
   const [copied, setCopied] = useState(false)
 
   const update = (k: string, v: string) => setForm((f) => ({ ...f, [k]: v }))
+
   const handleEmail = () => {
     const s = encodeURIComponent(`Portfolio inquiry from ${form.name}`)
+
     const b = encodeURIComponent(form.message)
+
     window.location.href = `mailto:${links.email}?subject=${s}&body=${b}`
   }
+
   const copyMessage = () => {
     navigator.clipboard.writeText(form.message)
+
     setCopied(true)
+
     setTimeout(() => setCopied(false), 2000)
   }
 
   const inputBase: CSSProperties = {
     width: "100%",
+
     padding: "12px 16px",
+
     borderRadius: "10px",
+
     border: "1px solid var(--border)",
+
     backgroundColor: "var(--background)",
+
     color: "var(--foreground)",
+
     fontSize: "14px",
+
     fontFamily: "Outfit, sans-serif",
+
     outline: "none",
+
     transition: "border-color 0.2s",
   }
 
@@ -56,7 +74,7 @@ export function Contact() {
             className="text-[1.15rem] leading-relaxed self-center"
             style={{ color: "var(--muted-foreground)" }}
           >
-            Fill out the form and hit "Continue to email" — it opens your email
+            Fill out the form and hit "Continue to email": it opens your email
             client with the message ready to send.
           </p>
           <div className="space-y-3">
@@ -94,6 +112,7 @@ export function Contact() {
                 className="flex-1 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed"
                 style={{
                   backgroundColor: "var(--primary)",
+
                   color: "var(--primary-foreground)",
                 }}
               >
@@ -105,6 +124,7 @@ export function Contact() {
                 className="px-5 py-2.5 rounded-full text-sm font-semibold border transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed"
                 style={{
                   borderColor: "var(--primary)",
+
                   color: "var(--primary)",
                 }}
               >

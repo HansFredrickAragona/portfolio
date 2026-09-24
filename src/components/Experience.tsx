@@ -45,7 +45,7 @@ export function Experience() {
                     color: "var(--muted-foreground)",
                   }}
                 >
-                  {e.start} – {e.end}
+                  {e.start} to {e.end}
                 </span>
               </div>
               <p

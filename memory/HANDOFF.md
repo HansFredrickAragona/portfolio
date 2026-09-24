@@ -61,3 +61,5 @@ Owner-driven rapid UI refinements on feat/v2:
 - Removed "Temporary AI portrait" figcaption; About alt cleaned to "Hans working at a laptop".
 
 Checks at a829bb1: oxfmt PASS, `npx tsc --noEmit` PASS, `npm run build` PASS (static `/` 75.8 kB), privacy grep clean. techIcons.tsx / skills.ts left unstaged (oxfmt CRLF-only noise). Two UI commits pending push: `1cad7a8`, `a829bb1`.
+
+Owner resumed Codex after OpenCode finished: About heading added; inner headings use h3. AI-temp image caption was already absent and project badge already In development, retained. Long em/en dashes removed from src copy/metadata; dates now use to. Format, typecheck, production build, diff check pass; no browser recheck this text-only refinement. Existing techIcons.tsx and skills.ts line-ending changes untouched. Base 1a1cbd3.
