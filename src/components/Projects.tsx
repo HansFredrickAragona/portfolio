@@ -438,17 +438,6 @@ function ConceptArt({ id }: { id: string }) {
 // Browser mockup frame wrapping an iframe or placeholder
 
 function BrowserMockup({ project }: { project: Project }) {
-  const [loaded, setLoaded] = useState(false)
-
-  const emoji =
-    project.id === "soilscan"
-      ? "🌱"
-      : project.id === "baguiogis"
-        ? "🗺️"
-        : project.id === "grammar"
-          ? "✍️"
-          : "📋"
-
   return (
     <div
       className="w-full rounded-xl overflow-hidden"
@@ -501,19 +490,10 @@ function BrowserMockup({ project }: { project: Project }) {
       >
         {project.liveUrl ? (
           <>
-            {!loaded && (
-              <div
-                className="absolute inset-0 flex flex-col items-center justify-center gap-3"
-                style={{ color: "var(--muted-foreground)" }}
-              >
-                <span className="text-4xl opacity-30">{emoji}</span>
-                <span className="text-xs opacity-50">Loading preview…</span>
-              </div>
-            )}
             <iframe
               src={project.liveUrl}
               title={project.title}
-              onLoad={() => setLoaded(true)}
+              loading="eager"
               className="w-full h-full border-0"
               style={{
                 transform: "scale(0.75)",
@@ -523,10 +503,6 @@ function BrowserMockup({ project }: { project: Project }) {
                 width: "133.33%",
 
                 height: "133.33%",
-
-                opacity: loaded ? 1 : 0,
-
-                transition: "opacity 0.4s ease",
               }}
             />
           </>
