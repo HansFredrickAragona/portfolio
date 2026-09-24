@@ -31,3 +31,7 @@ Owner requested minimal expandable skills headings, smooth reveal and shorter la
 ## Figma v2 push — 2026-09-24
 
 Owner: “push now.” Authorizes pushing the Figma integration commits on `feat/v2` (`ff89b2a` onward) to origin, including memory sync commits. Still no deploy, no PR, no merge to main unless separately requested.
+
+## Codex refinement push — 2026-09-24
+
+Owner: “do all commit pushed before we continue the changes in ui.” Authorizes committing the uncommitted memory handoff checkpoint and pushing all local `feat/v2` commits (Codex combined-design refinements `f765f6c`…`8cebd47` plus memory) to origin before further UI work. Still no deploy, no PR, no merge to main unless separately requested.

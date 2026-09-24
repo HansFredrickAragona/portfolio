@@ -17,3 +17,8 @@
 | Push Figma commit | root | done (`ff89b2a`+`a2d6e13` → origin/feat/v2) | owner: "push now" |
 
 No task permits deploy or PR.
+
+## Urgent successor checkpoint 2026-09-24
+- DONE: requested Services width and font update, commit 8cebd47; typecheck/build pass.
+- DONE: owner authorized commit+push of all local feat/v2 before further UI work.
+- NEXT: push feat/v2, then verify Services browser layout per memory/OPENCODE_HANDOFF.md; await owner UI feedback. No new redesign scope.

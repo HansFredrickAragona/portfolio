@@ -1,6 +1,6 @@
 # Current state
 
-- Branch: **feat/v2** in sync with `origin/feat/v2` (verified after push; last source commit `ff89b2a`, tip includes memory sync commits).
+- Branch: **feat/v2**. Application tip `8cebd478886b8520f98df3cc4423c304cb8005f1`. Codex refinements were local; owner authorized commit+push of all local work before further UI changes (2026-09-24). URGENT successor state: `memory/OPENCODE_HANDOFF.md`.
 - Figma integration `ff89b2a` + checkpoints pushed 2026-09-24 (owner: "push now").
 - Created from `feat/v1` @ `bfcefef`; docs-only strip at `ccf4140`.
 - Stack: **Next.js 15.5 App Router** (not Vite), React 19, Tailwind 4, oxfmt.
@@ -47,3 +47,4 @@
 
 ## 2026-09-24 owner-approved combined design
 Implemented combined V1 hero/layout and V2 content, laptop About panel, full skills with icons and two-column accordions, glass surfaces and GSAP section reveals. Preserved V2 carousel and decorative GitHub squares. Desktop closed sections fit 1280x720; mobile overflow and native accordion keyboard behavior checked. Final build verification recorded in HANDOFF. No push/deployment.
+
