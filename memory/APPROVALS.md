@@ -30,4 +30,4 @@ Owner requested minimal expandable skills headings, smooth reveal and shorter la
 
 ## Figma v2 push — 2026-09-24
 
-Owner: “push now.” Authorizes pushing the Figma integration commits on `feat/v2` (`ff89b2a`, `a2d6e13`) to origin. Still no deploy, no PR, no merge to main unless separately requested.
+Owner: “push now.” Authorizes pushing the Figma integration commits on `feat/v2` (`ff89b2a` onward) to origin, including memory sync commits. Still no deploy, no PR, no merge to main unless separately requested.

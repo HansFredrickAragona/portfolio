@@ -11,4 +11,4 @@
 - D09: Tech-symbol extension: Hero decorative symbols from verified résumé stack; About full categorized skills; local simple-icons CC0 paths; GSAP only for symbol motion.
 - D10: **Branch strategy** — `feat/v1` = full prior Next.js app snapshot (`bfcefef`, pushed/renamed). `feat/v2` = docs + Figma UI. Owner unzipped Figma Make export (actually **Next.js 15 App Router**, not Vite). Port requirements applied: complete skills data, About photos+info, Hero GitHub+Email separate + LinkedIn/GitHub/Email buttons, approved links only. See `docs/DECISIONS.md` DX11+.
 - D11: Figma drop-in wrong contact data corrected from export (wrong email/LinkedIn). Centralized in `src/data/links.ts`. Experience wrong university entry replaced with v1 DOST/Gift of Grace/Bell-Kenz. oxfmt type-member breakage noted; verify tsc after format.
-- D12: Owner authorized push of Figma integration on 2026-09-24 (“push now”). origin/feat/v2 at push-record commit = `c29762f` (source `ff89b2a`). No deploy/PR/merge authorized.
+- D12: Owner authorized push of Figma integration on 2026-09-24 (“push now”). origin/feat/v2 synced after push (source `ff89b2a`). No deploy/PR/merge authorized.
