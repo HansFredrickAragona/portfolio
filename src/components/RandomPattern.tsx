@@ -85,19 +85,19 @@ export function RandomPattern({ dark }: { dark: boolean }) {
     week: Math.round((i / 12) * WEEKS),
   }))
 
-  const CELL = 16
+  const CELL = 22
 
-  const GAP = 4
+  const GAP = 5
 
-  const DAY_LABEL_W = 32
+  const DAY_LABEL_W = 36
 
-  const MONTH_LABEL_H = 18
+  const MONTH_LABEL_H = 20
 
   const totalW = DAY_LABEL_W + WEEKS * (CELL + GAP)
 
   const totalH = MONTH_LABEL_H + DAYS * (CELL + GAP)
 
-  const visibleH = Math.round(totalH * 0.75)
+  const visibleH = Math.round(totalH * 0.5)
 
   return (
     <div
@@ -124,7 +124,7 @@ export function RandomPattern({ dark }: { dark: boolean }) {
             key={label}
             x={DAY_LABEL_W + week * (CELL + GAP)}
             y={13}
-            fontSize="12"
+            fontSize="13"
             fill={dark ? "#8b949e" : "#57606a"}
           >
             {label}
@@ -138,7 +138,7 @@ export function RandomPattern({ dark }: { dark: boolean }) {
               <text
                 x={0}
                 y={MONTH_LABEL_H + d * (CELL + GAP) + CELL - 2}
-                fontSize="12"
+                fontSize="13"
                 fill={dark ? "#8b949e" : "#57606a"}
               >
                 {DAY_LABELS[d]}

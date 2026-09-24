@@ -142,7 +142,7 @@ main > section > div:not(.absolute) { width:100%; }
 .about-photo img { width:100%; max-height:570px; object-fit:cover; border-radius:18px; }
 .about-photo figcaption { position:absolute; bottom:12px; left:12px; background:var(--background); border-radius:8px; padding:4px 8px; font-size:.75rem; }
 .about-copy { display:grid; gap:25px; line-height:1.55; }
-.about-intro { font-size:clamp(1.44rem,2.25vw,1.9rem); }
+.about-intro { font-size:clamp(1.37rem,2.14vw,1.81rem); }
 .about-copy h2 { font-family:var(--font-serif); font-size:1.67rem; color:var(--primary); margin-bottom:7px; }
 .about-copy li + li { margin-top:7px; }
 .skills-shell { max-width:1360px; margin:auto; padding:41px; }

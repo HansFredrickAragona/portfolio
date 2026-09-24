@@ -135,7 +135,7 @@ export function Services() {
           {SERVICES.map((s, i) => (
             <div
               key={i}
-              className="border-b py-[18px] cursor-pointer transition-all duration-200 rounded-lg px-3 -mx-3"
+              className="hover-card border-b py-[18px] cursor-pointer transition-all duration-200 rounded-lg px-3 -mx-3"
               style={{
                 borderColor: "var(--border)",
                 backgroundColor:

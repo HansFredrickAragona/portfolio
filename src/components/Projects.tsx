@@ -116,19 +116,19 @@ const PROJECTS: Project[] = [
   },
 ]
 
-// Browser mockup frame wrapping an iframe or placeholder
+// Browser mockup frame wrapping an iframe or labeled abstract placeholder
 
 function BrowserMockup({ project }: { project: Project }) {
   const [loaded, setLoaded] = useState(false)
 
-  const emoji =
+  const accent =
     project.id === "soilscan"
-      ? "🌱"
+      ? "#3d6e4a"
       : project.id === "baguiogis"
-        ? "🗺️"
+        ? "#3d6e8c"
         : project.id === "grammar"
-          ? "✍️"
-          : "📋"
+          ? "#6a5acd"
+          : "#8c6a3d"
 
   return (
     <div
@@ -178,7 +178,7 @@ function BrowserMockup({ project }: { project: Project }) {
       {/* Preview area */}
       <div
         className="relative w-full"
-        style={{ height: "360px", backgroundColor: "var(--muted)" }}
+        style={{ height: "480px", backgroundColor: "var(--muted)" }}
       >
         {project.liveUrl ? (
           <>
@@ -187,7 +187,6 @@ function BrowserMockup({ project }: { project: Project }) {
                 className="absolute inset-0 flex flex-col items-center justify-center gap-3"
                 style={{ color: "var(--muted-foreground)" }}
               >
-                <span className="text-4xl opacity-30">{emoji}</span>
                 <span className="text-xs opacity-50">Loading preview…</span>
               </div>
             )}
@@ -213,13 +212,56 @@ function BrowserMockup({ project }: { project: Project }) {
           </>
         ) : (
           <div
-            className="w-full h-full flex flex-col items-center justify-center gap-3"
+            className="w-full h-full flex flex-col items-center justify-center gap-4 p-6"
             style={{ color: "var(--muted-foreground)" }}
           >
-            <span className="text-5xl opacity-20">{emoji}</span>
-            <span className="text-sm font-medium opacity-40">
-              In development
-            </span>
+            <div
+              className="w-full max-w-sm rounded-xl border p-6 grid gap-3"
+              style={{
+                borderColor: "var(--border)",
+                backgroundColor: "var(--card)",
+              }}
+              aria-hidden="true"
+            >
+              <div
+                className="h-3 w-2/3 rounded"
+                style={{ backgroundColor: accent, opacity: 0.55 }}
+              />
+              <div
+                className="h-2.5 w-full rounded"
+                style={{
+                  backgroundColor: "var(--muted-foreground)",
+                  opacity: 0.25,
+                }}
+              />
+              <div
+                className="h-2.5 w-5/6 rounded"
+                style={{
+                  backgroundColor: "var(--muted-foreground)",
+                  opacity: 0.2,
+                }}
+              />
+              <div className="grid grid-cols-3 gap-2 pt-1">
+                {[0, 1, 2].map((n) => (
+                  <div
+                    key={n}
+                    className="h-14 rounded-lg"
+                    style={{
+                      backgroundColor: accent,
+                      opacity: 0.12 + n * 0.06,
+                    }}
+                  />
+                ))}
+              </div>
+              <div
+                className="h-8 w-28 rounded-lg mt-1"
+                style={{ backgroundColor: accent, opacity: 0.45 }}
+              />
+            </div>
+            <p className="text-sm font-medium opacity-70">
+              Concept layout — not a live screenshot
+            </p>
+            <p className="text-xs font-medium opacity-50">In development</p>
           </div>
         )}
       </div>
@@ -371,13 +413,13 @@ export function Projects() {
               ←
             </button>
 
-            {/* Browser preview — ~4.5 cols */}
-            <div className="lg:col-span-4">
+            {/* Browser preview — larger demo frame */}
+            <div className="lg:col-span-6">
               <BrowserMockup project={p} />
             </div>
 
-            {/* Project info — ~6 cols */}
-            <div className="hover-card project-info-card lg:col-span-6 flex flex-col gap-3">
+            {/* Project info */}
+            <div className="hover-card project-info-card lg:col-span-5 flex flex-col gap-3">
               <h3
                 className="font-serif text-2xl md:text-3xl font-semibold leading-snug"
                 style={{ color: "var(--primary)" }}

@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 import { aboutSkillCategories } from "@/data/skills"
 
 import { TechIcon } from "./icons/TechIcon"
@@ -19,6 +21,8 @@ const aliases: Record<string, string> = {
 }
 
 export function Skills() {
+  const [openId, setOpenId] = useState<string | null>(null)
+
   return (
     <section id="skills" className="skills-section">
       <div className="skills-shell glass-panel">
@@ -31,7 +35,16 @@ export function Skills() {
           ].map((groups, index) => (
             <div key={index}>
               {groups.map((group) => (
-                <details className="skill-group hover-card" key={group.id}>
+                <details
+                  className="skill-group hover-card"
+                  key={group.id}
+                  open={openId === group.id}
+                  onToggle={(e) => {
+                    const el = e.currentTarget
+                    if (el.open) setOpenId(group.id)
+                    else setOpenId((cur) => (cur === group.id ? null : cur))
+                  }}
+                >
                   <summary>
                     {group.label}
                     <span aria-hidden="true">+</span>
