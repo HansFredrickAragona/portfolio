@@ -41,3 +41,5 @@ Browser checks: 1280x720 hero 720px; projects/services/experience/about/collapse
 Initial production build compiled and typechecked but failed during page-data JSON parsing while development preview was being started. Preview stopped for isolated rerun; see final check output before committing. Working changes belong to Codex for this owner-approved task; historical OpenCode handoffs are not active transfer instructions.
 
 Final verification: production build PASS after fresh cache and excluding ignored tmp from TypeScript; formatting and strict typecheck PASS. No standalone lint/test scripts exist in V2. Preview on 127.0.0.1:3113. Base commit 9f397d2; completed local refinement commit follows.
+
+Hero follow-up: removed experience rail; moved GitHub square graphic into its place with roles above; removed plain GitHub/email address lines; enlarged name. Social buttons retained. TypeScript and production build pass, Hero formatted. Browser returned stale prior content and blocked fresh navigation, so final visual verification remains pending.

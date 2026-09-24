@@ -1,10 +1,8 @@
-import { experience } from "@/data/experience"
-
 import { FloatingIcons } from "./FloatingIcons"
 
 import { RandomPattern } from "./RandomPattern"
 
-import { HeroSocialButtons, HeroContactLines } from "./HeroSocial"
+import { HeroSocialButtons } from "./HeroSocial"
 
 export function Hero({ dark }: { dark: boolean }) {
   return (
@@ -14,17 +12,15 @@ export function Hero({ dark }: { dark: boolean }) {
         <h1 className="hero-name">
           Hans Fredrick<span>O. Aragona</span>
         </h1>
-        <p className="hero-roles">
-          Full-Stack Developer · AI & ML Engineer · Team Leader
-        </p>
         <div className="hero-stage">
-          <div className="hero-careers">
-            {experience.map((item) => (
-              <div key={item.id}>
-                <strong>{item.role}</strong>
-                <p>{item.org}</p>
-              </div>
-            ))}
+          <div className="hero-github-panel">
+            <p className="hero-roles">
+              Full-Stack Developer · AI &amp; ML Engineer · Team Leader
+            </p>
+            <div className="hero-contributions">
+              <RandomPattern dark={dark} />
+              <span>GitHub-inspired pattern</span>
+            </div>
           </div>
           <div className="hero-photo">
             <img
@@ -39,12 +35,7 @@ export function Hero({ dark }: { dark: boolean }) {
               communication, and collaborative leadership.
             </p>
             <HeroSocialButtons />
-            <HeroContactLines />
           </div>
-        </div>
-        <div className="hero-contributions">
-          <RandomPattern dark={dark} />
-          <span>GitHub-inspired pattern</span>
         </div>
         <div className="hero-actions">
           <a href="#projects">View my work ↗</a>

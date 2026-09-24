@@ -194,3 +194,12 @@ main > section > div:not(.absolute) { width:100%; }
  #projects > div:last-child { padding-top:28px; padding-bottom:28px; }
  #projects h3 { font-size:1.5rem; }
 }
+
+/* Hero: roles and GitHub squares replace the experience rail. */
+.hero-name { margin-bottom:28px; font-size:clamp(3.7rem,8.8vw,8rem); }
+.hero-github-panel { min-width:0; }
+.hero-github-panel .hero-roles { text-align:left; font-size:1.15rem; line-height:1.65; margin:0 0 20px; }
+.hero-github-panel .hero-contributions { margin:0; width:100%; }
+.hero-actions { margin-top:28px; }
+@media (min-width:901px) { .hero-name { font-size:clamp(4.5rem,11.5svh,8rem); } }
+@media (max-width:900px) { .hero-github-panel { max-width:600px; width:100%; margin:auto; } .hero-github-panel .hero-roles { text-align:center; } }
