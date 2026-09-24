@@ -7,10 +7,9 @@ export function About() {
         <figure className="about-photo">
           <img
             src="/assets/about-laptop.webp"
-            alt="Temporary AI portrait of Hans working at a laptop"
+            alt="Hans working at a laptop"
             loading="lazy"
           />
-          <figcaption>Temporary AI portrait</figcaption>
         </figure>
         <div className="about-copy">
           <p className="about-intro">{profile.detail}</p>

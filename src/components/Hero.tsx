@@ -25,8 +25,12 @@ export function Hero({ dark }: { dark: boolean }) {
               alt="Hans Fredrick O. Aragona"
             />
             <div className="hero-actions">
-              <a href="#projects">View my work ↗</a>
-              <a href="#contact">Let’s get in touch</a>
+              <a href="#projects" className="hover-card">
+                View my work ↗
+              </a>
+              <a href="#contact" className="hover-card">
+                Let’s get in touch
+              </a>
             </div>
           </div>
           <div className="hero-intro">

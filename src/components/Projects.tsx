@@ -536,7 +536,7 @@ function BrowserMockup({ project }: { project: Project }) {
                 color: "#fff",
               }}
             >
-              AI concept preview — not a product screenshot
+              In development
             </span>
           </div>
         )}
@@ -588,7 +588,7 @@ export function Projects() {
         @keyframes slideInLeft  { from { opacity:0; transform:translateX(-36px); } to { opacity:1; transform:translateX(0); } }
       `}</style>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-10 py-[74px] md:py-[92px]">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 py-[10px] md:py-[92px]">
         {/* Section header */}
         <div className="flex items-center justify-between mb-7">
           <h2 className="section-title mb-0">Projects</h2>

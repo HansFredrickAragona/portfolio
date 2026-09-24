@@ -34,7 +34,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-14 md:py-[74px] px-6 overflow-hidden"
+      className="relative py-[10px] md:py-[74px] px-6 overflow-hidden"
       style={{ backgroundColor: "var(--card)" }}
     >
       <FloatingIcons seed={3} />

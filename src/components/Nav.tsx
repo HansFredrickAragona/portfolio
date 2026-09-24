@@ -48,8 +48,11 @@ export function Nav({
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-16">
         <a
           href="#"
-          className="font-serif text-xl font-semibold tracking-tight"
-          style={{ color: "var(--primary)" }}
+          className="nav-glow font-serif text-[1.15rem] font-semibold tracking-tight w-10 h-10 rounded-full flex items-center justify-center shrink-0"
+          style={{
+            backgroundColor: "var(--primary)",
+            color: "var(--primary-foreground)",
+          }}
         >
           HF
         </a>
@@ -59,7 +62,7 @@ export function Nav({
             <li key={l}>
               <a
                 href={`#${l.toLowerCase().replace("é", "e")}`}
-                className="text-sm font-medium transition-colors duration-200"
+                className="nav-glow text-[0.95rem] font-medium inline-block"
                 style={{ color: "var(--muted-foreground)" }}
                 onMouseEnter={(e) =>
                   (e.currentTarget.style.color = "var(--primary)")
@@ -78,7 +81,7 @@ export function Nav({
           {/* Dark mode toggle */}
           <button
             onClick={() => setDark(!dark)}
-            className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200"
+            className="nav-glow w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200"
             style={{
               backgroundColor: "var(--secondary)",
               color: "var(--muted-foreground)",
@@ -126,18 +129,16 @@ export function Nav({
 
           <a
             href="#contact"
-            className="hidden md:inline-flex text-sm font-semibold px-5 py-2 rounded-full transition-all duration-200"
+            className="nav-glow hidden md:inline-flex text-[0.95rem] font-semibold px-5 py-2 rounded-full"
             style={{
               backgroundColor: "var(--primary)",
               color: "var(--primary-foreground)",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.opacity = "0.88"
-              e.currentTarget.style.transform = "translateY(-1px)"
+              e.currentTarget.style.opacity = "0.9"
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.opacity = "1"
-              e.currentTarget.style.transform = ""
             }}
           >
             Let's get in touch
@@ -188,7 +189,7 @@ export function Nav({
             <li key={l}>
               <a
                 href={`#${l.toLowerCase().replace("é", "e")}`}
-                className="text-base font-medium block py-1"
+                className="nav-glow text-base font-medium block py-1"
                 style={{ color: "var(--primary)" }}
                 onClick={() => setMenuOpen(false)}
               >
@@ -199,7 +200,7 @@ export function Nav({
           <li>
             <a
               href="#contact"
-              className="text-sm font-semibold px-5 py-2.5 rounded-full inline-block mt-1"
+              className="nav-glow text-sm font-semibold px-5 py-2.5 rounded-full inline-block mt-1"
               style={{
                 backgroundColor: "var(--primary)",
                 color: "var(--primary-foreground)",

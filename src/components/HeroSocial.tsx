@@ -72,7 +72,7 @@ export function HeroSocialButtons() {
           {...(item.external
             ? { target: "_blank", rel: "noopener noreferrer" }
             : {})}
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold border transition-all duration-200"
+          className="hover-card inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold border transition-all duration-200"
           style={{
             backgroundColor: "var(--secondary)",
             borderColor: "var(--border)",
