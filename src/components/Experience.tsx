@@ -10,18 +10,7 @@ export function Experience() {
     >
       <FloatingIcons seed={4} />
       <div className="relative z-10 max-w-6xl mx-auto">
-        <div className="flex items-center gap-3 mb-9">
-          <div
-            className="w-1 h-8 rounded-full"
-            style={{ backgroundColor: "var(--primary)" }}
-          />
-          <h2
-            className="font-serif text-[2rem] md:text-[2.65rem] font-semibold"
-            style={{ color: "var(--primary)" }}
-          >
-            Experience
-          </h2>
-        </div>
+        <h2 className="section-title">Experience</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {experience.map((e) => (
             <div

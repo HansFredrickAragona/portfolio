@@ -39,3 +39,9 @@ Owner: “do all commit pushed before we continue the changes in ui.” Authoriz
 ## Project concept previews — 2026-09-24
 
 Owner: “override fro now the ai images.” Temporary override of the no-fake-product-screenshot default for project demo frames only: labeled AI/concept UI illustrations showing how each app might look are allowed while real screenshots are unavailable. Must remain visibly labeled as concept/not a product screenshot. Live project iframes still preferred when loaded. Does not authorize inventing metrics, features, or claiming the art is a real deploy capture. Supersedes the prior “concept layout only / no AI mockups” hesitation for this slice only; permanent policy still prefers approved real screenshots.
+
+Owner follow-up (2026-09-24): AI concept art only for in-development projects (Grammar Checker, Résumé Job Tracker); live/completed projects (Soil Scan, BaguioReady GIS) keep the real iframe preview only.
+
+Owner follow-up (same day): AI concept art is limited to in-development projects only (Grammar Checker, Résumé Job Tracker). Live/completed projects (Soil Scan, BaguioReady GIS) keep real iframe previews and must not show concept art.
+
+Owner follow-up: AI concept art only for in-development projects (Grammar Checker, Résumé Job Tracker); live/completed projects (Soil Scan, BaguioReady GIS) keep the real iframe preview with no concept art.

@@ -116,6 +116,321 @@ const PROJECTS: Project[] = [
   },
 ]
 
+function ConceptArt({ id }: { id: string }) {
+  if (id === "grammar") {
+    return (
+      <svg
+        viewBox="0 0 640 480"
+        className="w-full h-full"
+        role="img"
+        aria-label="Concept illustration of Grammar Checker editor"
+      >
+        <rect width="640" height="480" fill="#f7f5fb" />
+        <rect width="640" height="48" fill="#2c2a4a" />
+        <text
+          x="20"
+          y="31"
+          fill="#efeaff"
+          fontFamily="Outfit,sans-serif"
+          fontSize="17"
+          fontWeight="600"
+        >
+          Grammar Checker
+        </text>
+        <rect x="500" y="12" width="120" height="24" rx="12" fill="#6a5acd" />
+        <text
+          x="560"
+          y="29"
+          textAnchor="middle"
+          fill="#fff"
+          fontFamily="Outfit,sans-serif"
+          fontSize="11"
+        >
+          Check text
+        </text>
+        <rect
+          x="24"
+          y="68"
+          width="380"
+          height="380"
+          rx="12"
+          fill="#fff"
+          stroke="#ddd6f3"
+        />
+        <text
+          x="44"
+          y="100"
+          fontFamily="Outfit,sans-serif"
+          fontSize="13"
+          fill="#6b6558"
+        >
+          Draft
+        </text>
+        <text
+          x="44"
+          y="140"
+          fontFamily="Outfit,sans-serif"
+          fontSize="16"
+          fill="#1a1a18"
+        >
+          The team{" "}
+          <tspan fill="#c1121f" textDecoration="underline">
+            have finish
+          </tspan>{" "}
+          the report
+        </text>
+        <text
+          x="44"
+          y="168"
+          fontFamily="Outfit,sans-serif"
+          fontSize="16"
+          fill="#1a1a18"
+        >
+          yesterday and{" "}
+          <tspan fill="#c1121f" textDecoration="underline">
+            send
+          </tspan>{" "}
+          it to the client.
+        </text>
+        <text
+          x="44"
+          y="210"
+          fontFamily="Outfit,sans-serif"
+          fontSize="16"
+          fill="#1a1a18"
+        >
+          We{" "}
+          <tspan fill="#b08900" textDecoration="underline">
+            is excited
+          </tspan>{" "}
+          to share results
+        </text>
+        <text
+          x="44"
+          y="238"
+          fontFamily="Outfit,sans-serif"
+          fontSize="16"
+          fill="#1a1a18"
+        >
+          with the{" "}
+          <tspan fill="#c1121f" textDecoration="underline">
+            stakeholders
+          </tspan>
+          .
+        </text>
+        {[0, 1, 2, 3].map((i) => (
+          <rect
+            key={i}
+            x="44"
+            y={270 + i * 36}
+            width={320 - i * 40}
+            height="10"
+            rx="5"
+            fill="#e8e4f4"
+          />
+        ))}
+        <rect
+          x="424"
+          y="68"
+          width="192"
+          height="380"
+          rx="12"
+          fill="#fff"
+          stroke="#ddd6f3"
+        />
+        <text
+          x="444"
+          y="100"
+          fontFamily="Outfit,sans-serif"
+          fontSize="13"
+          fill="#6a5acd"
+          fontWeight="600"
+        >
+          Suggestions
+        </text>
+        <rect x="440" y="120" width="160" height="88" rx="10" fill="#f3e8ff" />
+        <text
+          x="456"
+          y="146"
+          fontFamily="Outfit,sans-serif"
+          fontSize="12"
+          fill="#2c2a4a"
+          fontWeight="600"
+        >
+          Subject–verb
+        </text>
+        <text
+          x="456"
+          y="168"
+          fontFamily="Outfit,sans-serif"
+          fontSize="13"
+          fill="#6a5acd"
+        >
+          has finished
+        </text>
+        <rect x="456" y="180" width="72" height="18" rx="9" fill="#6a5acd" />
+        <text
+          x="492"
+          y="193"
+          textAnchor="middle"
+          fill="#fff"
+          fontFamily="Outfit,sans-serif"
+          fontSize="10"
+        >
+          Apply
+        </text>
+        <rect x="440" y="224" width="160" height="88" rx="10" fill="#f3e8ff" />
+        <text
+          x="456"
+          y="250"
+          fontFamily="Outfit,sans-serif"
+          fontSize="12"
+          fill="#2c2a4a"
+          fontWeight="600"
+        >
+          Tense
+        </text>
+        <text
+          x="456"
+          y="272"
+          fontFamily="Outfit,sans-serif"
+          fontSize="13"
+          fill="#6a5acd"
+        >
+          sent
+        </text>
+        <rect x="456" y="284" width="72" height="18" rx="9" fill="#6a5acd" />
+        <text
+          x="492"
+          y="297"
+          textAnchor="middle"
+          fill="#fff"
+          fontFamily="Outfit,sans-serif"
+          fontSize="10"
+        >
+          Apply
+        </text>
+        <text
+          x="444"
+          y="360"
+          fontFamily="Outfit,sans-serif"
+          fontSize="12"
+          fill="#6b6558"
+        >
+          Score
+        </text>
+        <text
+          x="444"
+          y="400"
+          fontFamily="Outfit,sans-serif"
+          fontSize="36"
+          fill="#6a5acd"
+          fontWeight="700"
+        >
+          78
+        </text>
+      </svg>
+    )
+  }
+  return (
+    <svg
+      viewBox="0 0 640 480"
+      className="w-full h-full"
+      role="img"
+      aria-label="Concept illustration of Resume Job Tracker board"
+    >
+      <rect width="640" height="480" fill="#f6f1ea" />
+      <rect width="640" height="48" fill="#3d2f1f" />
+      <text
+        x="20"
+        y="31"
+        fill="#f5f0e8"
+        fontFamily="Outfit,sans-serif"
+        fontSize="17"
+        fontWeight="600"
+      >
+        Résumé Job Tracker
+      </text>
+      <rect x="500" y="12" width="120" height="24" rx="12" fill="#8c6a3d" />
+      <text
+        x="560"
+        y="29"
+        textAnchor="middle"
+        fill="#fff"
+        fontFamily="Outfit,sans-serif"
+        fontSize="11"
+      >
+        Add application
+      </text>
+      {[
+        { x: 16, title: "Applied", cards: ["Frontend role", "Data intern"] },
+        { x: 176, title: "Interview", cards: ["AI engineer"] },
+        { x: 336, title: "Offer", cards: ["Junior FS"] },
+        { x: 496, title: "Closed", cards: [] },
+      ].map((col) => (
+        <g key={col.title}>
+          <rect
+            x={col.x}
+            y="68"
+            width="144"
+            height="388"
+            rx="12"
+            fill="#ebe3d6"
+          />
+          <text
+            x={col.x + 14}
+            y="96"
+            fontFamily="Outfit,sans-serif"
+            fontSize="13"
+            fill="#3d2f1f"
+            fontWeight="600"
+          >
+            {col.title}
+          </text>
+          {col.cards.map((c, i) => (
+            <g key={c}>
+              <rect
+                x={col.x + 10}
+                y={112 + i * 88}
+                width="124"
+                height="72"
+                rx="10"
+                fill="#fff"
+                stroke="#d9d0c2"
+              />
+              <rect
+                x={col.x + 22}
+                y={128 + i * 88}
+                width="80"
+                height="8"
+                rx="4"
+                fill="#8c6a3d"
+                opacity=".7"
+              />
+              <rect
+                x={col.x + 22}
+                y={146 + i * 88}
+                width="96"
+                height="6"
+                rx="3"
+                fill="#d9d0c2"
+              />
+              <rect
+                x={col.x + 22}
+                y={160 + i * 88}
+                width="64"
+                height="6"
+                rx="3"
+                fill="#d9d0c2"
+              />
+            </g>
+          ))}
+        </g>
+      ))}
+    </svg>
+  )
+}
+
 // Browser mockup frame wrapping an iframe or placeholder
 
 function BrowserMockup({ project }: { project: Project }) {
@@ -178,7 +493,7 @@ function BrowserMockup({ project }: { project: Project }) {
       {/* Preview area */}
       <div
         className="relative w-full"
-        style={{ height: "360px", backgroundColor: "var(--muted)" }}
+        style={{ height: "378px", backgroundColor: "var(--muted)" }}
       >
         {project.liveUrl ? (
           <>
@@ -212,13 +527,16 @@ function BrowserMockup({ project }: { project: Project }) {
             />
           </>
         ) : (
-          <div
-            className="w-full h-full flex flex-col items-center justify-center gap-3"
-            style={{ color: "var(--muted-foreground)" }}
-          >
-            <span className="text-5xl opacity-20">{emoji}</span>
-            <span className="text-sm font-medium opacity-40">
-              In development
+          <div className="relative w-full h-full">
+            <ConceptArt id={project.id} />
+            <span
+              className="absolute bottom-2 left-2 right-2 text-center text-[10px] px-2 py-1 rounded"
+              style={{
+                backgroundColor: "rgba(0,0,0,0.55)",
+                color: "#fff",
+              }}
+            >
+              AI concept preview — not a product screenshot
             </span>
           </div>
         )}
@@ -273,18 +591,7 @@ export function Projects() {
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-[74px] md:py-[92px]">
         {/* Section header */}
         <div className="flex items-center justify-between mb-7">
-          <div className="flex items-center gap-3">
-            <div
-              className="w-1 h-8 rounded-full"
-              style={{ backgroundColor: "var(--primary)" }}
-            />
-            <h2
-              className="font-serif text-[2rem] md:text-[2.65rem] font-semibold"
-              style={{ color: "var(--primary)" }}
-            >
-              Projects
-            </h2>
-          </div>
+          <h2 className="section-title mb-0">Projects</h2>
           <div className="flex items-center gap-3">
             <span
               className="text-sm font-medium tabular-nums"

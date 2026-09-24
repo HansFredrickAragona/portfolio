@@ -119,18 +119,7 @@ export function Services() {
     >
       <FloatingIcons seed={2} />
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10">
-        <div className="flex items-center gap-3 mb-9">
-          <div
-            className="w-1 h-8 rounded-full"
-            style={{ backgroundColor: "var(--primary)" }}
-          />
-          <h2
-            className="font-serif text-[2rem] md:text-[2.65rem] font-semibold"
-            style={{ color: "var(--primary)" }}
-          >
-            Services
-          </h2>
-        </div>
+        <h2 className="section-title">Services</h2>
         <div className="w-full">
           {SERVICES.map((s, i) => (
             <div
