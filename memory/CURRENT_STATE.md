@@ -1,7 +1,7 @@
 # Current state
 
-- Branch: **feat/v2** — Figma Make drop-in integrated with v1 content ports.
-- Created from `feat/v1` @ `bfcefef`; docs-only strip at `ccf4140`; Figma app drop-in pending first source commit this session.
+- Branch: **feat/v2** — Figma Make drop-in integrated with v1 content ports @ `ff89b2a`.
+- Created from `feat/v1` @ `bfcefef`; docs-only strip at `ccf4140`; Figma source commit `ff89b2a` (local, not pushed).
 - Stack: **Next.js 15.5 App Router** (not Vite), React 19, Tailwind 4, oxfmt.
 - Full prior app remains on `feat/v1` @ `bfcefef`.
 - Checks (this drop-in): `npx tsc --noEmit` PASS, `npm run build` PASS (static `/` 13.8 kB), privacy grep clean, LFS tracks both portraits.
