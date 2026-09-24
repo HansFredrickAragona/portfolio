@@ -1,3 +1,5 @@
+import { FloatingIcons } from "./FloatingIcons"
+
 import { useState } from "react"
 
 import { aboutSkillCategories } from "@/data/skills"
@@ -25,6 +27,7 @@ export function Skills() {
 
   return (
     <section id="skills" className="skills-section">
+      <FloatingIcons seed={1} />
       <div className="skills-shell glass-panel">
         <h2 className="section-title">Skills</h2>
         <div className="skills-columns">
@@ -41,6 +44,7 @@ export function Skills() {
                   open={openId === group.id}
                   onToggle={(e) => {
                     const el = e.currentTarget
+
                     if (el.open) setOpenId(group.id)
                     else setOpenId((cur) => (cur === group.id ? null : cur))
                   }}

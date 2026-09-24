@@ -7,71 +7,36 @@ export function FloatingIcons({
   color?: string
   seed?: number
 }) {
-  const placements = [
-    { idx: seed % icons.length, top: "8%", left: "1%", delay: "0s", size: 0.8 },
-    {
-      idx: (seed + 2) % icons.length,
-      top: "50%",
-      left: "0%",
-      delay: "1.1s",
-      size: 0.85,
-    },
-    {
-      idx: (seed + 4) % icons.length,
-      top: "82%",
-      left: "2%",
-      delay: "0.5s",
-      size: 0.75,
-    },
-    {
-      idx: (seed + 1) % icons.length,
-      top: "12%",
-      right: "1%",
-      delay: "0.8s",
-      size: 0.85,
-    },
-    {
-      idx: (seed + 3) % icons.length,
-      top: "55%",
-      right: "0%",
-      delay: "0.3s",
-      size: 0.8,
-    },
-    {
-      idx: (seed + 5) % icons.length,
-      top: "80%",
-      right: "2%",
-      delay: "1.4s",
-      size: 0.75,
-    },
-  ]
   return (
-    <>
-      {placements.map((p, i) => {
-        const icon = icons[p.idx]
+    <div
+      className="section-icon-frame absolute inset-0 pointer-events-none hidden lg:block"
+      aria-hidden="true"
+    >
+      {[0, 1, 2, 3, 4, 5].map((index) => {
+        const icon = icons[(seed + index) % icons.length]
+
         return (
           <div
-            key={i}
-            className="animate-float absolute hidden lg:flex flex-col items-center pointer-events-none"
-            style={{
-              top: p.top,
-              left: (p as any).left,
-              right: (p as any).right,
-              animationDelay: p.delay,
-              opacity: 0.16,
-              transform: `scale(${p.size})`,
-            }}
+            key={index}
+            className={`section-edge-icon edge-${
+              index < 3 ? "left" : "right"
+            } edge-row-${index % 3}`}
           >
-            {icon.el(color)}
-            <span
-              className="mt-1 text-[9px] font-semibold tracking-wide"
-              style={{ color: "var(--muted-foreground)" }}
+            <div
+              className="animate-float flex flex-col items-center"
+              style={{ animationDelay: `${index * 0.25}s`, opacity: 0.16 }}
             >
-              {icon.label}
-            </span>
+              {icon.el(color)}
+              <span
+                className="mt-1 text-[9px] font-semibold tracking-wide"
+                style={{ color: "var(--muted-foreground)" }}
+              >
+                {icon.label}
+              </span>
+            </div>
           </div>
         )
       })}
-    </>
+    </div>
   )
 }

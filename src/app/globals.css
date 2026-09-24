@@ -272,3 +272,17 @@ main > section > div:not(.absolute) { width:100%; }
 
 /* Content sections follow their content height instead of filling a screen. */
 main > section:not(#hero) { min-height:0; justify-content:flex-start; }
+
+/* Match Services content and heading alignment across sections. */
+.skills-shell { max-width:1280px; }
+.about-section-shell,.skills-shell { position:relative; z-index:1; }
+.section-icon-frame { overflow:hidden; }
+.section-edge-icon { position:absolute; width:48px; height:56px; }
+.section-edge-icon.edge-left { left:12px; }
+.section-edge-icon.edge-right { right:12px; }
+.section-edge-icon.edge-row-0 { top:20px; }
+.section-edge-icon.edge-row-1 { top:50%; translate:0 -50%; }
+.section-edge-icon.edge-row-2 { bottom:20px; }
+@media (min-width:1024px) and (max-width:1439px) {
+  main > section:not(#hero), .contact-screen > section { padding-inline:72px; }
+}

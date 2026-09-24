@@ -1,8 +1,11 @@
+import { FloatingIcons } from "./FloatingIcons"
+
 import { profile, education, leadership, interests } from "@/data/profile"
 
 export function About() {
   return (
     <section id="about" aria-label="About Hans" className="about-section">
+      <FloatingIcons seed={6} />
       <div className="about-section-shell">
         <h2 className="section-title">About</h2>
         <div className="about-layout glass-panel">

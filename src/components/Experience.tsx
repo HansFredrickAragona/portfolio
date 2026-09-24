@@ -9,7 +9,7 @@ export function Experience() {
       className="relative py-[10px] md:py-[74px] px-6 overflow-hidden"
     >
       <FloatingIcons seed={4} />
-      <div className="relative z-10 max-w-6xl mx-auto">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10">
         <h2 className="section-title">Experience</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {experience.map((e) => (
