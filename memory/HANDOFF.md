@@ -65,3 +65,5 @@ Checks at a829bb1: oxfmt PASS, `npx tsc --noEmit` PASS, `npm run build` PASS (st
 Owner resumed Codex after OpenCode finished: About heading added; inner headings use h3. AI-temp image caption was already absent and project badge already In development, retained. Long em/en dashes removed from src copy/metadata; dates now use to. Format, typecheck, production build, diff check pass; no browser recheck this text-only refinement. Existing techIcons.tsx and skills.ts line-ending changes untouched. Base 1a1cbd3.
 
 Desktop spacing request: sections use 20px outer and 10px inner padding above 900px. Hero top includes 64px fixed-nav clearance plus 20px. Footer and mobile spacing unchanged; existing viewport minimum heights retained. Production build/typecheck and diff check PASS; no new browser inspection.
+
+Owner reports section gaps still too large. Removed full-screen minimum height and vertical centering from main content sections except hero; 20px outer/10px inner desktop padding retained. Contact/footer sizing unchanged. Build/typecheck and diff check PASS. This supersedes earlier one-screen-per-content-section requirement in response to latest owner feedback.
