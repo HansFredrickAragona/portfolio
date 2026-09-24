@@ -24,3 +24,7 @@ No task permits deploy or PR.
 - DONE: successor accepted writer ownership in memory/OPENCODE_HANDOFF.md.
 - DONE: Services browser verification — desktop 1440x900 screenshot shows 5 full-width rows, section title, icons, + toggles; DOM/CSS checks confirm titles text-xl/md:text-2xl (20/24px), desc text-base (16px), container max-w-7xl, no max-w-4xl. QA wrapper HTML in public/ deleted after use.
 - NEXT: await owner UI feedback. No new redesign scope. Optional later: mobile 375 and expanded-row screenshot recheck (headless scroll quirks only; markup already verified).
+
+## 2026-09-24 late UI batch (OpenCode)
+- DONE: section titles unified; concept previews → "In development"; nav glow; hero hover-card; mobile 10px section padding + 2.53rem titles; About text −10%; caption removed. Commits `1cad7a8`, `a829bb1`. tsc/build/privacy PASS.
+- NEXT: push both commits; write/refresh handoff; await owner.

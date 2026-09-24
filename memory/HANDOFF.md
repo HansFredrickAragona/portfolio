@@ -49,3 +49,15 @@ Hero follow-up: removed experience rail; moved GitHub square graphic into its pl
 Services width refinement: removed max-w-4xl inner cap; rows now fill the section content width. Titles 20px mobile/24px desktop; descriptions 16px. Increased disclosure height allowance for larger text. Format, typecheck and production build PASS.
 
 2026-09-24 successor verification: Services desktop browser check completed (headless Edge + DOM/CSS); earlier ERR_BLOCKED_BY_CLIENT blocker cleared. Handoff commit 297ec24 pushed; writer ownership accepted in memory/OPENCODE_HANDOFF.md. Temporary QA HTML removed from public/. Awaiting further owner design feedback.
+
+## 2026-09-24 late UI batch (OpenCode)
+
+Owner-driven rapid UI refinements on feat/v2:
+
+- Unified section headings to Skills `.section-title` (Experience, Services, Projects). Concept previews for in-dev projects only; badge text now "In development".
+- Nav: circular HF badge, larger labels, single `nav-glow` hover rule.
+- Hero + social CTAs: cursor-follow `hover-card` glow (reduced-motion/touch guarded).
+- Mobile: section padding 10px; `.section-title` 2.53rem (~25% down from desktop 3.33rem); about/skills/contact inner padding tightened; About body/intro/h2 text −10%.
+- Removed "Temporary AI portrait" figcaption; About alt cleaned to "Hans working at a laptop".
+
+Checks at a829bb1: oxfmt PASS, `npx tsc --noEmit` PASS, `npm run build` PASS (static `/` 75.8 kB), privacy grep clean. techIcons.tsx / skills.ts left unstaged (oxfmt CRLF-only noise). Two UI commits pending push: `1cad7a8`, `a829bb1`.

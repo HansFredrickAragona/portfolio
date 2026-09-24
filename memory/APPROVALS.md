@@ -45,3 +45,7 @@ Owner follow-up (2026-09-24): AI concept art only for in-development projects (G
 Owner follow-up (same day): AI concept art is limited to in-development projects only (Grammar Checker, Résumé Job Tracker). Live/completed projects (Soil Scan, BaguioReady GIS) keep real iframe previews and must not show concept art.
 
 Owner follow-up: AI concept art only for in-development projects (Grammar Checker, Résumé Job Tracker); live/completed projects (Soil Scan, BaguioReady GIS) keep the real iframe preview with no concept art.
+
+## Late UI batch + handoff commit/push — 2026-09-24
+
+Owner asked to reduce About text 10%, save/commit everything, and do the handoff. Authorizes local commit of the style batch (section titles, nav glow, hero hover-card, mobile density, About −10%, caption/label changes) and refreshing memory handoff files. Same-session owner pattern continues to authorize commit+push of local feat/v2 UI work; still no deploy, no PR, no merge to main unless separately requested. Commit email remains repository-local `hansfredrick2600@gmail.com`.

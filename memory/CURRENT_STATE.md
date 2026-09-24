@@ -49,3 +49,6 @@
 ## 2026-09-24 owner-approved combined design
 Implemented combined V1 hero/layout and V2 content, laptop About panel, full skills with icons and two-column accordions, glass surfaces and GSAP section reveals. Preserved V2 carousel and decorative GitHub squares. Desktop closed sections fit 1280x720; mobile overflow and native accordion keyboard behavior checked. Final build verification recorded in HANDOFF. No push/deployment.
 
+## 2026-09-24 late UI (feat/v2)
+Tip `a829bb1` after style batch: skills-style section titles, in-dev concept badges, nav glow, hero hover-card, About −10% text, mobile section padding 10px + heading 2.53rem. Prior commit `1cad7a8`. Checks: tsc + production build + privacy grep PASS. techIcons/skills CRLF noise unstaged. Push of these two commits was the next action when handoff was written.
+
