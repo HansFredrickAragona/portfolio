@@ -73,3 +73,5 @@ Alignment refinement: Experience max width now matches Services (1280px); Skills
 Floating icons visibility: opacity increased from 0.16 to 0.70 at owner request. Production build/typecheck pass; no layout changes.
 
 Owner revised floating icon opacity to 30% (0.3), superseding 70%. No layout changes.
+
+2026-09-24 browser mockup simplification (Codex): removed iframe loading overlay and emoji placeholder from BrowserMockup component. iframe now loads eagerly with scale transform only. Commit `40fb3d8` pushed to origin/feat/v2. Build/typecheck PASS.

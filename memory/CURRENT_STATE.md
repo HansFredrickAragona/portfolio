@@ -1,6 +1,6 @@
 # Current state
 
-- Branch: **feat/v2**. Application tip `8cebd47` for UI; docs tip includes handoff commit `297ec24` (pushed, origin in sync). Owner authorized commit+push of all local work before further UI changes (2026-09-24). Successor ownership accepted: `memory/OPENCODE_HANDOFF.md`.
+- Branch: **feat/v2**. Application tip `40fb3d8` for UI; docs tip includes handoff commit `297ec24` (pushed, origin in sync). Owner authorized commit+push of all local work before further UI changes (2026-09-24). Successor ownership accepted: `memory/OPENCODE_HANDOFF.md`.
 - Figma integration `ff89b2a` + checkpoints pushed 2026-09-24 (owner: "push now").
 - 2026-09-24 Services browser verification: desktop 1440 full-width rows + typography confirmed via headless Edge screenshot and DOM/CSS inspection; temporary public/*qa*.html wrappers deleted after use. tsc + production build PASS; privacy grep clean. Preview last run on port 3115.
 - Created from `feat/v1` @ `bfcefef`; docs-only strip at `ccf4140`.
@@ -50,5 +50,5 @@
 Implemented combined V1 hero/layout and V2 content, laptop About panel, full skills with icons and two-column accordions, glass surfaces and GSAP section reveals. Preserved V2 carousel and decorative GitHub squares. Desktop closed sections fit 1280x720; mobile overflow and native accordion keyboard behavior checked. Final build verification recorded in HANDOFF. No push/deployment.
 
 ## 2026-09-24 late UI (feat/v2)
-Tip `a829bb1` after style batch: skills-style section titles, in-dev concept badges, nav glow, hero hover-card, About −10% text, mobile section padding 10px + heading 2.53rem. Prior commit `1cad7a8`. Checks: tsc + production build + privacy grep PASS. techIcons/skills CRLF noise unstaged. Push of these two commits was the next action when handoff was written.
+Tip `40fb3d8` after style batch: skills-style section titles, in-dev concept badges, nav glow, hero hover-card, About −10% text, mobile section padding 10px + heading 2.53rem, simplified browser mockup (removed loading overlay/emoji). Prior commit `a829bb1`. Checks: tsc + production build + privacy grep PASS. techIcons/skills CRLF noise unstaged. All local commits pushed to origin/feat/v2.
 

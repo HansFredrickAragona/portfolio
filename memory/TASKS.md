@@ -27,4 +27,7 @@ No task permits deploy or PR.
 
 ## 2026-09-24 late UI batch (OpenCode)
 - DONE: section titles unified; concept previews → "In development"; nav glow; hero hover-card; mobile 10px section padding + 2.53rem titles; About text −10%; caption removed. Commits `1cad7a8`, `a829bb1`. tsc/build/privacy PASS.
-- NEXT: push both commits; write/refresh handoff; await owner.
+- DONE: push both commits; write/refresh handoff; await owner.
+
+## 2026-09-24 browser mockup simplification (Codex)
+- DONE: removed iframe loading overlay and emoji placeholder from BrowserMockup. iframe loads eagerly with scale transform. Commit `40fb3d8` pushed to origin/feat/v2. tsc/build/privacy PASS.
