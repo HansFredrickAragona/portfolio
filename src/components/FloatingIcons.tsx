@@ -24,7 +24,7 @@ export function FloatingIcons({
           >
             <div
               className="animate-float flex flex-col items-center"
-              style={{ animationDelay: `${index * 0.25}s`, opacity: 0.7 }}
+              style={{ animationDelay: `${index * 0.25}s`, opacity: 0.3 }}
             >
               {icon.el(color)}
               <span
