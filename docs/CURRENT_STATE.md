@@ -2,6 +2,4 @@
 
 See `memory/CURRENT_STATE.md` for full operational state.
 
-Active work: technology-symbol system + About skills showcase implemented on `feat/overnight-portfolio` after owner instruction to build without waiting (photos still pending — temporary SVG placeholders in use).
-
-Pending after checks: format, lint, typecheck, tests, production build, commit, memory sync.
+Active branch: **v1** — full snapshot of origin portfolio content at 2026-09-23, commit `d1ad623`. Contains complete Next.js app + Codex editorial redesign. All checks pass. Prior development on `feat/overnight-portfolio` and `main`.
