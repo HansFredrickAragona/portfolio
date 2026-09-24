@@ -2,13 +2,11 @@
 
 - D01: Simple MVC inside Next.js App Router; no separate backend or persistence.
 - D02: Active overnight batch 00-08; local draft only; numeric phase progression with internal checks, final morning review.
-- D03: Public name Hans Fredrick; full source name Hans Fredrick Ong Aragona. Public email and repo-local Git email `hansfredrick2600@gmail.com`. GitHub profile `https://github.com/HansFredrickAragona`; LinkedIn `https://www.linkedin.com/in/hans-aragona`. Do not alter GitHub account email/authentication based on a contact email request.
-- D04: Owner milestone narrative, by college year (not guessed semester/calendar dates): Year 1 learned programming; Year 2 became a varsity member, participated in an organization, developed a simple GUI; Year 3 became team captain, participated in a pitching event, founded the AWS Learning Club at school; Year 4 DOST-funded thesis, club events, presented thesis at events. Treat ambiguous organization role in Year 2 conservatively as participation, not office/title. No numerical intensity or inferred semester placement. Use an accessible four-year narrative/list/grid with year labels; full semester heatmap deferred until dates exist.
-- D05: Fertilizer recommendation deployment is a Soil Scan component demo, not proof of entire Soil Scan deployment. Verify live URL before enabling. Grammar Checker and Resume Job Tracker remain in development with previews only.
-- D06: September 25, 2026 deadline; interpreted 23:59 Asia/Manila. Overnight kickoff September 22 23:45, eight-hour window ends September 23 07:45. User can correct exact deadline time later.
-- D07: No resume download without approved redaction; no analytics, no Facebook without verified owner link, no invented canonical production URL. Missing optional inputs do not block unrelated draft implementation.
-- D08: OpenWolf 1.0.4 installed but README documents only Claude Code hooks; no verified Codex/OpenCode integration. Use consistent Markdown/Git fallback. No speculative hooks or daemon.
-- D09: Tech-symbol extension: Hero decorative symbols from verified résumé/project stack only; About holds full categorized skills with evidence lines; icons from simple-icons CC0 paths bundled locally; GSAP only for symbol motion; temporary About photos until owner assets. Details in `docs/DECISIONS.md` DX01–DX10.
-
-- D09: Owner selected current portfolio continuation, not the unavailable Figma v2 export. Retain green/cream/blue and approved information. Add progressive GSAP ScrollTrigger section reveals and stronger editorial Hero/About typography. Keep server content readable without JavaScript; no scroll hijacking or pinning.
-- D10: Two generated About photos are labeled temporary AI portraits. Original real portrait remains Hero and third About photo. Two background extraction attempts returned opaque checkerboards, so neither is used. Real replacement photos remain pending. See docs/ASSET_PROVENANCE.md.
+- D03: Public name Hans Fredrick; full source name Hans Fredrick Ong Aragona. Public email and repo-local Git email `hansfredrick2600@gmail.com`. GitHub profile `https://github.com/HansFredrickAragona`; LinkedIn `https://www.linkedin.com/in/hans-aragona`.
+- D04: Owner milestone narrative by college year (not guessed semester dates).
+- D05: Fertilizer recommendation deployment is a Soil Scan component demo. Grammar Checker and Resume Job Tracker remain in development.
+- D06: September 25, 2026 deadline; 23:59 Asia/Manila.
+- D07: No resume download without approved redaction; no analytics, no Facebook without verified link, no invented canonical URL.
+- D08: OpenWolf no verified Codex/OpenCode integration; Markdown/Git fallback.
+- D09: Tech-symbol extension: Hero decorative symbols from verified résumé stack; About full categorized skills; local simple-icons CC0 paths; GSAP only for symbol motion.
+- D10 (new): **Branch strategy** — `feat/v1` = full Next.js app snapshot (Codex editorial redesign, all checks pass, pushed). `v2` = docs/agents only; website source will be Figma Make React+Vite. Port requirements from v1: complete skills data, About photos+info, Hero with GitHub+Email separately and LinkedIn/GitHub/Email as buttons. See `docs/DECISIONS.md` for prior details DX01–DX10.

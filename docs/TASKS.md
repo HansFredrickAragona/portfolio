@@ -1,7 +1,5 @@
 # Tasks (docs mirror)
 
-Authoritative queue: `memory/TASKS.md`. This file records the technology-symbol extension slice.
+Authoritative queue: `memory/TASKS.md`.
 
-| Task | Status | Acceptance |
-|---|---|---|
-| Tech symbols + About skills showcase | done (pending commit) | Résumé-derived inventory; Hero decorative symbols + GSAP; About multi-column + categorized skills + temp photos; docs DESIGN/DESIGN_SYSTEM/MOTION/CONTENT/ARCHITECTURE/DECISIONS; format/lint/typecheck/test/build |
+Current active: v2 docs-only branch creation, memory update, Figma Vite integration pending owner unzip.

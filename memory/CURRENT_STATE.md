@@ -1,17 +1,41 @@
 # Current state
 
-- Branch: **v1** — full snapshot of the origin portfolio content as of 2026-09-23 at commit `d1ad623`.
-- Source: `feat/overnight-portfolio` including all Codex editorial redesign work (full-name Hero, arched portrait, editorial About with AI temp photos, native skills accordions, GSAP ScrollTrigger reveals, project carousel).
-- Application: Next.js 16.3.5 / React 19.2.8 / Tailwind 4 / strict TS / gsap ^3.15.0.
-- Checks: format, lint, typecheck, 33 tests, production build — all PASS.
-- Privacy: grep clean for phone/city patterns; project-input/ and tmp/ ignored.
-- This branch contains the complete website codebase. The prior full development history remains on `feat/overnight-portfolio` and `main`.
-- Next: v2 branch will be created from v1 as docs/agents only; Figma Make React+Vite website files will be dropped in separately.
-- Deadline: September 25, 2026 EOD Asia/Manila. Real About photos, redacted résumé, production origin remain owner inputs.
+- Branch: **v2** — docs/agents only, no website code.
+- Created from `feat/v1` (commit `bfcefef`, 2026-09-23).
+- UI source will be **Figma Make → React + Vite** (owner will unzip website files into this branch).
+- Full Next.js app remains on `feat/v1` at `bfcefef` (pushed as `origin/v1` pending rename to `origin/feat/v1`).
+- Checks: N/A on this branch (no package.json / build tooling). Format/lint N/A for markdown-only.
 
-## v1 contents
+## Port-from-v1 requirements (owner-specified)
 
-- Full Next.js app: src/**, public/**, configs, tests
-- All docs/** and memory/**
-- portfolio-agent-system/** (rules, specs, prompts)
-- AGENTS.md, opencode.json, .gitignore
+When integrating Figma Make React+Vite code into v2, port content from `feat/v1`:
+
+1. **Skills data** — `src/models/skills.ts` (`aboutSkillCategories`, 9 categories, complete with names + evidence lines) + `TechIcon`/`techIconPaths`.
+2. **About me** — photos + information: `about-photos.ts`, `profile.ts`, `education.ts`, `leadership.ts`; images `about-hans-ai-temp.webp`, `about-hans-outdoors-ai-temp.webp`, `portrait.webp`; About copy (intro, education, leadership, beyond-work interests).
+3. **Hero section** — GitHub and Email listed **separately** (visible distinct entries); LinkedIn, GitHub, and Email as **buttons** (button-style CTAs, not icon-only pills).
+4. **Approved links** (`links.ts`): email `hansfredrick2600@gmail.com`, GitHub `https://github.com/HansFredrickAragona`, LinkedIn `https://www.linkedin.com/in/hans-aragona`. No Facebook.
+
+## Kept on this branch
+
+- `AGENTS.md`, `opencode.json`, `.gitignore`
+- `docs/**` (all design/architecture/QA docs)
+- `memory/**` (approvals, decisions, handoff, blockers, content gaps)
+- `portfolio-agent-system/**` (rules, specs, prompts, optional workflows)
+
+## Removed on this branch
+
+- `src/**`, `public/**` (all website code and assets)
+- `package.json`, `package-lock.json`, `next.config.ts`, `tsconfig.json`, `vitest.config.ts`, `eslint.config.mjs`, `postcss.config.mjs`, prettier configs
+
+## Next
+
+- Owner unzips Figma Make React+Vite website files into this branch.
+- Agent reads/inspects drop-in (stack, structure, privacy: no phone/address/secrets).
+- Port skills, About, Hero button requirements from `feat/v1`.
+- Push only with explicit owner permission.
+
+## Privacy
+
+- No phone number or city address in tracked files (privacy grep clean).
+- `project-input/` and `tmp/` gitignored.
+- Deadline: September 25, 2026 EOD Asia/Manila.

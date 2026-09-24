@@ -1,28 +1,17 @@
 # Task queue
 
-All phases below are authorized as local drafts by APPROVALS. Each completed task requires owned files, acceptance, applicable checks, progress update, then a local task commit.
-
 | Task | Owner | Status | Acceptance |
 |---|---|---|---|
-| 00 Bootstrap + recovery | root | done (commit 2b2dfbd); clean recovery previously blocked | contract, consistent memory, private ignores, failed recovery evidence recorded |
-| 01 Evidence/plan | content/root | done (commit c0614a2) | brief, evidence matrix, content model, gaps and task plan; no invented claims |
-| 02 Design | design/root | done (docs/DESIGN_SYSTEM.md) | responsive editorial tokens, measured AA contrast, interactions, wireframes |
-| 03 MVC scaffold | programmer/root | done (commit 0e6f734); all checks pass | compatible exact packages, architecture doc, scripts, minimal shell, format/lint/typecheck/test/build |
-| 04 Content/assets | content/programmer | done (commit a412d6f) | typed verified content, optimized portrait, year-based milestones, supported case-study drafts |
-| 05 Homepage | programmer | done (commit f93398e) | all supported sections, themes, accessible project disclosure, responsive actual QA |
-| 06 Case studies | programmer/content | done (commit 2018748) | concise Soil Scan/BaguioReadyGIS only from evidence, routes and return navigation |
-| 07 Contact/metadata | programmer | done (commit e7ab949) | encoded mailto, copy fallbacks, verified metadata, no analytics/storage |
-| 08 Integrated QA | QA/root | done (commit b7cf2ae) | relevant automated checks + browser inspection, fixes, honest QA report and morning handoff |
-| 09 Tech symbols + About skills | root | done (this commit) | résumé inventory, Hero GSAP symbols, About multi-column skills, temp photos, docs, format/lint/typecheck/test/build |
+| 00–08 Overnight batch | root | done | see feat/v1 history |
+| Tech symbols + About skills | root | done | see feat/v1 history |
+| Codex editorial redesign + carousel | codex | done (`d1ad623`) | all checks pass |
+| Create v1 snapshot branch | root | done (`bfcefef`, renamed `feat/v1`) | full app + memory marking |
+| Push v1 to origin | root | done (pending rename to `feat/v1` on remote) | owner authorized |
+| Create v2 docs-only branch | root | in progress | strip app code, keep agent docs/memory |
+| Memory update for v2 | root | in progress | port-from-v1 requirements recorded |
+| Commit + push v2 | root | pending | ask permission before push |
+| Remote cleanup | root | pending | push feat/v1, delete origin/v1 + origin/feat/overnight-portfolio |
+| Figma Vite drop-in | owner | pending | unzip website files into v2 |
+| Port skills/About/Hero from v1 | root | pending | after Figma code lands |
 
-No task permits deployment, push, PR, final approval, or Prompt 09. Root retains memory ownership until specifically delegated.
-
-## Current portfolio redesign — 2026-09-23
-
-Owner selected current portfolio and authorized implementation. Root Codex owns integration; bounded motion specialist completed assigned files. Layout, two temporary AI assets, native skill disclosures and GSAP section reveals implemented. Final check/commit pending; see CURRENT_STATE and QA_REDESIGN. No Figma v2 work, push or deployment in this revision.
-
-Redesign task complete: final checks pass (31 tests, lint, format, typecheck, build, responsive browser). Local checkpoint commit ready; owner design review and real photo replacement next. Production preview http://127.0.0.1:3112.
-
-Completed owner spacing/content follow-up: wider layout/larger type; no eyebrows or Career Growth; direct skill rows, no descriptions or duplicate How I work. Checks pass; local checkpoint only.
-
-Completed minimal skills accordion with short labels, click/keyboard control and smooth animation. Format/lint/typecheck/31 tests/build pass. Owner review next; local-only commit.
+No task permits deploy or PR. Push of v2 requires explicit owner permission.

@@ -1,7 +1,0 @@
-node_modules
-.next
-tmp
-project-input
-package-lock.json
-public/images
-*.md

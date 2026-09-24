@@ -1,9 +1,31 @@
-# Handoff — v1 snapshot
+# Handoff
 
-Branch **v1** created at commit `d1ad623` (2026-09-23). This is a full snapshot of the origin portfolio content including all Codex editorial redesign work.
+Branch **v2** — docs/agents only (no website code). Created from `feat/v1` @ `bfcefef`.
 
-- Contains: complete Next.js app, all docs/memory/portfolio-agent-system, AGENTS.md, opencode.json
-- Checks at snapshot: format, lint, typecheck, 33 tests, production build — all PASS
-- Source branch: `feat/overnight-portfolio` (remains available for continued development)
-- v2 will be created from v1 as docs/agents only; Figma Make React+Vite website code will be dropped in separately
-- No push/deployment from this snapshot branch unless explicitly authorized
+## What this branch is
+
+- Contains all agent documentation, memory, design docs, and agent-system rules.
+- Stripped of Next.js app source (`src/`, `public/`, configs).
+- Will receive Figma Make React+Vite website files (owner unzips).
+
+## What stays on `feat/v1`
+
+- Full Next.js app with Codex editorial redesign (Hero, About, skills accordion, GSAP motion, project carousel).
+- All content models: skills, About photos/info, links, profile, education, leadership.
+
+## Port requirements for Figma integration
+
+1. Skills data (complete, 9 categories with evidence) from `feat/v1`.
+2. About me photos + information from `feat/v1`.
+3. Hero: GitHub and Email as separate visible entries; LinkedIn/GitHub/Email as buttons.
+
+## Checks
+
+- v2: N/A (no app tooling — documentation-only branch).
+- feat/v1 @ `d1ad623`: format, lint, typecheck, 33 tests, production build — all PASS.
+
+## Pending
+
+- Owner unzips Figma Make React+Vite code.
+- Push v2 only after explicit owner permission.
+- Remote cleanup: rename `origin/v1` → `origin/feat/v1`; delete `origin/feat/overnight-portfolio`.

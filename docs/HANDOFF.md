@@ -2,6 +2,6 @@
 
 Full handoff: `memory/HANDOFF.md`.
 
-## v1 snapshot (2026-09-23)
+## v2 docs-only branch
 
-Branch `v1` created at commit `d1ad623`. Full snapshot of origin portfolio with Codex editorial redesign. See `memory/HANDOFF.md` for details.
+Created from `feat/v1` @ `bfcefef`. Website code stripped; agent docs/memory retained. Figma Make React+Vite files will be dropped in by owner. Port skills, About photos/info, and Hero button requirements from `feat/v1`.
