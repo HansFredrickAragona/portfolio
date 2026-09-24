@@ -31,3 +31,6 @@ No task permits deploy or PR.
 
 ## 2026-09-24 browser mockup simplification (Codex)
 - DONE: removed iframe loading overlay and emoji placeholder from BrowserMockup. iframe loads eagerly with scale transform. Commit `40fb3d8` pushed to origin/feat/v2. tsc/build/privacy PASS.
+
+## 2026-09-24 README (OpenCode)
+- DONE: created root `README.md` with overview, components, technical overview, stack, getting started, verification. Commit `5b3516e` pushed to origin/feat/v2. Docs-only (tsc/build N/A).

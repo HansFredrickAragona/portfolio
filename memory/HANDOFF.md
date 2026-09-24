@@ -75,3 +75,5 @@ Floating icons visibility: opacity increased from 0.16 to 0.70 at owner request.
 Owner revised floating icon opacity to 30% (0.3), superseding 70%. No layout changes.
 
 2026-09-24 browser mockup simplification (Codex): removed iframe loading overlay and emoji placeholder from BrowserMockup component. iframe now loads eagerly with scale transform only. Commit `40fb3d8` pushed to origin/feat/v2. Build/typecheck PASS.
+
+2026-09-24 README (OpenCode): created root README.md covering project overview, page sections, component tree, technical overview (hover-card glow, ScrollMotion, FloatingIcons, BrowserMockup, useDarkMode), tech stack, getting started, verification, and deployment. Commit `5b3516e` pushed to origin/feat/v2. Documentation-only change; tsc/build not re-run (N/A).
