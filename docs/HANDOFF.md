@@ -2,6 +2,6 @@
 
 Full handoff: `memory/HANDOFF.md`.
 
-## v2 docs-only branch
+## v2 Figma integration
 
-Created from `feat/v1` @ `bfcefef`. Website code stripped; agent docs/memory retained. Figma Make React+Vite files will be dropped in by owner. Port skills, About photos/info, and Hero button requirements from `feat/v1`.
+Branch **feat/v2** receives Figma Make Next.js 15 files. Port-from-v1 requirements applied (skills evidence, About content/photos, Hero buttons, approved links). Typecheck and production build pass; push pending owner permission.

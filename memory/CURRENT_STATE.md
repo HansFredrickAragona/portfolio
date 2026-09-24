@@ -1,41 +1,45 @@
 # Current state
 
-- Branch: **v2** — docs/agents only, no website code.
-- Created from `feat/v1` (commit `bfcefef`, 2026-09-23).
-- UI source will be **Figma Make → React + Vite** (owner will unzip website files into this branch).
-- Full Next.js app remains on `feat/v1` at `bfcefef` (pushed as `origin/v1` pending rename to `origin/feat/v1`).
-- Checks: N/A on this branch (no package.json / build tooling). Format/lint N/A for markdown-only.
+- Branch: **feat/v2** — Figma Make drop-in integrated with v1 content ports.
+- Created from `feat/v1` @ `bfcefef`; docs-only strip at `ccf4140`; Figma app drop-in pending first source commit this session.
+- Stack: **Next.js 15.5 App Router** (not Vite), React 19, Tailwind 4, oxfmt.
+- Full prior app remains on `feat/v1` @ `bfcefef`.
+- Checks (this drop-in): `npx tsc --noEmit` PASS, `npm run build` PASS (static `/` 13.8 kB), privacy grep clean, LFS tracks both portraits.
+- `npm run format` (oxfmt) broke TS type-member semicolons once; fixed in `techIcons.tsx` and `data/skills.ts`. Do not re-run format blindly — verify tsc after.
 
-## Port-from-v1 requirements (owner-specified)
+## Figma drop-in fixes applied
 
-When integrating Figma Make React+Vite code into v2, port content from `feat/v1`:
+- Wrong email `hansfredrickarago@email.com` → `hansfredrick2600@gmail.com` via `src/data/links.ts`.
+- Wrong LinkedIn → `https://www.linkedin.com/in/hans-aragona`.
+- GitHub added: `https://github.com/HansFredrickAragona`.
+- Hero: separate GitHub + Email text entries + LinkedIn/GitHub/Email buttons (`HeroSocial.tsx`).
+- Footer: LinkedIn/GitHub/Email only; Facebook and dead Résumé links removed; © 2026.
+- Nav: Résumé item replaced with Contact.
+- Skills: full `aboutSkillCategories` (9 categories, evidence lines) from v1.
+- About: v1 profile detail, education (SLU), leadership, interests + Figma portraits.
+- Experience: v1 DOST / Gift of Grace / Bell-Kenz (removed wrong University of Baguio entry).
+- Junk removed: `.gitignore copy`, `next-env.d copy.ts`, `tsconfig.tsbuildinfo`.
 
-1. **Skills data** — `src/models/skills.ts` (`aboutSkillCategories`, 9 categories, complete with names + evidence lines) + `TechIcon`/`techIconPaths`.
-2. **About me** — photos + information: `about-photos.ts`, `profile.ts`, `education.ts`, `leadership.ts`; images `about-hans-ai-temp.webp`, `about-hans-outdoors-ai-temp.webp`, `portrait.webp`; About copy (intro, education, leadership, beyond-work interests).
-3. **Hero section** — GitHub and Email listed **separately** (visible distinct entries); LinkedIn, GitHub, and Email as **buttons** (button-style CTAs, not icon-only pills).
-4. **Approved links** (`links.ts`): email `hansfredrick2600@gmail.com`, GitHub `https://github.com/HansFredrickAragona`, LinkedIn `https://www.linkedin.com/in/hans-aragona`. No Facebook.
+## Port-from-v1 requirements status
+
+1. Skills data — DONE (`src/data/skills.ts`).
+2. About photos + information — DONE (portraits + profile/education/leadership/interests).
+3. Hero GitHub/Email separate + three buttons — DONE (`HeroSocial.tsx`).
+4. Approved links — DONE (`src/data/links.ts`).
 
 ## Kept on this branch
 
-- `AGENTS.md`, `opencode.json`, `.gitignore`
-- `docs/**` (all design/architecture/QA docs)
-- `memory/**` (approvals, decisions, handoff, blockers, content gaps)
-- `portfolio-agent-system/**` (rules, specs, prompts, optional workflows)
-
-## Removed on this branch
-
-- `src/**`, `public/**` (all website code and assets)
-- `package.json`, `package-lock.json`, `next.config.ts`, `tsconfig.json`, `vitest.config.ts`, `eslint.config.mjs`, `postcss.config.mjs`, prettier configs
+- `AGENTS.md`, `opencode.json`, `.gitignore`, `.gitattributes`
+- `docs/**`, `memory/**`, `portfolio-agent-system/**`
+- Figma app: `src/**`, `public/**`, configs, `package.json`
 
 ## Next
 
-- Owner unzips Figma Make React+Vite website files into this branch.
-- Agent reads/inspects drop-in (stack, structure, privacy: no phone/address/secrets).
-- Port skills, About, Hero button requirements from `feat/v1`.
-- Push only with explicit owner permission.
+- Stage memory updates + Figma source; commit; push only with owner permission.
+- Optional: downscale ~24MB portraits later (LFS already tracks them).
+- No deploy/PR/merge to main without owner auth.
 
 ## Privacy
 
 - No phone number or city address in tracked files (privacy grep clean).
 - `project-input/` and `tmp/` gitignored.
-- Deadline: September 25, 2026 EOD Asia/Manila.

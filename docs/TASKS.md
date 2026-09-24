@@ -2,4 +2,4 @@
 
 Authoritative queue: `memory/TASKS.md`.
 
-Current active: v2 docs-only branch creation, memory update, Figma Vite integration pending owner unzip.
+Current active: Figma source + memory commit on `feat/v2`; push only after owner permission.

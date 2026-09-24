@@ -2,4 +2,4 @@
 
 See `memory/CURRENT_STATE.md` for full operational state.
 
-Active branch: **v2** — docs/agents only, no website code. UI will come from Figma Make React+Vite (owner unzips). Full Next.js app on `feat/v1`. Port skills/About/Hero requirements from v1 when integrating.
+Active branch: **feat/v2** — Figma Make **Next.js 15** drop-in integrated with v1 skills/About/Hero/link ports. Typecheck + production build pass. Push of source commit pending owner permission. Full prior app on `feat/v1`.

@@ -1,31 +1,30 @@
 # Handoff
 
-Branch **v2** — docs/agents only (no website code). Created from `feat/v1` @ `bfcefef`.
+Branch **feat/v2** — Figma Make Next.js 15 app integrated with ported v1 content.
 
 ## What this branch is
 
-- Contains all agent documentation, memory, design docs, and agent-system rules.
-- Stripped of Next.js app source (`src/`, `public/`, configs).
-- Will receive Figma Make React+Vite website files (owner unzips).
+- Agent docs/memory + Figma Make website drop-in (Next.js 15 App Router).
+- Prior docs-only strip at `ccf4140`; source files added in the Figma integration commit this session.
+- All port-from-v1 requirements applied (skills evidence, About info/photos, Hero buttons, approved links).
 
 ## What stays on `feat/v1`
 
-- Full Next.js app with Codex editorial redesign (Hero, About, skills accordion, GSAP motion, project carousel).
-- All content models: skills, About photos/info, links, profile, education, leadership.
+- Full prior Next.js app with Codex editorial redesign @ `bfcefef`.
+- Content models used as port source: skills, About, links, profile, education, leadership, experience.
 
-## Port requirements for Figma integration
+## Checks (Figma drop-in)
 
-1. Skills data (complete, 9 categories with evidence) from `feat/v1`.
-2. About me photos + information from `feat/v1`.
-3. Hero: GitHub and Email as separate visible entries; LinkedIn/GitHub/Email as buttons.
-
-## Checks
-
-- v2: N/A (no app tooling — documentation-only branch).
-- feat/v1 @ `d1ad623`: format, lint, typecheck, 33 tests, production build — all PASS.
+- Typecheck: PASS (`npx tsc --noEmit`).
+- Production build: PASS (`npm run build`).
+- Privacy grep: clean (no phone/city patterns in tracked/staged files).
+- LFS: both `public/assets/hans-portrait*.jpg` tracked as LFS.
+- Lint/tests: N/A (Figma package.json has no eslint/vitest; oxfmt only).
+- Visual responsive/a11y browser QA: NOT yet run this session.
 
 ## Pending
 
-- Owner unzips Figma Make React+Vite code.
-- Push v2 only after explicit owner permission.
-- Remote cleanup: rename `origin/v1` → `origin/feat/v1`; delete `origin/feat/overnight-portfolio`.
+- Owner permission to push `feat/v2`.
+- Optional portrait downscale (~24MB each).
+- Deploy/PR/merge: forbidden without owner auth.
+- Deadline remains 2026-09-25 EOD Asia/Manila.
