@@ -1,4 +1,5 @@
 import { FloatingIcons } from "./FloatingIcons"
+
 import { experience } from "@/data/experience"
 
 export function Experience() {
@@ -25,9 +26,10 @@ export function Experience() {
           {experience.map((e) => (
             <div
               key={e.id}
-              className="rounded-2xl p-5 flex flex-col gap-3 transition-all duration-200"
+              className="hover-card rounded-2xl p-5 flex flex-col gap-3 transition-all duration-200"
               style={{
                 backgroundColor: "var(--card)",
+
                 border: "1px solid var(--border)",
               }}
             >
@@ -50,6 +52,7 @@ export function Experience() {
                   className="shrink-0 text-xs font-medium px-2.5 py-1 rounded-full whitespace-nowrap"
                   style={{
                     backgroundColor: "var(--secondary)",
+
                     color: "var(--muted-foreground)",
                   }}
                 >
@@ -69,7 +72,9 @@ export function Experience() {
                     className="text-xs px-2 py-0.5 rounded-full"
                     style={{
                       backgroundColor: "var(--secondary)",
+
                       color: "var(--secondary-foreground)",
+
                       border: "1px solid var(--border)",
                     }}
                   >

@@ -203,3 +203,22 @@ main > section > div:not(.absolute) { width:100%; }
 .hero-actions { margin-top:28px; }
 @media (min-width:901px) { .hero-name { font-size:clamp(4.5rem,11.5svh,8rem); } }
 @media (max-width:900px) { .hero-github-panel { max-width:600px; width:100%; margin:auto; } .hero-github-panel .hero-roles { text-align:center; } }
+
+/* Open section layouts; individual cards retain their surfaces. */
+.glass-panel, #projects > div:last-child, #services > div:last-child, #experience > div:last-child, #contact > div:last-child {
+ background:transparent; border:0; border-radius:0; box-shadow:none; backdrop-filter:none;
+}
+.hero-name { font-size:clamp(2.5rem,6.1vw,6rem); line-height:1.08; letter-spacing:-.045em; margin-bottom:24px; }
+.hero-photo { position:relative; height:clamp(360px,58svh,580px); border-radius:180px 180px 24px 24px; background:var(--card); }
+.hero-photo img { object-fit:cover; object-position:center 25%; }
+.hero-photo .hero-actions { position:absolute; bottom:16px; left:12px; right:12px; margin:0; gap:8px; z-index:1; flex-wrap:wrap; }
+.hero-photo .hero-actions a { padding:12px 14px; font-size:.9rem; background:var(--background); box-shadow:0 4px 20px #0002; }
+.hero-photo .hero-actions a:first-child { background:var(--primary); }
+@media(min-width:901px) { .hero-name { white-space:nowrap; } }
+.hover-card { position:relative; isolation:isolate; border-radius:16px; transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease; }
+.hover-card::after { content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none; background:radial-gradient(220px circle at var(--glow-x,50%) var(--glow-y,50%), #6aadcc28, #5a9e7a10 45%, transparent 75%); opacity:var(--glow-opacity,0); transition:opacity .25s ease; z-index:1; }
+.skill-group { padding:0 16px; margin-bottom:8px; background:color-mix(in srgb,var(--card) 45%,transparent); }
+.project-info-card { padding:24px; border:1px solid var(--border); background:color-mix(in srgb,var(--card) 45%,transparent); }
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference) { .hover-card:hover { transform:translateY(-4px); box-shadow:0 12px 30px #142b2014; border-color:var(--accent); } }
+@media(max-width:900px) { .hero-photo { height:480px; } .hero-name { font-size:clamp(2.2rem,7.5vw,4.5rem); } }
+@media(prefers-reduced-motion:reduce) { .hover-card::after { display:none; } }

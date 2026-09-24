@@ -1,5 +1,7 @@
 "use client"
 
+import { CardGlow } from "@/components/CardGlow"
+
 import { ScrollMotion } from "@/components/ScrollMotion"
 
 import { useDarkMode } from "@/hooks/useDarkMode"
@@ -28,6 +30,7 @@ export default function Home() {
   return (
     <>
       <ScrollMotion />
+      <CardGlow />
       <Nav dark={dark} setDark={setDark} />
       <main>
         <Hero dark={dark} />

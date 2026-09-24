@@ -1,79 +1,126 @@
 import { useState, useRef, type TouchEvent } from "react"
+
 import { FloatingIcons } from "./FloatingIcons"
 
 export interface Project {
   id: string
+
   title: string
+
   summary: string
+
   status: "completed" | "development"
+
   problem: string
+
   role: string
+
   outcome: string
+
   tech: string[]
+
   liveUrl?: string
+
   caseStudy?: boolean
 }
 
 const PROJECTS: Project[] = [
   {
     id: "soilscan",
+
     title: "Soil Scan — Fertilizer Recommendation System",
+
     summary:
       "An AI-powered web platform that analyzes soil data to generate precise fertilizer recommendations for farmers.",
+
     status: "completed",
+
     problem:
       "Farmers lacked accessible, data-driven fertilizer guidance, leading to over-application and soil degradation.",
+
     role: "Lead developer — designed the ML pipeline, built the full-stack app, handled deployment.",
+
     outcome:
       "Deployed tool now accessible online, enabling evidence-based decisions for smallholder farmers.",
+
     tech: ["Python", "FastAPI", "React", "TensorFlow", "PostgreSQL", "Vercel"],
+
     liveUrl: "https://frontend-delta-rust-70.vercel.app/",
+
     caseStudy: true,
   },
+
   {
     id: "baguiogis",
+
     title: "BaguioReady GIS",
+
     summary:
       "A geospatial web application providing real-time disaster preparedness information for Baguio City.",
+
     status: "completed",
+
     problem:
       "Emergency response lacked a centralized digital tool for spatial hazard mapping and public access.",
+
     role: "Full-stack developer — built the GIS data layer, interactive map UI, and backend API.",
+
     outcome:
       "Publicly available platform supporting community disaster preparedness decisions.",
+
     tech: ["React", "PostGIS", "Node.js", "Leaflet", "PostgreSQL", "Render"],
+
     liveUrl: "https://baguio-ready-gis-web.vercel.app/",
+
     caseStudy: true,
   },
+
   {
     id: "grammar",
+
     title: "Grammar Checker",
+
     summary:
       "An NLP-based grammar correction tool providing contextual writing feedback in real time.",
+
     status: "development",
+
     problem:
       "Existing tools miss contextual issues relevant to Filipino English writers.",
+
     role: "Lead developer — designing the NLP pipeline and building the editor interface.",
+
     outcome: "[In progress — not yet deployed]",
+
     tech: ["Python", "React", "FastAPI", "spaCy", "TypeScript"],
   },
+
   {
     id: "tracker",
+
     title: "Résumé Job Tracker",
+
     summary:
       "A productivity app for managing job applications, tracking stages, and organizing résumé versions.",
+
     status: "development",
+
     problem:
       "Job seekers lack a purpose-built tool connecting application history with résumé variants.",
+
     role: "Solo developer — designing the data model, UI system, and automation features.",
+
     outcome: "[In progress — not yet deployed]",
+
     tech: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS"],
   },
 ]
 
 // Browser mockup frame wrapping an iframe or placeholder
+
 function BrowserMockup({ project }: { project: Project }) {
   const [loaded, setLoaded] = useState(false)
+
   const emoji =
     project.id === "soilscan"
       ? "🌱"
@@ -88,6 +135,7 @@ function BrowserMockup({ project }: { project: Project }) {
       className="w-full rounded-xl overflow-hidden"
       style={{
         border: "1px solid var(--border)",
+
         boxShadow: "0 20px 60px rgba(0,0,0,0.12)",
       }}
     >
@@ -96,6 +144,7 @@ function BrowserMockup({ project }: { project: Project }) {
         className="flex items-center gap-2 px-4 py-3"
         style={{
           backgroundColor: "var(--secondary)",
+
           borderBottom: "1px solid var(--border)",
         }}
       >
@@ -118,6 +167,7 @@ function BrowserMockup({ project }: { project: Project }) {
             className="rounded-md px-3 py-1 text-xs truncate"
             style={{
               backgroundColor: "var(--muted)",
+
               color: "var(--muted-foreground)",
             }}
           >
@@ -148,10 +198,15 @@ function BrowserMockup({ project }: { project: Project }) {
               className="w-full h-full border-0"
               style={{
                 transform: "scale(0.75)",
+
                 transformOrigin: "top left",
+
                 width: "133.33%",
+
                 height: "133.33%",
+
                 opacity: loaded ? 1 : 0,
+
                 transition: "opacity 0.4s ease",
               }}
             />
@@ -174,22 +229,30 @@ function BrowserMockup({ project }: { project: Project }) {
 
 export function Projects() {
   const [idx, setIdx] = useState(0)
+
   const [dir, setDir] = useState<1 | -1>(1)
+
   const [animKey, setAnimKey] = useState(0)
 
   const go = (d: 1 | -1) => {
     setDir(d)
+
     setAnimKey((k) => k + 1)
+
     setIdx((i) => (i + d + PROJECTS.length) % PROJECTS.length)
   }
 
   // Swipe support
+
   const touchStartX = useRef(0)
+
   const onTouchStart = (e: TouchEvent) => {
     touchStartX.current = e.touches[0].clientX
   }
+
   const onTouchEnd = (e: TouchEvent) => {
     const dx = e.changedTouches[0].clientX - touchStartX.current
+
     if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1)
   }
 
@@ -237,7 +300,9 @@ export function Projects() {
                 className="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold transition-all duration-200"
                 style={{
                   backgroundColor: "var(--secondary)",
+
                   color: "var(--primary)",
+
                   border: "2px solid var(--border)",
                 }}
                 aria-label="Previous project"
@@ -249,7 +314,9 @@ export function Projects() {
                 className="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold transition-all duration-200"
                 style={{
                   backgroundColor: "var(--secondary)",
+
                   color: "var(--primary)",
+
                   border: "2px solid var(--border)",
                 }}
                 aria-label="Next project"
@@ -269,6 +336,7 @@ export function Projects() {
             animation: `${
               dir === 1 ? "slideInRight" : "slideInLeft"
             } 0.4s cubic-bezier(0.22,1,0.36,1) both`,
+
             touchAction: "pan-y",
           }}
         >
@@ -279,17 +347,23 @@ export function Projects() {
               className="hidden lg:flex w-14 h-14 rounded-full items-center justify-center text-2xl font-bold transition-all duration-200 shrink-0 lg:col-span-1"
               style={{
                 backgroundColor: "var(--secondary)",
+
                 color: "var(--primary)",
+
                 border: "2px solid var(--border)",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = "var(--primary)"
+
                 e.currentTarget.style.color = "var(--primary-foreground)"
+
                 e.currentTarget.style.transform = "scale(1.1)"
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.backgroundColor = "var(--secondary)"
+
                 e.currentTarget.style.color = "var(--primary)"
+
                 e.currentTarget.style.transform = ""
               }}
               aria-label="Previous project"
@@ -303,7 +377,7 @@ export function Projects() {
             </div>
 
             {/* Project info — ~6 cols */}
-            <div className="lg:col-span-6 flex flex-col gap-3">
+            <div className="hover-card project-info-card lg:col-span-6 flex flex-col gap-3">
               <h3
                 className="font-serif text-2xl md:text-3xl font-semibold leading-snug"
                 style={{ color: "var(--primary)" }}
@@ -324,7 +398,9 @@ export function Projects() {
               >
                 {[
                   ["Problem", p.problem],
+
                   ["Role", p.role],
+
                   ["Outcome", p.outcome],
                 ].map(([label, val]) => (
                   <div key={label}>
@@ -351,7 +427,9 @@ export function Projects() {
                     className="text-xs px-2.5 py-1 rounded-full"
                     style={{
                       backgroundColor: "var(--secondary)",
+
                       color: "var(--secondary-foreground)",
+
                       border: "1px solid var(--border)",
                     }}
                   >
@@ -369,14 +447,17 @@ export function Projects() {
                     className="flex items-center justify-center gap-2 w-full sm:w-auto sm:inline-flex text-sm font-semibold px-5 py-3 rounded-xl transition-all duration-200"
                     style={{
                       backgroundColor: "var(--primary)",
+
                       color: "var(--primary-foreground)",
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.opacity = "0.85"
+
                       e.currentTarget.style.transform = "translateY(-1px)"
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.opacity = "1"
+
                       e.currentTarget.style.transform = ""
                     }}
                   >
@@ -406,17 +487,23 @@ export function Projects() {
               className="hidden lg:flex w-14 h-14 rounded-full items-center justify-center text-2xl font-bold transition-all duration-200 shrink-0 lg:col-span-1"
               style={{
                 backgroundColor: "var(--secondary)",
+
                 color: "var(--primary)",
+
                 border: "2px solid var(--border)",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = "var(--primary)"
+
                 e.currentTarget.style.color = "var(--primary-foreground)"
+
                 e.currentTarget.style.transform = "scale(1.1)"
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.backgroundColor = "var(--secondary)"
+
                 e.currentTarget.style.color = "var(--primary)"
+
                 e.currentTarget.style.transform = ""
               }}
               aria-label="Next project"
@@ -433,7 +520,9 @@ export function Projects() {
             className="lg:hidden w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold"
             style={{
               backgroundColor: "var(--secondary)",
+
               color: "var(--primary)",
+
               border: "2px solid var(--border)",
             }}
           >
@@ -446,13 +535,17 @@ export function Projects() {
                 key={i}
                 onClick={() => {
                   setDir(i > idx ? 1 : -1)
+
                   setAnimKey((k) => k + 1)
+
                   setIdx(i)
                 }}
                 className="rounded-full transition-all duration-300"
                 style={{
                   width: i === idx ? "24px" : "8px",
+
                   height: "8px",
+
                   backgroundColor:
                     i === idx ? "var(--primary)" : "var(--muted)",
                 }}
@@ -466,7 +559,9 @@ export function Projects() {
             className="lg:hidden w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold"
             style={{
               backgroundColor: "var(--secondary)",
+
               color: "var(--primary)",
+
               border: "2px solid var(--border)",
             }}
           >
