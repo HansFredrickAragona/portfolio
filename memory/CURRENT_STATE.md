@@ -44,3 +44,6 @@
 
 - No phone number or city address in tracked files (privacy grep clean).
 - `project-input/` and `tmp/` gitignored.
+
+## 2026-09-24 owner-approved combined design
+Implemented combined V1 hero/layout and V2 content, laptop About panel, full skills with icons and two-column accordions, glass surfaces and GSAP section reveals. Preserved V2 carousel and decorative GitHub squares. Desktop closed sections fit 1280x720; mobile overflow and native accordion keyboard behavior checked. Final build verification recorded in HANDOFF. No push/deployment.

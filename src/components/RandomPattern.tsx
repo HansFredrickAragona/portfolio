@@ -1,44 +1,75 @@
 export function RandomPattern({ dark }: { dark: boolean }) {
   const WEEKS = 52
+
   const DAYS = 7
+
   const MONTHS = [
     "Jan",
+
     "Feb",
+
     "Mar",
+
     "Apr",
+
     "May",
+
     "Jun",
+
     "Jul",
+
     "Aug",
+
     "Sep",
+
     "Oct",
+
     "Nov",
+
     "Dec",
   ]
+
   const DAY_LABELS = ["Mon", "", "Wed", "", "Fri", "", ""]
 
   // Realistic contribution pattern: sprints, weekends dip, rare quiet weeks
+
   function pseudo(w: number, d: number) {
     const isWeekend = d >= 5
+
     // Week-level intensity via overlapping waves — always positive base
+
     const weekNoise =
       Math.sin(w * 0.31 + 0.5) * 0.35 +
       Math.sin(w * 0.97 + 1.1) * 0.25 +
       Math.sin(w * 1.85 + 2.0) * 0.15
+
     const weekIntensity = 0.55 + weekNoise * 0.45 // range ~0.15–0.95
+
     // Per-cell deterministic jitter
+
     const jitter =
       ((((w * 31 + d * 17 + w * d + 1) * 1234567) >>> 0) % 1000) / 1000
+
     let score = weekIntensity * 0.6 + jitter * 0.4
+
     // Weekend dip
+
     if (isWeekend) score *= 0.5
+
     // Rare quiet week (only ~1 in 8, not clustering in same region)
+
     if (Math.sin(w * 0.41 + 3.7) > 0.78) score *= 0.18
+
     score = Math.min(score, 1)
+
     if (score < 0.14) return 0
+
     if (score < 0.34) return 1
+
     if (score < 0.56) return 2
+
     if (score < 0.76) return 3
+
     return 4
   }
 
@@ -47,24 +78,37 @@ export function RandomPattern({ dark }: { dark: boolean }) {
     : ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"]
 
   // Spread month labels evenly across 52 weeks
+
   const monthPositions = MONTHS.map((m, i) => ({
     label: m,
+
     week: Math.round((i / 12) * WEEKS),
   }))
 
   const CELL = 11
+
   const GAP = 3
+
   const DAY_LABEL_W = 28
+
   const MONTH_LABEL_H = 16
+
   const totalW = DAY_LABEL_W + WEEKS * (CELL + GAP)
+
   const totalH = MONTH_LABEL_H + DAYS * (CELL + GAP)
 
   return (
     <div style={{ overflowX: "auto", maxWidth: "100%" }}>
       <svg
-        width={totalW}
-        height={totalH}
-        style={{ display: "block", fontFamily: "Outfit, sans-serif" }}
+        viewBox={`0 0 ${totalW} ${totalH}`}
+        role="img"
+        aria-label="Decorative GitHub-inspired contribution squares"
+        width="100%"
+        style={{
+          display: "block",
+          height: "auto",
+          fontFamily: "Outfit, sans-serif",
+        }}
       >
         {/* Month labels */}
         {monthPositions.map(({ label, week }) => (

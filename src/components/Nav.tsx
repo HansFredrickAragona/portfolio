@@ -16,7 +16,14 @@ export function Nav({
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
 
-  const links = ["Projects", "Services", "Experience", "About", "Contact"]
+  const links = [
+    "Projects",
+    "Services",
+    "Experience",
+    "About",
+    "Skills",
+    "Contact",
+  ]
 
   const navBg = scrolled
     ? dark

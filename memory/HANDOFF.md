@@ -29,3 +29,15 @@ Branch **feat/v2** — Figma Make Next.js 15 app integrated with ported v1 conte
 - Optional portrait downscale (~24MB each).
 - Deploy/PR/merge: forbidden without owner auth.
 - Deadline remains 2026-09-25 EOD Asia/Manila.
+
+## 2026-09-24 combined V1/V2 refinement
+
+Owner approved implementation on feat/v2: V1 hero composition with V2 content/floating icons, preserve GitHub contribution-square reference, laptop About image without About heading, complete icon skills with concise two-column accordions, retain V2 project carousel, translucent surfaces, GSAP reveals, viewport-sized desktop sections and shared contact/footer screen.
+
+Implemented in Hero, About, Skills, ScrollMotion, globals.css and page composition. Restored the labeled temporary AI laptop portrait and local icon paths from feat/v1. GitHub squares remain decorative, not actual contribution telemetry. No modifications to feat/v1 or main; no push/deploy.
+
+Browser checks: 1280x720 hero 720px; projects/services/experience/about/collapsed skills 656px (64px navigation allowance). Skills expands with content; native click opens and Enter closes. Carousel next selects BaguioReady GIS. At 375px skills uses a single column and document has no horizontal overflow. Reduced-motion CSS disables animation; GSAP only runs under no-preference. Full mobile swipe/reduced-motion emulation not performed. Existing V2 project facts need a separate evidence audit. No lint/test scripts are configured in this V2 package.
+
+Initial production build compiled and typechecked but failed during page-data JSON parsing while development preview was being started. Preview stopped for isolated rerun; see final check output before committing. Working changes belong to Codex for this owner-approved task; historical OpenCode handoffs are not active transfer instructions.
+
+Final verification: production build PASS after fresh cache and excluding ignored tmp from TypeScript; formatting and strict typecheck PASS. No standalone lint/test scripts exist in V2. Preview on 127.0.0.1:3113. Base commit 9f397d2; completed local refinement commit follows.

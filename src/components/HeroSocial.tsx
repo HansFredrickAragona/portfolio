@@ -64,11 +64,10 @@ const BUTTONS = [
 
 export function HeroSocialButtons() {
   return (
-    <div className="flex flex-wrap gap-3" role="list">
+    <div className="flex flex-wrap gap-3">
       {BUTTONS.map((item) => (
         <a
           key={item.id}
-          role="listitem"
           href={item.href}
           {...(item.external
             ? { target: "_blank", rel: "noopener noreferrer" }
