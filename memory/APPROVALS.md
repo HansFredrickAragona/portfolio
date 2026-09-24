@@ -27,3 +27,7 @@ Owner confirmed GSAP scrolling, approved implementation and temporary AI photos,
 Owner follow-up: remove eyebrow labels, simplify skills to category/name rows without descriptions, remove Career Growth, widen layout/reduce whitespace and increase type. This overrides previous career-grid and detailed skill-disclosure presentation requirements. No publication authorized.
 
 Owner requested minimal expandable skills headings, smooth reveal and shorter labels. This supersedes always-visible skill rows; native disclosure implementation is authorized.
+
+## Figma v2 push — 2026-09-24
+
+Owner: “push now.” Authorizes pushing the Figma integration commits on `feat/v2` (`ff89b2a`, `a2d6e13`) to origin. Still no deploy, no PR, no merge to main unless separately requested.

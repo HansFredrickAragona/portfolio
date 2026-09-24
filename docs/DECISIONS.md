@@ -12,4 +12,4 @@ Full decisions: `memory/DECISIONS.md`.
   2. About information (profile, education, leadership, interests) + Figma portraits
   3. Hero: GitHub and Email as separate visible entries; LinkedIn, GitHub, Email as buttons (`HeroSocial.tsx`)
   4. Approved links centralized in `src/data/links.ts`; wrong Figma email/LinkedIn corrected
-- Push of new source commit requires explicit owner permission.
+- Push completed 2026-09-24 (owner: "push now") — origin/feat/v2 = `a2d6e13`.

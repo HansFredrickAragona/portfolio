@@ -1,7 +1,8 @@
 # Current state
 
-- Branch: **feat/v2** — Figma Make drop-in integrated with v1 content ports @ `ff89b2a`.
-- Created from `feat/v1` @ `bfcefef`; docs-only strip at `ccf4140`; Figma source commit `ff89b2a` (local, not pushed).
+- Branch: **feat/v2** @ `a2d6e13` (in sync with `origin/feat/v2`).
+- Figma integration commit `ff89b2a` + checkpoint `a2d6e13` pushed 2026-09-24 (owner: "push now").
+- Created from `feat/v1` @ `bfcefef`; docs-only strip at `ccf4140`.
 - Stack: **Next.js 15.5 App Router** (not Vite), React 19, Tailwind 4, oxfmt.
 - Full prior app remains on `feat/v1` @ `bfcefef`.
 - Checks (this drop-in): `npx tsc --noEmit` PASS, `npm run build` PASS (static `/` 13.8 kB), privacy grep clean, LFS tracks both portraits.
@@ -35,7 +36,7 @@
 
 ## Next
 
-- Stage memory updates + Figma source; commit; push only with owner permission.
+- Visual responsive/a11y browser QA not yet run this session (optional next).
 - Optional: downscale ~24MB portraits later (LFS already tracks them).
 - No deploy/PR/merge to main without owner auth.
 

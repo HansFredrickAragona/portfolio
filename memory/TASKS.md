@@ -14,6 +14,6 @@
 | Figma Make drop-in | owner | done | Next.js 15 files unzipped into feat/v2 |
 | Port skills/About/Hero from v1 | root | done this session | links fixed, skills/about/experience ported, Hero buttons |
 | Checks + Figma source commit | root | done (`ff89b2a`) | tsc/build pass; privacy clean; memory synced |
-| Push Figma commit | root | pending | ask owner before push |
+| Push Figma commit | root | done (`ff89b2a`+`a2d6e13` → origin/feat/v2) | owner: "push now" |
 
-No task permits deploy or PR. Push of new Figma commit requires explicit owner permission.
+No task permits deploy or PR.
