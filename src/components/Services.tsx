@@ -131,7 +131,7 @@ export function Services() {
             Services
           </h2>
         </div>
-        <div className="max-w-4xl">
+        <div className="w-full">
           {SERVICES.map((s, i) => (
             <div
               key={i}
@@ -161,7 +161,7 @@ export function Services() {
                     {s.icon}
                   </div>
                   <h3
-                    className="font-serif text-lg md:text-xl font-medium transition-colors duration-200"
+                    className="font-serif text-xl md:text-2xl font-medium transition-colors duration-200"
                     style={{
                       color:
                         hovered === i ? "var(--primary)" : "var(--foreground)",
@@ -183,11 +183,11 @@ export function Services() {
               </div>
               <div
                 className={`overflow-hidden transition-all duration-300 ${
-                  open === i ? "max-h-32 opacity-100 mt-2" : "max-h-0 opacity-0"
+                  open === i ? "max-h-64 opacity-100 mt-2" : "max-h-0 opacity-0"
                 }`}
               >
                 <p
-                  className="text-sm leading-relaxed"
+                  className="text-base leading-relaxed"
                   style={{ color: "var(--muted-foreground)" }}
                 >
                   {s.desc}
