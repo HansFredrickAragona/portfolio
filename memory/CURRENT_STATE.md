@@ -1,7 +1,8 @@
 # Current state
 
-- Branch: **feat/v2**. Application tip `8cebd478886b8520f98df3cc4423c304cb8005f1`. Codex refinements were local; owner authorized commit+push of all local work before further UI changes (2026-09-24). URGENT successor state: `memory/OPENCODE_HANDOFF.md`.
+- Branch: **feat/v2**. Application tip `8cebd47` for UI; docs tip includes handoff commit `297ec24` (pushed, origin in sync). Owner authorized commit+push of all local work before further UI changes (2026-09-24). Successor ownership accepted: `memory/OPENCODE_HANDOFF.md`.
 - Figma integration `ff89b2a` + checkpoints pushed 2026-09-24 (owner: "push now").
+- 2026-09-24 Services browser verification: desktop 1440 full-width rows + typography confirmed via headless Edge screenshot and DOM/CSS inspection; temporary public/*qa*.html wrappers deleted after use. tsc + production build PASS; privacy grep clean. Preview last run on port 3115.
 - Created from `feat/v1` @ `bfcefef`; docs-only strip at `ccf4140`.
 - Stack: **Next.js 15.5 App Router** (not Vite), React 19, Tailwind 4, oxfmt.
 - Full prior app remains on `feat/v1` @ `bfcefef`.
@@ -36,8 +37,8 @@
 
 ## Next
 
-- Visual responsive/a11y browser QA not yet run this session (optional next).
-- Optional: downscale ~24MB portraits later (LFS already tracks them).
+- Await owner UI feedback; no unsolicited redesign.
+- Optional: mobile 375 + expanded Services screenshot recheck; downscale ~24MB portraits later (LFS already tracks them).
 - No deploy/PR/merge to main without owner auth.
 
 ## Privacy

@@ -20,5 +20,7 @@ No task permits deploy or PR.
 
 ## Urgent successor checkpoint 2026-09-24
 - DONE: requested Services width and font update, commit 8cebd47; typecheck/build pass.
-- DONE: owner authorized commit+push of all local feat/v2 before further UI work.
-- NEXT: push feat/v2, then verify Services browser layout per memory/OPENCODE_HANDOFF.md; await owner UI feedback. No new redesign scope.
+- DONE: owner authorized commit+push of all local feat/v2 before further UI work; pushed through 297ec24.
+- DONE: successor accepted writer ownership in memory/OPENCODE_HANDOFF.md.
+- DONE: Services browser verification — desktop 1440x900 screenshot shows 5 full-width rows, section title, icons, + toggles; DOM/CSS checks confirm titles text-xl/md:text-2xl (20/24px), desc text-base (16px), container max-w-7xl, no max-w-4xl. QA wrapper HTML in public/ deleted after use.
+- NEXT: await owner UI feedback. No new redesign scope. Optional later: mobile 375 and expanded-row screenshot recheck (headless scroll quirks only; markup already verified).

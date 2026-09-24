@@ -8,4 +8,4 @@
 - Delivery deadline still 2026-09-25 23:59 Asia/Manila (end-of-day interpretation; owner may correct exact time).
 - Prompt 09, push, PR, merge, and deploy remain forbidden until owner authorizes a new batch.
 
-2026-09-24: latest Services browser recheck blocked by ERR_BLOCKED_BY_CLIENT; build/typecheck pass. At owner-reported 3% Codex, handoff prepared; successor launch/acceptance not verified.
+2026-09-24: Services browser recheck previously blocked by ERR_BLOCKED_BY_CLIENT; resolved later same day via same-origin wrapper + headless Edge — desktop Services layout visually verified (screenshots under ignored tmp/qa/). Build/typecheck still pass. Successor ownership accepted in memory/OPENCODE_HANDOFF.md. Remaining residual: mobile 375 and expanded-row captures flaky under headless (tool limitation, not an app defect); optional manual browser glance only.

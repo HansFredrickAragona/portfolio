@@ -20,12 +20,12 @@ Branch **feat/v2** — Figma Make Next.js 15 app integrated with ported v1 conte
 - Privacy grep: clean (no phone/city patterns in tracked/staged files).
 - LFS: both `public/assets/hans-portrait*.jpg` tracked as LFS.
 - Lint/tests: N/A (Figma package.json has no eslint/vitest; oxfmt only).
-- Visual responsive/a11y browser QA: NOT yet run this session.
+- Visual QA: Services desktop 1440 verified 2026-09-24 (full-width rows, 20/24px titles, 16px desc in CSS); broader responsive/a11y pass not fully run this session.
 
 ## Pending
 
 - Push complete: `origin/feat/v2` in sync with local `feat/v2` (owner: "push now"); source integration at `ff89b2a`.
-- Visual responsive/a11y browser QA not yet run this session.
+- Services browser verification DONE (desktop); optional mobile/expanded recheck only.
 - Optional portrait downscale (~24MB each).
 - Deploy/PR/merge: forbidden without owner auth.
 - Deadline remains 2026-09-25 EOD Asia/Manila.
@@ -46,6 +46,6 @@ Hero follow-up: removed experience rail; moved GitHub square graphic into its pl
 
 2026-09-24 hero/card refinement: full name is one desktop line, portrait enlarged to show upper body, CTAs overlay photo. Removed section-wide glass cards. Added individual skills/project-info/experience hover lift and pointer-following radial glow with fine-pointer and reduced-motion guards. Format, strict typecheck, production build and diff check PASS. Fresh production preview on port 3114: actual 1440x900 hero 900px, no horizontal overflow, heading nowrap; skills click expands, glow opacity activates, parent background transparent. Browser viewport override reset. No standalone lint/test scripts configured.
 
-Services width refinement: removed max-w-4xl inner cap; rows now fill the section content width. Titles 20px mobile/24px desktop; descriptions 16px. Increased disclosure height allowance for larger text. Format, typecheck and production build PASS. Browser recheck blocked by client; visual verification pending. Preview restarted on 3114.
+Services width refinement: removed max-w-4xl inner cap; rows now fill the section content width. Titles 20px mobile/24px desktop; descriptions 16px. Increased disclosure height allowance for larger text. Format, typecheck and production build PASS.
 
-URGENT 2026-09-24: owner reports 3% Codex remaining. Canonical recovery is memory/OPENCODE_HANDOFF.md. Application HEAD 8cebd47; Services implementation/checks complete; browser verification pending due client block. Codex ceases writes after this checkpoint. Successor acceptance not yet verified.
+2026-09-24 successor verification: Services desktop browser check completed (headless Edge + DOM/CSS); earlier ERR_BLOCKED_BY_CLIENT blocker cleared. Handoff commit 297ec24 pushed; writer ownership accepted in memory/OPENCODE_HANDOFF.md. Temporary QA HTML removed from public/. Awaiting further owner design feedback.
