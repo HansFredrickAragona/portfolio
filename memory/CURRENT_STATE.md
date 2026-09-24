@@ -1,7 +1,7 @@
 # Current state
 
-- Branch: **feat/v2** @ `a2d6e13` (in sync with `origin/feat/v2`).
-- Figma integration commit `ff89b2a` + checkpoint `a2d6e13` pushed 2026-09-24 (owner: "push now").
+- Branch: **feat/v2** @ `c29762f` (in sync with `origin/feat/v2`).
+- Figma integration `ff89b2a` + checkpoint `a2d6e13` + push memory `c29762f` pushed 2026-09-24 (owner: "push now").
 - Created from `feat/v1` @ `bfcefef`; docs-only strip at `ccf4140`.
 - Stack: **Next.js 15.5 App Router** (not Vite), React 19, Tailwind 4, oxfmt.
 - Full prior app remains on `feat/v1` @ `bfcefef`.

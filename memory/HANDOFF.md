@@ -24,7 +24,7 @@ Branch **feat/v2** — Figma Make Next.js 15 app integrated with ported v1 conte
 
 ## Pending
 
-- Push complete: `origin/feat/v2` = `a2d6e13` (owner: "push now").
+- Push complete: `origin/feat/v2` = `c29762f` (owner: "push now").
 - Visual responsive/a11y browser QA not yet run this session.
 - Optional portrait downscale (~24MB each).
 - Deploy/PR/merge: forbidden without owner auth.
