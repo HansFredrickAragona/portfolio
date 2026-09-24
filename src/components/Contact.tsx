@@ -45,7 +45,7 @@ export function Contact() {
             style={{ backgroundColor: "var(--primary)" }}
           />
           <h2
-            className="font-serif text-[1.75rem] md:text-[2.3rem] font-semibold"
+            className="font-serif text-[2rem] md:text-[2.65rem] font-semibold"
             style={{ color: "var(--primary)" }}
           >
             Let's talk
@@ -53,7 +53,7 @@ export function Contact() {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           <p
-            className="text-base leading-relaxed self-center"
+            className="text-[1.15rem] leading-relaxed self-center"
             style={{ color: "var(--muted-foreground)" }}
           >
             Fill out the form and hit "Continue to email" — it opens your email

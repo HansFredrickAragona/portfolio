@@ -279,7 +279,7 @@ export function Projects() {
               style={{ backgroundColor: "var(--primary)" }}
             />
             <h2
-              className="font-serif text-[1.75rem] md:text-[2.3rem] font-semibold"
+              className="font-serif text-[2rem] md:text-[2.65rem] font-semibold"
               style={{ color: "var(--primary)" }}
             >
               Projects

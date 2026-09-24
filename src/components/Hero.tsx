@@ -17,7 +17,6 @@ export function Hero({ dark }: { dark: boolean }) {
             </p>
             <div className="hero-contributions">
               <RandomPattern dark={dark} />
-              <span>GitHub-inspired pattern</span>
             </div>
           </div>
           <div className="hero-photo">

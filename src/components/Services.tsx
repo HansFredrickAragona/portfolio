@@ -125,7 +125,7 @@ export function Services() {
             style={{ backgroundColor: "var(--primary)" }}
           />
           <h2
-            className="font-serif text-[1.75rem] md:text-[2.3rem] font-semibold"
+            className="font-serif text-[2rem] md:text-[2.65rem] font-semibold"
             style={{ color: "var(--primary)" }}
           >
             Services
@@ -161,7 +161,7 @@ export function Services() {
                     {s.icon}
                   </div>
                   <h3
-                    className="font-serif text-xl md:text-2xl font-medium transition-colors duration-200"
+                    className="font-serif text-[1.4rem] md:text-[1.85rem] font-medium transition-colors duration-200"
                     style={{
                       color:
                         hovered === i ? "var(--primary)" : "var(--foreground)",
@@ -187,7 +187,7 @@ export function Services() {
                 }`}
               >
                 <p
-                  className="text-base leading-relaxed"
+                  className="text-[1.15rem] leading-relaxed"
                   style={{ color: "var(--muted-foreground)" }}
                 >
                   {s.desc}

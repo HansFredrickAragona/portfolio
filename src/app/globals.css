@@ -68,6 +68,7 @@ html {
 
 body {
   font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
   background-color: var(--background);
   color: var(--foreground);
   -webkit-font-smoothing: antialiased;
@@ -122,7 +123,7 @@ main > section > div:not(.absolute) { width:100%; }
 .hero-composition { max-width:1280px; margin:auto; position:relative; z-index:1; }
 .hero-name { font-family:var(--font-serif); font-size:clamp(3rem,6.2vw,6rem); line-height:.98; text-align:center; color:var(--primary); letter-spacing:-.045em; }
 .hero-name span { display:block; color:transparent; -webkit-text-stroke:1px var(--primary); }
-.hero-roles { text-align:center; margin:18px 0 28px; font-size:1.15rem; }
+.hero-roles { text-align:center; margin:18px 0 28px; font-size:1.32rem; }
 .hero-stage { display:grid; grid-template-columns:1fr 1.05fr 1fr; align-items:center; gap:37px; }
 .hero-photo { height:clamp(240px,34svh,380px); border-radius:180px 180px 24px 24px; overflow:hidden; }
 .hero-photo img { width:100%; height:100%; object-fit:cover; object-position:top; }
@@ -133,23 +134,22 @@ main > section > div:not(.absolute) { width:100%; }
 .hero-intro p { line-height:1.6; }
 .hero-intro a { overflow-wrap:anywhere; }
 .hero-contributions { max-width:750px; margin:25px auto 0; }
-.hero-contributions > span { display:block; font-size:.8rem; color:var(--muted-foreground); text-align:right; }
 .hero-actions { display:flex; gap:14px; justify-content:center; margin-top:14px; }
-.hero-actions a { padding:12px 23px; border:1px solid var(--border); border-radius:12px; background:var(--glass-bg); }
+.hero-actions a { padding:12px 23px; border:1px solid var(--border); border-radius:12px; background:var(--glass-bg); font-size:1.05rem; }
 .hero-actions a:first-child { background:var(--primary); color:var(--primary-foreground); }
 .about-layout { max-width:1280px; margin:auto; display:grid; grid-template-columns:.85fr 1.15fr; gap:55px; padding:37px; align-items:center; }
 .about-photo { position:relative; }
 .about-photo img { width:100%; max-height:570px; object-fit:cover; border-radius:18px; }
 .about-photo figcaption { position:absolute; bottom:12px; left:12px; background:var(--background); border-radius:8px; padding:4px 8px; font-size:.75rem; }
 .about-copy { display:grid; gap:25px; line-height:1.55; }
-.about-intro { font-size:clamp(1.25rem,1.95vw,1.65rem); }
-.about-copy h2 { font-family:var(--font-serif); font-size:1.45rem; color:var(--primary); margin-bottom:7px; }
+.about-intro { font-size:clamp(1.44rem,2.25vw,1.9rem); }
+.about-copy h2 { font-family:var(--font-serif); font-size:1.67rem; color:var(--primary); margin-bottom:7px; }
 .about-copy li + li { margin-top:7px; }
 .skills-shell { max-width:1360px; margin:auto; padding:41px; }
-.section-title { font-family:var(--font-serif); font-size:2.9rem; color:var(--primary); margin-bottom:28px; }
+.section-title { font-family:var(--font-serif); font-size:3.33rem; color:var(--primary); margin-bottom:28px; }
 .skills-columns { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:55px; }
 .skill-group { border-bottom:1px solid var(--border); interpolate-size:allow-keywords; }
-.skill-group summary { cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; padding:23px 0; font-size:1.44rem; font-weight:500; gap:18px; }
+.skill-group summary { cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; padding:23px 0; font-size:1.66rem; font-weight:500; gap:18px; }
 .skill-group summary::-webkit-details-marker { display:none; }
 .skill-group summary span { transition:transform .25s; font-size:1.85rem; }
 .skill-group[open] summary span { transform:rotate(45deg); }
@@ -192,13 +192,13 @@ main > section > div:not(.absolute) { width:100%; }
  .hero-contributions { max-width:600px; margin-top:12px; }
  .about-photo img { max-height:calc(100svh - 200px); }
  #projects > div:last-child { padding-top:28px; padding-bottom:28px; }
- #projects h3 { font-size:1.5rem; }
+ #projects h3 { font-size:1.72rem; }
 }
 
 /* Hero: roles and GitHub squares replace the experience rail. */
 .hero-name { margin-bottom:28px; font-size:clamp(3.7rem,8.8vw,8rem); }
 .hero-github-panel { min-width:0; }
-.hero-github-panel .hero-roles { text-align:left; font-size:1.32rem; line-height:1.65; margin:0 0 23px; }
+.hero-github-panel .hero-roles { text-align:left; font-size:1.52rem; line-height:1.65; margin:0 0 23px; }
 .hero-github-panel .hero-contributions { margin:0; width:100%; }
 .hero-actions { margin-top:28px; }
 @media (min-width:901px) { .hero-name { font-size:clamp(4.5rem,11.5svh,8rem); } }

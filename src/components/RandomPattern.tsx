@@ -85,20 +85,28 @@ export function RandomPattern({ dark }: { dark: boolean }) {
     week: Math.round((i / 12) * WEEKS),
   }))
 
-  const CELL = 11
+  const CELL = 16
 
-  const GAP = 3
+  const GAP = 4
 
-  const DAY_LABEL_W = 28
+  const DAY_LABEL_W = 32
 
-  const MONTH_LABEL_H = 16
+  const MONTH_LABEL_H = 18
 
   const totalW = DAY_LABEL_W + WEEKS * (CELL + GAP)
 
   const totalH = MONTH_LABEL_H + DAYS * (CELL + GAP)
 
+  const visibleH = Math.round(totalH * 0.75)
+
   return (
-    <div style={{ overflowX: "auto", maxWidth: "100%" }}>
+    <div
+      style={{
+        overflow: "hidden",
+        maxWidth: "100%",
+        height: visibleH,
+      }}
+    >
       <svg
         viewBox={`0 0 ${totalW} ${totalH}`}
         role="img"
@@ -115,8 +123,8 @@ export function RandomPattern({ dark }: { dark: boolean }) {
           <text
             key={label}
             x={DAY_LABEL_W + week * (CELL + GAP)}
-            y={11}
-            fontSize="10"
+            y={13}
+            fontSize="12"
             fill={dark ? "#8b949e" : "#57606a"}
           >
             {label}
@@ -129,8 +137,8 @@ export function RandomPattern({ dark }: { dark: boolean }) {
             {DAY_LABELS[d] && (
               <text
                 x={0}
-                y={MONTH_LABEL_H + d * (CELL + GAP) + CELL - 1}
-                fontSize="10"
+                y={MONTH_LABEL_H + d * (CELL + GAP) + CELL - 2}
+                fontSize="12"
                 fill={dark ? "#8b949e" : "#57606a"}
               >
                 {DAY_LABELS[d]}
@@ -143,7 +151,7 @@ export function RandomPattern({ dark }: { dark: boolean }) {
                 y={MONTH_LABEL_H + d * (CELL + GAP)}
                 width={CELL}
                 height={CELL}
-                rx="2"
+                rx="3"
                 fill={levels[pseudo(w, d)]}
               />
             ))}
