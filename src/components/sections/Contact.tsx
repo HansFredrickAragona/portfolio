@@ -10,8 +10,6 @@ export function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" })
   const [copied, setCopied] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [verificationStep, setVerificationStep] = useState(false)
-  const [verificationCode, setVerificationCode] = useState("")
   const [submitStatus, setSubmitStatus] =
     useState<"idle" | "success" | "error">("idle")
   const [submitError, setSubmitError] = useState("")
@@ -21,14 +19,7 @@ export function Contact() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    if (
-      !form.name ||
-      !form.email ||
-      !form.message ||
-      (verificationStep && !verificationCode)
-    ) {
-      return
-    }
+    if (!form.name || !form.email || !form.message) return
 
     setIsSubmitting(true)
     setSubmitStatus("idle")
@@ -38,11 +29,7 @@ export function Contact() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...form,
-          action: verificationStep ? "verify" : "request-verification",
-          ...(verificationStep ? { code: verificationCode.trim() } : {}),
-        }),
+        body: JSON.stringify(form),
       })
 
       const data = await res.json()
@@ -51,16 +38,8 @@ export function Contact() {
         throw new Error(data.error || "Failed to send message")
       }
 
-      if (data.verificationRequired) {
-        setVerificationStep(true)
-        setVerificationCode("")
-        return
-      }
-
       setSubmitStatus("success")
       setForm({ name: "", email: "", message: "" })
-      setVerificationStep(false)
-      setVerificationCode("")
     } catch (err) {
       setSubmitStatus("error")
       setSubmitError(
@@ -121,115 +100,53 @@ export function Contact() {
             inbox without opening your email app.
           </p>
           <form onSubmit={handleSubmit} className="space-y-3">
-            {verificationStep ? (
-              <div className="space-y-3">
-                <p
-                  className="text-sm leading-relaxed"
-                  style={{ color: "var(--muted-foreground)" }}
-                  role="status"
-                >
-                  Enter the 6-digit code we sent to{" "}
-                  <strong>{form.email}</strong>. It expires in 10 minutes.
-                </p>
-                <input
-                  style={inputBase}
-                  type="text"
-                  inputMode="numeric"
-                  autoComplete="one-time-code"
-                  aria-label="Email verification code"
-                  placeholder="6-digit verification code"
-                  value={verificationCode}
-                  onChange={(e) =>
-                    setVerificationCode(
-                      e.target.value.replace(/\D/g, "").slice(0, 6),
-                    )
-                  }
-                  onFocus={(e) =>
-                    (e.target.style.borderColor = "var(--primary)")
-                  }
-                  onBlur={(e) => (e.target.style.borderColor = "var(--border)")}
-                  disabled={isSubmitting}
-                  required
-                  minLength={6}
-                  maxLength={6}
-                  pattern="[0-9]{6}"
-                />
-                <button
-                  type="button"
-                  onClick={() => {
-                    setVerificationStep(false)
-                    setVerificationCode("")
-                    setSubmitStatus("idle")
-                    setSubmitError("")
-                  }}
-                  disabled={isSubmitting}
-                  className="text-xs transition-colors duration-200"
-                  style={{ color: "var(--muted-foreground)" }}
-                >
-                  Edit details or request a new code
-                </button>
-              </div>
-            ) : (
-              <>
-                <div className="grid grid-cols-2 gap-3">
-                  <input
-                    style={inputBase}
-                    placeholder="Your name"
-                    value={form.name}
-                    onChange={(e) => update("name", e.target.value)}
-                    onFocus={(e) =>
-                      (e.target.style.borderColor = "var(--primary)")
-                    }
-                    onBlur={(e) =>
-                      (e.target.style.borderColor = "var(--border)")
-                    }
-                    disabled={isSubmitting}
-                    required
-                    maxLength={100}
-                  />
-                  <input
-                    style={inputBase}
-                    type="email"
-                    placeholder="Your email"
-                    value={form.email}
-                    onChange={(e) => update("email", e.target.value)}
-                    onFocus={(e) =>
-                      (e.target.style.borderColor = "var(--primary)")
-                    }
-                    onBlur={(e) =>
-                      (e.target.style.borderColor = "var(--border)")
-                    }
-                    disabled={isSubmitting}
-                    required
-                    maxLength={254}
-                    autoComplete="email"
-                    autoCapitalize="none"
-                    spellCheck={false}
-                  />
-                </div>
-                <textarea
-                  style={{ ...inputBase, resize: "none", height: "100px" }}
-                  placeholder="Your message"
-                  value={form.message}
-                  onChange={(e) => update("message", e.target.value)}
-                  onFocus={(e) =>
-                    (e.target.style.borderColor = "var(--primary)")
-                  }
-                  onBlur={(e) => (e.target.style.borderColor = "var(--border)")}
-                  disabled={isSubmitting}
-                  required
-                  maxLength={5000}
-                />
-              </>
-            )}
+            <div className="grid grid-cols-2 gap-3">
+              <input
+                style={inputBase}
+                placeholder="Your name"
+                aria-label="Your name"
+                value={form.name}
+                onChange={(e) => update("name", e.target.value)}
+                onFocus={(e) => (e.target.style.borderColor = "var(--primary)")}
+                onBlur={(e) => (e.target.style.borderColor = "var(--border)")}
+                disabled={isSubmitting}
+                required
+                maxLength={100}
+              />
+              <input
+                style={inputBase}
+                type="email"
+                placeholder="Your email"
+                aria-label="Your email"
+                value={form.email}
+                onChange={(e) => update("email", e.target.value)}
+                onFocus={(e) => (e.target.style.borderColor = "var(--primary)")}
+                onBlur={(e) => (e.target.style.borderColor = "var(--border)")}
+                disabled={isSubmitting}
+                required
+                maxLength={254}
+                autoComplete="email"
+                autoCapitalize="none"
+                spellCheck={false}
+              />
+            </div>
+            <textarea
+              style={{ ...inputBase, resize: "none", height: "100px" }}
+              placeholder="Your message"
+              aria-label="Your message"
+              value={form.message}
+              onChange={(e) => update("message", e.target.value)}
+              onFocus={(e) => (e.target.style.borderColor = "var(--primary)")}
+              onBlur={(e) => (e.target.style.borderColor = "var(--border)")}
+              disabled={isSubmitting}
+              required
+              maxLength={5000}
+            />
             <div className="flex gap-3 pt-1">
               <button
                 type="submit"
                 disabled={
-                  isSubmitting ||
-                  (verificationStep
-                    ? verificationCode.length !== 6
-                    : !form.name || !form.email || !form.message)
+                  isSubmitting || !form.name || !form.email || !form.message
                 }
                 className="flex-1 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed"
                 style={{
@@ -238,28 +155,20 @@ export function Contact() {
                   color: "var(--primary-foreground)",
                 }}
               >
-                {isSubmitting
-                  ? verificationStep
-                    ? "Verifying…"
-                    : "Sending code…"
-                  : verificationStep
-                    ? "Verify and send message"
-                    : "Send verification code"}
+                {isSubmitting ? "Sending…" : "Send message"}
               </button>
-              {!verificationStep && (
-                <button
-                  type="button"
-                  onClick={copyMessage}
-                  disabled={!form.message || isSubmitting}
-                  className="px-5 py-2.5 rounded-full text-sm font-semibold border transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed"
-                  style={{
-                    borderColor: "var(--primary)",
-                    color: "var(--primary)",
-                  }}
-                >
-                  {copied ? "Copied ✓" : "Copy message"}
-                </button>
-              )}
+              <button
+                type="button"
+                onClick={copyMessage}
+                disabled={!form.message || isSubmitting}
+                className="px-5 py-2.5 rounded-full text-sm font-semibold border transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed"
+                style={{
+                  borderColor: "var(--primary)",
+                  color: "var(--primary)",
+                }}
+              >
+                {copied ? "Copied ✓" : "Copy message"}
+              </button>
             </div>
             {submitStatus === "success" && (
               <p
