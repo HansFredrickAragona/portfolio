@@ -1,12 +1,14 @@
-import { FloatingIcons } from "./FloatingIcons"
+"use client"
+
+import { FloatingIcons } from "@/components/ui/FloatingIcons"
 
 import { useState } from "react"
 
 import { aboutSkillCategories } from "@/data/skills"
 
-import { TechIcon } from "./icons/TechIcon"
+import { TechIcon } from "@/components/icons/TechIcon"
 
-import { techIconPaths, type TechIconId } from "./icons/techIconPaths"
+import { techIconPaths, type TechIconId } from "@/components/icons/techIconPaths"
 
 const aliases: Record<string, string> = {
   nextjs: "nextdotjs",

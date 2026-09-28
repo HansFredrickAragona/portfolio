@@ -1,4 +1,4 @@
-export function RandomPattern({ dark }: { dark: boolean }) {
+export function RandomPattern() {
   const WEEKS = 52
 
   const DAYS = 7
@@ -73,9 +73,7 @@ export function RandomPattern({ dark }: { dark: boolean }) {
     return 4
   }
 
-  const levels = dark
-    ? ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
-    : ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"]
+  const levels = [0, 1, 2, 3, 4].map((level) => `var(--pattern-${level})`)
 
   // Spread month labels evenly across 52 weeks
 
@@ -119,7 +117,7 @@ export function RandomPattern({ dark }: { dark: boolean }) {
 
           height: "auto",
 
-          fontFamily: "Outfit, sans-serif",
+          fontFamily: "var(--font-outfit), sans-serif",
         }}
       >
         {/* Month labels */}
@@ -129,7 +127,7 @@ export function RandomPattern({ dark }: { dark: boolean }) {
             x={DAY_LABEL_W + week * (CELL + GAP)}
             y={13}
             fontSize="13"
-            fill={dark ? "#8b949e" : "#57606a"}
+            fill="var(--pattern-label)"
           >
             {label}
           </text>
@@ -143,7 +141,7 @@ export function RandomPattern({ dark }: { dark: boolean }) {
                 x={0}
                 y={MONTH_LABEL_H + d * (CELL + GAP) + CELL - 2}
                 fontSize="13"
-                fill={dark ? "#8b949e" : "#57606a"}
+                fill="var(--pattern-label)"
               >
                 {DAY_LABELS[d]}
               </text>

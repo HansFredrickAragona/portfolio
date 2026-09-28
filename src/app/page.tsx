@@ -1,39 +1,29 @@
-"use client"
+import { DesktopEnhancements } from "@/components/ui/DesktopEnhancements"
+import { Hero } from "@/components/sections/Hero"
 
-import { CardGlow } from "@/components/CardGlow"
+import { SiteNavigation } from "@/components/ui/SiteNavigation"
 
-import { ScrollMotion } from "@/components/ScrollMotion"
+import { Projects } from "@/components/sections/Projects"
 
-import { useDarkMode } from "@/hooks/useDarkMode"
+import { Services } from "@/components/sections/Services"
 
-import { Nav } from "@/components/Nav"
+import { Experience } from "@/components/sections/Experience"
 
-import { Hero } from "@/components/Hero"
+import { About } from "@/components/sections/About"
 
-import { Projects } from "@/components/Projects"
+import { Skills } from "@/components/sections/Skills"
 
-import { Services } from "@/components/Services"
+import { Contact } from "@/components/sections/Contact"
 
-import { Experience } from "@/components/Experience"
-
-import { About } from "@/components/About"
-
-import { Skills } from "@/components/Skills"
-
-import { Contact } from "@/components/Contact"
-
-import { Footer } from "@/components/Footer"
+import { Footer } from "@/components/sections/Footer"
 
 export default function Home() {
-  const [dark, setDark] = useDarkMode()
-
   return (
     <>
-      <ScrollMotion />
-      <CardGlow />
-      <Nav dark={dark} setDark={setDark} />
+      <DesktopEnhancements />
+      <SiteNavigation />
       <main>
-        <Hero dark={dark} />
+        <Hero />
         <Projects />
         <Services />
         <Experience />

@@ -1,4 +1,4 @@
-import { icons } from "./techIcons"
+import { icons } from "@/data/techIcons"
 
 export function FloatingIcons({
   color = "var(--primary)",

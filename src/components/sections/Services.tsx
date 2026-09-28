@@ -1,6 +1,8 @@
+"use client"
+
 import { useState } from "react"
 
-import { FloatingIcons } from "./FloatingIcons"
+import { FloatingIcons } from "@/components/ui/FloatingIcons"
 
 const SERVICES = [
   {

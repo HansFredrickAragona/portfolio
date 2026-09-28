@@ -1,6 +1,8 @@
+"use client"
+
 import { useState, useRef, type TouchEvent } from "react"
 
-import { FloatingIcons } from "./FloatingIcons"
+import { FloatingIcons } from "@/components/ui/FloatingIcons"
 
 export interface Project {
   id: string
@@ -131,7 +133,7 @@ function ConceptArt({ id }: { id: string }) {
           x="20"
           y="31"
           fill="#efeaff"
-          fontFamily="Outfit,sans-serif"
+          fontFamily="var(--font-outfit),sans-serif"
           fontSize="17"
           fontWeight="600"
         >
@@ -143,7 +145,7 @@ function ConceptArt({ id }: { id: string }) {
           y="29"
           textAnchor="middle"
           fill="#fff"
-          fontFamily="Outfit,sans-serif"
+          fontFamily="var(--font-outfit),sans-serif"
           fontSize="11"
         >
           Check text
@@ -160,7 +162,7 @@ function ConceptArt({ id }: { id: string }) {
         <text
           x="44"
           y="100"
-          fontFamily="Outfit,sans-serif"
+          fontFamily="var(--font-outfit),sans-serif"
           fontSize="13"
           fill="#6b6558"
         >
@@ -169,7 +171,7 @@ function ConceptArt({ id }: { id: string }) {
         <text
           x="44"
           y="140"
-          fontFamily="Outfit,sans-serif"
+          fontFamily="var(--font-outfit),sans-serif"
           fontSize="16"
           fill="#1a1a18"
         >
@@ -182,7 +184,7 @@ function ConceptArt({ id }: { id: string }) {
         <text
           x="44"
           y="168"
-          fontFamily="Outfit,sans-serif"
+          fontFamily="var(--font-outfit),sans-serif"
           fontSize="16"
           fill="#1a1a18"
         >
@@ -195,7 +197,7 @@ function ConceptArt({ id }: { id: string }) {
         <text
           x="44"
           y="210"
-          fontFamily="Outfit,sans-serif"
+          fontFamily="var(--font-outfit),sans-serif"
           fontSize="16"
           fill="#1a1a18"
         >
@@ -208,7 +210,7 @@ function ConceptArt({ id }: { id: string }) {
         <text
           x="44"
           y="238"
-          fontFamily="Outfit,sans-serif"
+          fontFamily="var(--font-outfit),sans-serif"
           fontSize="16"
           fill="#1a1a18"
         >
@@ -241,7 +243,7 @@ function ConceptArt({ id }: { id: string }) {
         <text
           x="444"
           y="100"
-          fontFamily="Outfit,sans-serif"
+          fontFamily="var(--font-outfit),sans-serif"
           fontSize="13"
           fill="#6a5acd"
           fontWeight="600"
@@ -252,7 +254,7 @@ function ConceptArt({ id }: { id: string }) {
         <text
           x="456"
           y="146"
-          fontFamily="Outfit,sans-serif"
+          fontFamily="var(--font-outfit),sans-serif"
           fontSize="12"
           fill="#2c2a4a"
           fontWeight="600"
@@ -262,7 +264,7 @@ function ConceptArt({ id }: { id: string }) {
         <text
           x="456"
           y="168"
-          fontFamily="Outfit,sans-serif"
+          fontFamily="var(--font-outfit),sans-serif"
           fontSize="13"
           fill="#6a5acd"
         >
@@ -274,7 +276,7 @@ function ConceptArt({ id }: { id: string }) {
           y="193"
           textAnchor="middle"
           fill="#fff"
-          fontFamily="Outfit,sans-serif"
+          fontFamily="var(--font-outfit),sans-serif"
           fontSize="10"
         >
           Apply
@@ -283,7 +285,7 @@ function ConceptArt({ id }: { id: string }) {
         <text
           x="456"
           y="250"
-          fontFamily="Outfit,sans-serif"
+          fontFamily="var(--font-outfit),sans-serif"
           fontSize="12"
           fill="#2c2a4a"
           fontWeight="600"
@@ -293,7 +295,7 @@ function ConceptArt({ id }: { id: string }) {
         <text
           x="456"
           y="272"
-          fontFamily="Outfit,sans-serif"
+          fontFamily="var(--font-outfit),sans-serif"
           fontSize="13"
           fill="#6a5acd"
         >
@@ -305,7 +307,7 @@ function ConceptArt({ id }: { id: string }) {
           y="297"
           textAnchor="middle"
           fill="#fff"
-          fontFamily="Outfit,sans-serif"
+          fontFamily="var(--font-outfit),sans-serif"
           fontSize="10"
         >
           Apply
@@ -313,7 +315,7 @@ function ConceptArt({ id }: { id: string }) {
         <text
           x="444"
           y="360"
-          fontFamily="Outfit,sans-serif"
+          fontFamily="var(--font-outfit),sans-serif"
           fontSize="12"
           fill="#6b6558"
         >
@@ -322,7 +324,7 @@ function ConceptArt({ id }: { id: string }) {
         <text
           x="444"
           y="400"
-          fontFamily="Outfit,sans-serif"
+          fontFamily="var(--font-outfit),sans-serif"
           fontSize="36"
           fill="#6a5acd"
           fontWeight="700"
@@ -346,7 +348,7 @@ function ConceptArt({ id }: { id: string }) {
         x="20"
         y="31"
         fill="#f5f0e8"
-        fontFamily="Outfit,sans-serif"
+        fontFamily="var(--font-outfit),sans-serif"
         fontSize="17"
         fontWeight="600"
       >
@@ -358,7 +360,7 @@ function ConceptArt({ id }: { id: string }) {
         y="29"
         textAnchor="middle"
         fill="#fff"
-        fontFamily="Outfit,sans-serif"
+        fontFamily="var(--font-outfit),sans-serif"
         fontSize="11"
       >
         Add application
@@ -384,7 +386,7 @@ function ConceptArt({ id }: { id: string }) {
           <text
             x={col.x + 14}
             y="96"
-            fontFamily="Outfit,sans-serif"
+            fontFamily="var(--font-outfit),sans-serif"
             fontSize="13"
             fill="#3d2f1f"
             fontWeight="600"

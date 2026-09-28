@@ -28,3 +28,5 @@ Status: ACCEPTED by successor 2026-09-24. Writer ownership: OpenCode `opencode/m
 2. Await owner UI feedback. Do not redesign unprompted. Do not deploy/PR/merge without explicit owner auth.
 3. Optional later: mobile visual glance; portrait downscale; V2 project-facts evidence audit vs feat/v1 (flag separately, do not invent).
 4. Preserve unknown edits; only one root writer; approved free models only.
+
+2026-09-28: Owner confirms OpenCode is idle and explicitly assigns Codex writer ownership for mobile Lighthouse performance fixes. Codex resumes; prior transfer is historical.

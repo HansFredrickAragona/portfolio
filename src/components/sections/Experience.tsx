@@ -1,4 +1,4 @@
-import { FloatingIcons } from "./FloatingIcons"
+import { FloatingIcons } from "@/components/ui/FloatingIcons"
 
 import { experience } from "@/data/experience"
 

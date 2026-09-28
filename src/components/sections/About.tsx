@@ -1,4 +1,4 @@
-import { FloatingIcons } from "./FloatingIcons"
+import { FloatingIcons } from "@/components/ui/FloatingIcons"
 
 import { profile, education, leadership, interests } from "@/data/profile"
 
@@ -13,6 +13,8 @@ export function About() {
             <img
               src="/assets/about-laptop.webp"
               alt="Hans working at a laptop"
+              width={900}
+              height={1125}
               loading="lazy"
             />
           </figure>

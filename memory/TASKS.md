@@ -34,3 +34,15 @@ No task permits deploy or PR.
 
 ## 2026-09-24 README (OpenCode)
 - DONE: created root `README.md` with overview, components, technical overview, stack, getting started, verification. Commit `5b3516e` pushed to origin/feat/v2. Docs-only (tsc/build N/A).
+
+- 2026-09-28 Lighthouse performance: implementation/build/typecheck and responsive DOM checks done; clean production Lighthouse and full visual QA pending. See CURRENT_STATE checkpoint.
+
+## 2026-09-28 Lighthouse continuation
+- COMPLETE: LCP image optimized and high-priority discoverable preload verified in generated production HTML; Google fonts self-hosted; home page SSR boundary narrowed; GSAP replaced by native reduced-motion-aware reveals. Production build First Load JS 136 kB, previous 183 kB. See CURRENT_STATE checkpoint for checks and remaining clean mobile Lighthouse run.
+- STILL OPEN: user to rerun clean-profile Lighthouse against production (never localhost:3000 dev) to capture final metrics; full mobile screenshot check.
+
+- 2026-09-28 follow-up Lighthouse: About image intrinsic size 900x1125 fixed, generated HTML verified; production build/typecheck PASS. Current metrics still from localhost:3000 dev; production Lighthouse pending.
+
+- 2026-09-28 desktop motion/hover correction (Codex): DONE. GSAP scroll reveals and pointer-follow glow are loaded only at desktop width (>=901px) with reduced motion off; mobile leaves those chunks unloaded. Build, lint/type validation, Oxfmt, and diff check PASS. Manual visual interaction QA and clean mobile Lighthouse are still open; see CURRENT_STATE.
+
+- 2026-09-28 theme-mode transition (Codex): DONE. Added circular reveal from the actual toggle button in both directions; respects reduced motion and falls back where View Transitions are unsupported. Build/lint/type validation and Oxfmt PASS. Interactive browser check pending; see CURRENT_STATE.

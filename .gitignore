@@ -13,6 +13,7 @@
 /secrets/
 /credentials/
 .npmrc
+vercel-env.json
 
 # Dependencies and generated application output.
 node_modules/

@@ -1,10 +1,11 @@
-import { FloatingIcons } from "./FloatingIcons"
+import Image from "next/image"
+import { FloatingIcons } from "@/components/ui/FloatingIcons"
 
-import { RandomPattern } from "./RandomPattern"
+import { RandomPattern } from "@/components/ui/RandomPattern"
 
-import { HeroSocialButtons } from "./HeroSocial"
+import { HeroSocialButtons } from "@/components/ui/HeroSocial"
 
-export function Hero({ dark }: { dark: boolean }) {
+export function Hero() {
   return (
     <section id="hero" className="hero-section">
       <FloatingIcons seed={0} />
@@ -16,13 +17,18 @@ export function Hero({ dark }: { dark: boolean }) {
               Full-Stack Developer · AI &amp; ML Engineer · Team Leader
             </p>
             <div className="hero-contributions">
-              <RandomPattern dark={dark} />
+              <RandomPattern />
             </div>
           </div>
           <div className="hero-photo">
-            <img
-              src="/assets/hans-portrait2.jpg"
+            <Image
+              src="/assets/hans-portrait-optimized.webp"
               alt="Hans Fredrick O. Aragona"
+              width={1200}
+              height={1800}
+              sizes="(max-width: 900px) 340px, (max-width: 1439px) 33vw, 420px"
+              priority
+              fetchPriority="high"
             />
             <div className="hero-actions">
               <a href="#projects" className="hover-card">

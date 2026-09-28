@@ -5,7 +5,7 @@ export function Nav({
   setDark,
 }: {
   dark: boolean
-  setDark: (v: boolean) => void
+  setDark: (v: boolean, origin?: HTMLElement) => void
 }) {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -80,13 +80,14 @@ export function Nav({
         <div className="flex items-center gap-3">
           {/* Dark mode toggle */}
           <button
-            onClick={() => setDark(!dark)}
+            onClick={(event) => setDark(!dark, event.currentTarget)}
             className="nav-glow w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200"
             style={{
               backgroundColor: "var(--secondary)",
               color: "var(--muted-foreground)",
             }}
-            aria-label="Toggle dark mode"
+            aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
+            aria-pressed={dark}
             onMouseEnter={(e) =>
               (e.currentTarget.style.color = "var(--primary)")
             }
