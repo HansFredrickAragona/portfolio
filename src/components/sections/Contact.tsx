@@ -10,9 +10,8 @@ export function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" })
   const [copied, setCopied] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">(
-    "idle"
-  )
+  const [submitStatus, setSubmitStatus] =
+    useState<"idle" | "success" | "error">("idle")
   const [submitError, setSubmitError] = useState("")
 
   const update = (k: string, v: string) => setForm((f) => ({ ...f, [k]: v }))
@@ -43,7 +42,9 @@ export function Contact() {
       setForm({ name: "", email: "", message: "" })
     } catch (err) {
       setSubmitStatus("error")
-      setSubmitError(err instanceof Error ? err.message : "Failed to send message")
+      setSubmitError(
+        err instanceof Error ? err.message : "Failed to send message",
+      )
     } finally {
       setIsSubmitting(false)
     }
@@ -95,8 +96,8 @@ export function Contact() {
             className="text-[1.15rem] leading-relaxed self-center"
             style={{ color: "var(--muted-foreground)" }}
           >
-            Fill out the form and hit "Send message": it sends directly to my
-            inbox — no email client needed.
+            Fill out the form and hit "Send message" to send it directly to my
+            inbox without opening your email app.
           </p>
           <form onSubmit={handleSubmit} className="space-y-3">
             <div className="grid grid-cols-2 gap-3">
@@ -121,6 +122,10 @@ export function Contact() {
                 onBlur={(e) => (e.target.style.borderColor = "var(--border)")}
                 disabled={isSubmitting}
                 required
+                maxLength={254}
+                autoComplete="email"
+                autoCapitalize="none"
+                spellCheck={false}
               />
             </div>
             <textarea
@@ -137,7 +142,9 @@ export function Contact() {
             <div className="flex gap-3 pt-1">
               <button
                 type="submit"
-                disabled={isSubmitting || !form.name || !form.email || !form.message}
+                disabled={
+                  isSubmitting || !form.name || !form.email || !form.message
+                }
                 className="flex-1 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed"
                 style={{
                   backgroundColor: "var(--primary)",
@@ -167,7 +174,7 @@ export function Contact() {
                 style={{ color: "var(--primary)" }}
                 role="status"
               >
-                Message sent — thank you!
+                Message sent. Thank you!
               </p>
             )}
             {submitStatus === "error" && (

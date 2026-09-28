@@ -55,8 +55,8 @@ const BUTTONS = [
   },
   {
     id: "email",
-    label: "Email",
-    href: `mailto:${links.email}`,
+    label: "Get in touch",
+    href: "#contact",
     external: false,
     icon: ICONS.email,
   },
