@@ -1,13 +1,13 @@
 # Hans Fredrick O. Aragona — Portfolio
 
-Personal portfolio website showcasing full-stack and AI/ML engineering work, professional experience, skills, and services. Single-page editorial layout with dark/light themes, GSAP scroll animations, and a mailto-based contact form (no backend).
+Personal portfolio website showcasing full-stack and AI/ML engineering work, professional experience, skills, and services. Single-page editorial layout with dark/light themes, GSAP scroll animations, and a contact form that verifies email ownership before forwarding messages.
 
 ## Project overview
 
 - **Goal:** present projects, services, experience, skills, and contact info in a polished, responsive single-page site.
 - **Audience:** recruiters, collaborators, potential clients.
 - **Content:** real projects (Soil Scan, BaguioReady GIS, Grammar Checker, etc.), verified experience (DOST, Gift of Grace, Bell-Kenz), education (Saint Louis University), and evidence-backed skills.
-- **Constraints:** no database, no backend service, no auth/CMS/chatbot, no paid services. Static export–friendly; privacy-conscious (no phone/address/secrets in tracked files).
+- **Constraints:** no database, auth/CMS/chatbot, or paid services. A small serverless contact route uses Resend for email verification and delivery. Privacy-conscious (no phone/address/secrets in tracked files).
 
 ## Page sections
 
@@ -19,7 +19,7 @@ Personal portfolio website showcasing full-stack and AI/ML engineering work, pro
 | **Experience** | Timeline-style cards for DOST, Gift of Grace, Bell-Kenz with date chips and skill tags. |
 | **About** | Portrait, profile detail, education, leadership, and interests from `src/data/profile.ts`. |
 | **Skills** | Nine category accordions (languages, frontend, backend, AI/ML, data, databases, GIS, tools, professional) with tech icons and evidence lines. |
-| **Contact** | Form that composes a `mailto:` link; copy-message and copy-email helpers. No server submission. |
+| **Contact** | Form sends a one-time email code and forwards the message only after the visitor confirms inbox access. |
 | **Footer** | Name, LinkedIn / GitHub / Email links, copyright. |
 
 ## Components
@@ -72,7 +72,7 @@ src/
 - **Animation:** GSAP 3 + ScrollTrigger for section reveals; CSS keyframes for floating/fade effects; pointer-driven glow via CSS variables. All animations disabled under `prefers-reduced-motion`.
 - **Theming:** `useDarkMode` hook toggles `.dark` on `<html>` and persists to `localStorage`; Nav consumes the boolean for background/blur.
 - **Accessibility:** semantic sections with `id` anchors, `aria-hidden` decoration, focus-visible outlines, keyboard-completable scroll reveals, native `<details>` accordions for skills/services.
-- **Contact:** client-side only — builds a `mailto:` URL; no network calls, no form backend.
+- **Contact:** Next.js route validates the address and mail domain, emails a short-lived verification code, then forwards the message after code confirmation. Requires a verified Resend sender address in `CONTACT_FROM_EMAIL`.
 - **Path alias:** `@/*` → `./src/*` (TypeScript `paths`).
 
 ## Tech stack
@@ -87,7 +87,7 @@ src/
 | Formatter | oxfmt |
 | Package manager | npm |
 
-No database, ORM, auth provider, CMS, or paid service.
+No database, ORM, auth provider, CMS, or paid service. Resend handles verification and contact email delivery.
 
 ## Getting started
 
@@ -110,6 +110,8 @@ npx tsc --noEmit
 ```
 
 Requires Node.js 18+ and npm.
+
+For the contact form, copy `.env.example` to `.env.local` and set the Resend API key, destination inbox, and sender address. `CONTACT_FROM_EMAIL` must be on a domain verified in Resend. Set the same values in Vercel before enabling email verification in production.
 
 ## Project structure (repo root)
 
