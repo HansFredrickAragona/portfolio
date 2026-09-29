@@ -52,14 +52,23 @@ export function ScrollMotion() {
         })
 
         const refresh = () => scrollTriggerModule.ScrollTrigger.refresh()
+        const onTransitionEnd = (event: TransitionEvent) => {
+          if (
+            event.propertyName === "block-size" &&
+            event.target instanceof HTMLDetailsElement
+          ) {
+            refresh()
+          }
+        }
+
         document.addEventListener("toggle", refresh, true)
-        document.addEventListener("transitionend", refresh)
+        document.addEventListener("transitionend", onTransitionEnd)
         window.addEventListener("load", refresh)
 
         cleanup = () => {
           media.revert()
           document.removeEventListener("toggle", refresh, true)
-          document.removeEventListener("transitionend", refresh)
+          document.removeEventListener("transitionend", onTransitionEnd)
           window.removeEventListener("load", refresh)
         }
       },

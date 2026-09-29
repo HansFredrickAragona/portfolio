@@ -1,4 +1,3 @@
-import Link from "next/link"
 import Image from "next/image"
 import { FloatingIcons } from "@/components/ui/FloatingIcons"
 
@@ -35,9 +34,9 @@ export function Hero() {
               <a href="#projects" className="hover-card">
                 View my work ↗
               </a>
-              <Link href="#contact" scroll className="hover-card">
+              <a href="#contact" className="hover-card">
                 Let’s get in touch
-              </Link>
+              </a>
             </div>
           </div>
           <div className="hero-intro">
