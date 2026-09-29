@@ -4,6 +4,7 @@ import { NextRequest, NextResponse } from "next/server"
 import { Resend } from "resend"
 
 const CONTACT_EMAIL = process.env.CONTACT_EMAIL || "hansfredrick2600@gmail.com"
+const DEFAULT_FROM_EMAIL = "Portfolio <onboarding@resend.dev>"
 
 interface ContactFormData {
   name?: unknown
@@ -77,14 +78,8 @@ function getResendClient() {
   return new Resend(apiKey)
 }
 
-function getFromEmail(): string | null {
-  const from = process.env.CONTACT_FROM_EMAIL?.trim()
-  if (!from) return null
-
-  const senderAddress = from.match(/<([^>]+)>/)?.[1] ?? from
-  if (senderAddress.toLowerCase().endsWith("@resend.dev")) return null
-
-  return from
+function getFromEmail(): string {
+  return process.env.CONTACT_FROM_EMAIL?.trim() || DEFAULT_FROM_EMAIL
 }
 
 function errorResponse(message: string, status: number) {
@@ -122,9 +117,6 @@ export async function POST(request: NextRequest) {
   }
 
   const from = getFromEmail()
-  if (!from) {
-    return errorResponse("Email sending is temporarily unavailable.", 503)
-  }
 
   let resend: ReturnType<typeof getResendClient>
   try {

@@ -111,7 +111,7 @@ npx tsc --noEmit
 
 Requires Node.js 18+ and npm.
 
-For the contact form, copy `.env.example` to `.env.local` and set the Resend API key, destination inbox, and sender address. `CONTACT_FROM_EMAIL` must be on a domain verified in Resend. Set the same values in Vercel for message delivery.
+For the contact form, set a Resend API key and destination inbox. `CONTACT_FROM_EMAIL` is optional; it defaults to Resend's onboarding test sender. To use a custom sender, set it to an address on a domain verified in Resend. Set the required values in Vercel for message delivery.
 
 ## Project structure (repo root)
 
