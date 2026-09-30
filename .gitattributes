@@ -145,7 +145,8 @@
 *.nc                 filter=lfs diff=lfs merge=lfs -text
 *.mat                filter=lfs diff=lfs merge=lfs -text
 
-# Keep the small public portfolio WebP assets in Git so deployments do not
-# require Git LFS support to serve them.
+# Keep small public portfolio images in Git so deployments do not require
+# Git LFS support to serve them.
 /public/assets/about-laptop.webp -filter -diff -merge -text
 /public/assets/hans-portrait-optimized.webp -filter -diff -merge -text
+/public/images/tribitlabs/*.png -filter -diff -merge -text
