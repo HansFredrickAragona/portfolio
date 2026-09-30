@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useState, useRef, type TouchEvent } from "react"
 
 import { FloatingIcons } from "@/components/ui/FloatingIcons"
@@ -22,6 +23,8 @@ export interface Project {
   tech: string[]
 
   liveUrl?: string
+
+  previewImages?: { src: string; label: string; alt: string }[]
 
   caseStudy?: boolean
 }
@@ -75,6 +78,64 @@ const PROJECTS: Project[] = [
     liveUrl: "https://baguio-ready-gis-web.vercel.app/",
 
     caseStudy: true,
+  },
+
+  {
+    id: "tribitlabsweb",
+
+    title: "TribitLabs",
+
+    summary:
+      "A modern frontend UI website for TribitLabs, a startup providing client-facing web interactions and services.",
+
+    status: "completed",
+
+    problem:
+      "TribitLabs needed a polished, performant front-end presence for clients to interact with their services and learn about the startup.",
+
+    role: "Frontend developer: built the responsive UI with animations and deployed to Vercel.",
+
+    outcome:
+      "Live production website with smooth GSAP animations, responsive design, and fast performance on Vercel.",
+
+    tech: ["Next.js", "React", "GSAP", "TypeScript", "Tailwind CSS", "Vercel"],
+
+    liveUrl: "https://tribitlabs.com",
+
+    previewImages: [
+      {
+        src: "/images/tribitlabs/hero.png",
+        label: "Home",
+        alt: "Tribit Labs homepage with the headline Custom builds for messy work",
+      },
+      {
+        src: "/images/tribitlabs/projects.png",
+        label: "Work",
+        alt: "Tribit Labs Work page showing a founder project",
+      },
+      {
+        src: "/images/tribitlabs/services.png",
+        label: "Services",
+        alt: "Tribit Labs services page",
+      },
+      {
+        src: "/images/tribitlabs/how%20we%20work.png",
+        label: "How we work",
+        alt: "Tribit Labs process page showing the first step, Talk",
+      },
+      {
+        src: "/images/tribitlabs/get%20started.png",
+        label: "Get started",
+        alt: "Tribit Labs Get Started section and footer",
+      },
+      {
+        src: "/images/tribitlabs/FAQ.png",
+        label: "FAQ",
+        alt: "Tribit Labs frequently asked questions page",
+      },
+    ],
+
+    caseStudy: false,
   },
 
   {
@@ -440,6 +501,31 @@ function ConceptArt({ id }: { id: string }) {
 // Browser mockup frame wrapping an iframe or placeholder
 
 function BrowserMockup({ project }: { project: Project }) {
+  const [previewIndex, setPreviewIndex] = useState(0)
+  const previewTouchStartX = useRef(0)
+  const previewImages = project.previewImages ?? []
+  const hasPreviewCarousel = previewImages.length > 0
+
+  const changePreview = (direction: -1 | 1) => {
+    setPreviewIndex(
+      (current) =>
+        (current + direction + previewImages.length) % previewImages.length,
+    )
+  }
+
+  const onPreviewTouchStart = (event: TouchEvent) => {
+    previewTouchStartX.current = event.touches[0].clientX
+    event.stopPropagation()
+  }
+
+  const onPreviewTouchEnd = (event: TouchEvent) => {
+    const deltaX = event.changedTouches[0].clientX - previewTouchStartX.current
+    event.stopPropagation()
+    if (Math.abs(deltaX) > 40) changePreview(deltaX < 0 ? 1 : -1)
+  }
+
+  const activePreview = previewImages[previewIndex]
+
   return (
     <div
       className="w-full rounded-xl overflow-hidden"
@@ -488,9 +574,87 @@ function BrowserMockup({ project }: { project: Project }) {
       {/* Preview area */}
       <div
         className="relative w-full"
-        style={{ height: "378px", backgroundColor: "var(--muted)" }}
+        style={{
+          height: hasPreviewCarousel ? "auto" : "378px",
+          aspectRatio: hasPreviewCarousel ? "16 / 9" : undefined,
+          backgroundColor: "var(--muted)",
+        }}
       >
-        {project.liveUrl ? (
+        {hasPreviewCarousel && activePreview ? (
+          <div
+            className="absolute inset-0"
+            onTouchStart={onPreviewTouchStart}
+            onTouchEnd={onPreviewTouchEnd}
+          >
+            <Image
+              src={activePreview.src}
+              alt={activePreview.alt}
+              fill
+              priority={previewIndex === 0}
+              sizes="(max-width: 1024px) 100vw, 33vw"
+              className="object-cover object-top"
+            />
+            <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 bg-gradient-to-t from-black/80 to-transparent px-3 pb-3 pt-8">
+              <button
+                type="button"
+                onClick={() => changePreview(-1)}
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-lg font-semibold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                style={{ backgroundColor: "rgba(0,0,0,0.55)" }}
+                aria-label={`Previous screenshot; showing ${activePreview.label}`}
+              >
+                ←
+              </button>
+              <div className="flex min-w-0 flex-col items-center gap-1">
+                <span
+                  className="truncate text-xs font-semibold text-white"
+                  aria-live="polite"
+                >
+                  {activePreview.label} ·{" "}
+                  {previewIndex + 1}{" "}
+                  / {previewImages.length}
+                </span>
+                <div
+                  className="flex items-center gap-1.5"
+                  role="group"
+                  aria-label="Choose screenshot"
+                >
+                  {previewImages.map((preview, index) => (
+                    <button
+                      key={preview.src}
+                      type="button"
+                      onClick={() => setPreviewIndex(index)}
+                      className="flex h-6 w-6 items-center justify-center rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                      style={{
+                        backgroundColor: "transparent",
+                      }}
+                      aria-label={`Show ${preview.label} screenshot`}
+                      aria-pressed={index === previewIndex}
+                    >
+                      <span
+                        className="h-2 rounded-full transition-all"
+                        style={{
+                          width: index === previewIndex ? "12px" : "8px",
+                          backgroundColor: index === previewIndex
+                            ? "#ffffff"
+                            : "rgba(255,255,255,0.55)",
+                        }}
+                      />
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => changePreview(1)}
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-lg font-semibold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                style={{ backgroundColor: "rgba(0,0,0,0.55)" }}
+                aria-label={`Next screenshot; showing ${activePreview.label}`}
+              >
+                →
+              </button>
+            </div>
+          </div>
+        ) : project.liveUrl ? (
           <>
             <iframe
               src={project.liveUrl}
