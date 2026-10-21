@@ -139,6 +139,37 @@ const PROJECTS: Project[] = [
   },
 
   {
+    id: "solar-prospect",
+
+    title: "Solar Prospect Intelligence",
+
+    summary:
+      "A multi-agent architecture prototype for finding solar prospects, coordinated by a Supervisor, seven workflow roles, and a separate QA agent.",
+
+    status: "development",
+
+    problem:
+      "Solar prospect research requires gathering company and facility information from public sources.",
+
+    role: "Designed a Supervisor-led workflow with role-specific prompts, scoped memory, deterministic retries, and human review.",
+
+    outcome:
+      "Hosted mode routes role-specific calls to one shared Meta Llama 3.2 1B Instruct model through Cloudflare Workers AI's free daily allocation. Solar, roof, contact, and CRM integrations remain simulated.",
+
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Cloudflare Workers",
+      "Cloudflare Workers AI",
+      "Meta Llama 3.2 1B Instruct",
+      "Cloudflare D1",
+      "Vercel",
+    ],
+
+    liveUrl: "https://solar-prospect-intelligence.vercel.app/",
+  },
+
+  {
     id: "grammar",
 
     title: "Grammar Checker",
